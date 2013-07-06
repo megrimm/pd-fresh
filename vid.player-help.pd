@@ -1,0 +1,24 @@
+#N canvas 652 316 496 458 10;
+#X obj 137 49 gemhead;
+#X obj 27 50 vid.window;
+#X obj 137 271 vid.player;
+#X obj 137 306 pix_texture;
+#X obj 137 340 rectangle 5.5 4;
+#X msg 152 81 open samples/homer.avi;
+#X msg 175 155 stop;
+#X msg 174 130 play;
+#X msg 162 105 open samples/flyover.mov \, play;
+#X msg 183 209 speed \$1;
+#X floatatom 184 183 5 0 0 0 - - -;
+#X obj 27 27 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 0;
+#X connect 8 0 2 0;
+#X connect 9 0 2 0;
+#X connect 10 0 9 0;
+#X connect 11 0 1 0;

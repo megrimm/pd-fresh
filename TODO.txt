@@ -1,0 +1,4 @@
+gphoto
+purest-json - weather easy
+datamosher
+easy glsl loading
