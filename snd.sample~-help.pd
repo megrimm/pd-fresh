@@ -1,4 +1,4 @@
-#N canvas 25 368 579 495 10;
+#N canvas 767 375 579 495 10;
 #X obj 71 451 dac~;
 #X msg 69 26 open;
 #X msg 120 120 play;

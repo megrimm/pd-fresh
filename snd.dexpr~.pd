@@ -1,15 +1,16 @@
 #N canvas 770 22 523 228 10;
 #X obj 11 18 inlet~;
-#X obj 13 140 outlet~;
+#X obj 12 129 outlet~;
 #X obj 122 17 inlet;
 #X obj 11 43 s~ \$0-in;
-#X obj 13 117 r~ \$0-out;
+#X obj 12 106 r~ \$0-out;
 #X msg 122 141 clear \, obj 100 50 r~ \$2-in \, obj 100 100 expr~ \$1
 \, connect 0 0 1 0 \, obj 100 150 s~ \$2-out \, connect 1 0 2 0;
-#N canvas 403 486 336 251 \$0-dexpr-sub 1;
-#X obj 100 50 r~ 1018-in;
-#X obj 100 100 expr~ ($v1*2)+6;
-#X obj 100 150 s~ 1018-out;
+#N canvas 403 486 409 187 \$0-dexpr-sub 0;
+#X obj 32 27 r~ 1010-in;
+#X obj 32 77 expr~ ((((($v1>>12)^($v1>>12)-2)%11*$v1)/4|$v1>>13)&127)
+;
+#X obj 32 127 s~ 1010-out;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 11 72 pd \$0-dexpr-sub;

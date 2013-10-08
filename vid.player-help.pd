@@ -1,19 +1,33 @@
-#N canvas 652 316 496 458 10;
-#X obj 137 49 gemhead;
-#X obj 27 50 vid.window;
-#X obj 137 271 vid.player;
-#X obj 137 306 pix_texture;
-#X obj 137 340 rectangle 5.5 4;
-#X msg 152 81 open samples/homer.avi;
-#X msg 175 155 stop;
-#X msg 174 130 play;
-#X msg 162 105 open samples/flyover.mov \, play;
-#X msg 183 209 speed \$1;
-#X floatatom 184 183 5 0 0 0 - - -;
-#X obj 27 27 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
+#N canvas 658 66 697 478 10;
+#X obj 44 31 gemhead;
+#X obj 331 55 vid.window;
+#X obj 44 316 vid.player;
+#X obj 44 377 pix_texture;
+#X obj 44 411 rectangle 5.5 4;
+#X msg 59 126 open samples/homer.avi;
+#X msg 82 200 stop;
+#X msg 81 175 play;
+#X msg 69 150 open samples/flyover.mov \, play;
+#X msg 90 254 speed \$1;
+#X floatatom 90 232 5 0 0 0 - - -;
+#X obj 331 28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 101 347 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 145 343 <-- bangs when end is reached;
+#X text 144 375 <-- writes video to a texture;
+#X text 147 409 <-- write texture to a rectangle;
+#X text 405 53 <-- hit "esc" to open/resize window;
+#X text 404 26 <-- toggle for second monitor in fullscreen;
+#X text 275 148 <-- open a file and play immediately;
+#X text 233 111 <-- open a file from local filename;
+#X text 98 29 <-- begins the rendering chain;
+#X text 122 173 <-- play / loop the file;
+#X text 120 196 <-- stop the file/loop from playing;
+#X text 131 228 <-- changes the speed of playback;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
+#X connect 2 1 12 0;
 #X connect 3 0 4 0;
 #X connect 5 0 2 0;
 #X connect 6 0 2 0;
