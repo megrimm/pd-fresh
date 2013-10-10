@@ -51,6 +51,7 @@
 #X obj 289 409 samplerate~;
 #X obj 289 429 / 1000;
 #X obj 289 388 loadbang;
+#X text 253 664 (c)2012 \, megrimm;
 #X connect 0 0 1 0;
 #X connect 0 0 45 0;
 #X connect 1 0 8 0;

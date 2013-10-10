@@ -45,6 +45,7 @@
 #X obj 160 405 r \$0-6;
 #X obj 160 449 s \$0-7;
 #X obj 87 308 r \$0-7;
+#X text 137 736 (c)2012 \, megrimm;
 #X connect 0 0 19 0;
 #X connect 2 0 35 0;
 #X connect 3 0 17 1;

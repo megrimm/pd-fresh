@@ -19,6 +19,7 @@
 \, offset 0 -51 \, create \, 1;
 #X msg 120 231 0 \, destroy \, reset \, border 0 \, menubar -1 \, cursor
 0 \, fullscreen 1 \, create \, 1;
+#X text 262 4 (c)2012 \, megrimm;
 #X connect 0 0 13 0;
 #X connect 0 1 1 0;
 #X connect 0 1 9 0;

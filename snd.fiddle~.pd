@@ -17,6 +17,7 @@
 #X msg 91 194 1;
 #X obj 64 220 pack;
 #X obj 64 252 line;
+#X text 62 362 (c)2012 \, megrimm;
 #X connect 0 0 2 0;
 #X connect 0 1 10 0;
 #X connect 0 3 1 0;

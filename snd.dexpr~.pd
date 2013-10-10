@@ -1,4 +1,4 @@
-#N canvas 770 22 523 228 10;
+#N canvas 770 22 524 258 10;
 #X obj 11 18 inlet~;
 #X obj 12 129 outlet~;
 #X obj 122 17 inlet;
@@ -19,6 +19,7 @@
 #X obj 133 93 list append \$1;
 #X obj 133 69 initbang;
 #X obj 122 116 pack s \$0;
+#X text 118 219 (c)2012 \, megrimm;
 #X connect 0 0 3 0;
 #X connect 2 0 8 0;
 #X connect 4 0 1 0;

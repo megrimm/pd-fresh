@@ -51,6 +51,7 @@
 #X obj 344 303 r \$0-blobcoory;
 #X obj 272 482 r \$0-blobsize;
 #X obj 272 513 outlet;
+#X text 58 541 (c)2012 \, megrimm;
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 3 0 11 0;

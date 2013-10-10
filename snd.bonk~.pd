@@ -16,6 +16,7 @@
 #X obj 99 -526 route min max minvol;
 #X obj 227 -497 loadbang;
 #X msg 227 -477 50;
+#X text 254 -222 (c)2012 \, megrimm;
 #X connect 0 1 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 4 0;
