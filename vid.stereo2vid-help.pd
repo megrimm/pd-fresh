@@ -1,0 +1,21 @@
+#N canvas 663 210 671 487 10;
+#X floatatom 289 -328 5 0 0 0 - - -;
+#X msg 297 -302 8;
+#X msg 303 -281 16;
+#X msg 309 -257 32;
+#X msg 316 -233 64;
+#X obj 156 11 vid.stereo2vid;
+#X text 347 -271 <-- block size should be same as image sent;
+#X obj 543 -149 vid.window;
+#X obj 195 -270 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 10500 1;
+#X text 212 -278 saturation;
+#X obj 146 -348 adc~;
+#X connect 0 0 5 3;
+#X connect 1 0 5 3;
+#X connect 2 0 5 3;
+#X connect 3 0 5 3;
+#X connect 4 0 5 3;
+#X connect 8 0 5 2;
+#X connect 10 0 5 0;
+#X connect 10 1 5 1;
