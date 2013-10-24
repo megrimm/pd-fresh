@@ -43,6 +43,7 @@
 #X obj 481 467 r \$0-endreached;
 #X obj 481 497 outlet;
 #X text 310 585 (c)2012 \, megrimm;
+#X obj 506 152 vline~;
 #X connect 0 0 37 0;
 #X connect 2 0 1 0;
 #X connect 2 1 3 0;

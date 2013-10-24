@@ -1,18 +1,25 @@
 #N canvas 525 49 464 429 10;
-#X obj 152 330 dac~;
+#X obj 152 365 dac~;
 #X msg 151 11 open;
 #X msg 162 37 play;
 #X msg 182 153 slices \$1;
 #X floatatom 182 131 5 1 16 0 - - -;
 #X msg 172 61 stop;
-#X msg 188 195 speed \$1;
-#X floatatom 188 175 5 0 0 0 - - -;
-#X obj 152 269 snd.slicestep~;
-#X obj 233 294 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 193 245 speed \$1;
+#X floatatom 193 225 5 0 0 0 - - -;
+#X obj 152 304 snd.slicestep~;
+#X obj 233 329 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 141 -15 open _samples/amen.wav \, play;
 #X obj 182 86 loadbang;
 #X msg 182 108 16;
+#X obj 193 179 loadbang;
+#X msg 193 201 1;
+#X text 252 244 <-- change speed of sample;
+#X text 247 151 <-- number of slices;
+#X text 192 9 <-- open a sample;
+#X text 204 38 <-- play opened sample;
+#X text 210 59 <-- stop sample from playing;
 #X connect 1 0 8 0;
 #X connect 2 0 8 0;
 #X connect 3 0 8 0;
@@ -26,3 +33,5 @@
 #X connect 10 0 8 0;
 #X connect 11 0 12 0;
 #X connect 12 0 4 0;
+#X connect 13 0 14 0;
+#X connect 14 0 7 0;
