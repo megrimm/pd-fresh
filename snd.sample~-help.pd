@@ -19,9 +19,9 @@
 #X text 297 362 <-- number of samples;
 #X text 241 394 <-- length of sample in milliseconds;
 #X obj 173 335 unpack 0 0;
-#X obj 97 359 snapshot~;
-#X floatatom 97 382 10 0 0 0 - - -;
-#X msg 117 335 bang;
+#X obj 100 359 snapshot~;
+#X floatatom 100 382 10 0 0 0 - - -;
+#X msg 120 335 bang;
 #X obj 69 302 snd.sample~;
 #X msg 87 57 open _samples/dummy.wav;
 #X msg 100 87 open _samples/organ-01.wav \, play;

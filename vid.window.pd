@@ -1,5 +1,4 @@
-#N canvas 696 339 507 383 10;
-#X obj 41 94 select 0 1;
+#N canvas 602 310 507 383 10;
 #X obj 69 135 spigot;
 #X obj 41 0 gemkeyboard;
 #X obj 41 29 sel 53;
@@ -17,25 +16,26 @@
 ;
 #X msg 127 297 0 \, destroy \, reset \, border 0 \, dimen 1440 900
 \, offset 0 -51 \, create \, 1;
-#X msg 120 231 0 \, destroy \, reset \, border 0 \, menubar -1 \, cursor
-0 \, fullscreen 1 \, create \, 1;
 #X text 262 4 (c)2012 \, megrimm;
-#X connect 0 0 13 0;
-#X connect 0 1 1 0;
-#X connect 0 1 9 0;
-#X connect 1 0 12 0;
-#X connect 2 0 3 0;
-#X connect 3 0 11 0;
-#X connect 5 0 6 0;
-#X connect 6 0 11 0;
-#X connect 7 0 8 0;
-#X connect 7 0 1 1;
-#X connect 8 0 9 1;
-#X connect 9 0 15 0;
-#X connect 10 0 11 1;
-#X connect 11 0 10 0;
-#X connect 11 0 0 0;
-#X connect 12 0 4 0;
-#X connect 13 0 4 0;
-#X connect 14 0 4 0;
-#X connect 15 0 4 0;
+#X obj 41 94 select 1 0;
+#X msg 120 231 0 \, destroy \, reset \, border 0 \, menubar 0 \, cursor
+0 \, fullscreen 1 \, create \, 1;
+#X connect 0 0 11 0;
+#X connect 1 0 2 0;
+#X connect 2 0 10 0;
+#X connect 4 0 5 0;
+#X connect 5 0 10 0;
+#X connect 6 0 7 0;
+#X connect 6 0 0 1;
+#X connect 7 0 8 1;
+#X connect 8 0 16 0;
+#X connect 9 0 10 1;
+#X connect 10 0 9 0;
+#X connect 10 0 15 0;
+#X connect 11 0 3 0;
+#X connect 12 0 3 0;
+#X connect 13 0 3 0;
+#X connect 15 0 12 0;
+#X connect 15 1 0 0;
+#X connect 15 1 8 0;
+#X connect 16 0 3 0;

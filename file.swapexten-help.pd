@@ -1,0 +1,10 @@
+#N canvas 532 478 450 300 10;
+#X obj 163 195 print;
+#X msg 165 52 test.mov;
+#X msg 180 77 test.aif;
+#X msg 268 106 jpg;
+#X obj 163 134 file.swapext wav;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 0 0;
