@@ -1,4 +1,10 @@
+audio-visualizer
+auto tune abstraction ( pitch track -> pitch shift
 gphoto
 purest-json - weather easy
 datamosher
 easy glsl loading
+midi mutator
+granular
+
+rename to ez?
