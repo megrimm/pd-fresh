@@ -1,0 +1,5 @@
+#N canvas 525 22 511 502 10;
+#X declare -lib fresh;
+#X obj 144 23 import fresh;
+#X obj 147 184 vid.player2;
+#X obj 225 299 snd.sample~;

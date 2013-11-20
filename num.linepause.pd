@@ -20,10 +20,10 @@
 #X obj 100 203 s \$0-linectl;
 #X obj 222 201 t b b b;
 #X obj 57 641 outlet;
-#X obj 55 25 inlet;
+#X obj 56 24 inlet;
 #X obj 254 228 f;
 #X obj 285 228 f;
-#X obj 266 27 inlet;
+#X obj 269 27 inlet;
 #X obj 311 27 inlet;
 #X obj 285 278 s \$0-milliseconds;
 #X obj 56 151 sel 0 1;

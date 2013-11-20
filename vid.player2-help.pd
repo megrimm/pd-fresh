@@ -1,18 +1,18 @@
-#N canvas 626 22 716 546 10;
+#N canvas 626 22 735 656 10;
 #X obj 48 81 gemhead;
 #X obj 335 105 vid.window;
-#X obj 48 451 pix_texture;
-#X obj 48 485 rectangle 5.5 4;
+#X obj 48 506 pix_texture;
+#X obj 48 540 rectangle 5.5 4;
 #X msg 85 225 play;
 #X msg 94 304 speed \$1;
 #X floatatom 94 282 5 0 0 0 - - -;
 #X obj 335 78 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 111 395 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 111 450 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 155 391 <-- bangs when end is reached;
-#X text 148 449 <-- writes video to a texture;
-#X text 151 483 <-- write texture to a rectangle;
+#X text 155 446 <-- bangs when end is reached;
+#X text 148 504 <-- writes video to a texture;
+#X text 151 538 <-- write texture to a rectangle;
 #X text 409 103 <-- hit "esc" to open/resize window;
 #X text 408 76 <-- toggle for second monitor in fullscreen;
 #X text 279 198 <-- open a file and play immediately;
@@ -23,12 +23,14 @@
 #X text 135 278 <-- changes the speed of playback;
 #X obj 48 366 vid.player2;
 #X msg 56 139 open;
-#X msg 73 200 open _samples/alea.mpg \, play;
 #X text 44 28 A [line] based pix_film player.;
 #X msg 86 250 pause;
-#X floatatom 79 418 5 0 0 0 - - -;
-#X text 133 419 <-- number of frames;
+#X floatatom 79 473 5 0 0 0 - - -;
+#X text 133 474 <-- number of frames;
 #X msg 63 176 open _samples/anim.mov;
+#X msg 73 200 open _samples/anim.mov \, play;
+#X obj 121 400 print;
+#X text 162 400 <-- path/file loaded;
 #X connect 0 0 20 0;
 #X connect 2 0 3 0;
 #X connect 4 0 20 0;
@@ -36,9 +38,10 @@
 #X connect 6 0 5 0;
 #X connect 7 0 1 0;
 #X connect 20 0 2 0;
-#X connect 20 1 25 0;
+#X connect 20 1 24 0;
 #X connect 20 2 8 0;
+#X connect 20 3 28 0;
 #X connect 21 0 20 0;
-#X connect 22 0 20 0;
-#X connect 24 0 20 0;
+#X connect 23 0 20 0;
+#X connect 26 0 20 0;
 #X connect 27 0 20 0;

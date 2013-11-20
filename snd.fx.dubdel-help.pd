@@ -1,0 +1,23 @@
+#N canvas 114 44 650 547 10;
+#X obj 245 66 loadbang;
+#X text 274 239 feedback - delay feedback;
+#X text 275 265 bq - bandpass Q: resonance (default 2);
+#X text 272 128 basedur - base duration for delays;
+#X text 276 319 dry - amount of dry signal;
+#X text 277 337 dry=0 means fully wet (default);
+#X text 274 154 dell - delay divisor left.;
+#X text 274 168 Actual delay: basedur/dell;
+#X text 274 195 delr - delay divisor right.;
+#X text 274 209 Actual delay: basedur/delr;
+#X text 275 292 bandpass pitch in midi units (0-127);
+#X obj 147 403 dac~;
+#X obj 146 320 adc~;
+#X msg 245 93 dry 0.2 \, bq 2 \, basedur 1500 \, bpitch 83 \, feedback
+0.99 \, dell 2 \, delr 3 \,;
+#X obj 146 361 snd.fx.dubdel mydubdel;
+#X connect 0 0 13 0;
+#X connect 12 0 14 0;
+#X connect 12 1 14 1;
+#X connect 13 0 14 2;
+#X connect 14 0 11 0;
+#X connect 14 1 11 1;
