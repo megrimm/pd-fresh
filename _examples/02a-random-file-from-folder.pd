@@ -22,7 +22,7 @@
 #X obj 230 338 cyclone/sprintf %s/bvid;
 #X obj 230 385 print bvid;
 #X obj 70 213 file.filefolder;
-#X msg 82 132 path ../*;
+#X msg 82 132 open ../*;
 #X connect 1 0 21 1;
 #X connect 1 1 4 0;
 #X connect 2 0 21 0;

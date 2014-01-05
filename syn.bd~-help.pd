@@ -1,4 +1,4 @@
-#N canvas 78 79 861 733 10;
+#N canvas 73 49 861 733 10;
 #X obj 445 584 syn.bd~;
 #X obj 444 667 dac~;
 #X obj 217 368 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -17,7 +17,7 @@
 #X msg 596 362 cur \$1;
 #X floatatom 596 387 5 0 100 0 - - -;
 #X msg 596 409 dis \$1;
-#X floatatom 597 435 5 0 0 0 - - -;
+#X floatatom 597 435 5 0 100 0 - - -;
 #X msg 597 457 lop \$1;
 #X floatatom 599 481 5 0 100 0 - - -;
 #X msg 599 503 vol \$1;
@@ -25,18 +25,22 @@
 #X msg 81 287 \; pd dsp 1 \;;
 #X msg 231 245 1;
 #X msg 236 222 0;
-#N canvas 906 112 450 300 \$0-presets 1;
-#X obj 90 215 outlet;
-#X obj 88 115 sel 0 1 2 3;
-#X obj 90 75 inlet;
-#X msg 89 170 afq 40 \, efq 50 \, tim 25 \, att 8 \, dec 20 \, cur
-8 \, dis 4 \, lop 18 \, vol 80;
+#N canvas 939 57 485 387 \$0-presets 1;
+#X obj 39 328 outlet;
+#X obj 40 72 sel 0 1 2 3;
+#X obj 40 33 inlet;
+#X msg 40 127 afq 3 \, efq 22 \, tim 1 \, att 1 \, dec 1 \, cur 18
+\, dis 4 \, lop 18 \, vol 80;
+#X msg 66 169 afq 3 \, efq 16 \, tim 0 \, att 1 \, dec 70 \, cur 18
+\, dis 0 \, lop 18 \, vol 70;
 #X connect 1 0 3 0;
+#X connect 1 1 4 0;
 #X connect 2 0 1 0;
 #X connect 3 0 0 0;
+#X connect 4 0 0 0;
 #X restore 590 71 pd \$0-presets;
 #X obj 590 48 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X text 652 503 <-- volume;
 #X text 641 405 <-- distortion;
 #X text 646 454 <-- lowpass;

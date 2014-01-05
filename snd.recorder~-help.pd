@@ -1,0 +1,22 @@
+#N canvas 390 85 447 353 10;
+#X floatatom 37 200 5 0 0 0 - - -;
+#X obj 37 77 osc~ 350;
+#X obj 110 25 tgl 15 0 empty empty record 17 7 0 8 -262144 -1 -1 0
+1;
+#X obj 37 166 snd.recorder~;
+#X text 302 74 <-- does work;
+#X text 227 100 <-- doesnt work;
+#X obj 126 53 loadbang;
+#X msg 126 77 save /Users/megrimm/Desktop;
+#X msg 143 126 samprate 96000;
+#X obj 32 255 snd.recorder~ name-of-the-folder;
+#X msg 134 102 save ~/Desktop;
+#X text 241 125 <-- change sample rate;
+#X connect 1 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 3 2;
+#X connect 3 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 2;
+#X connect 8 0 3 2;
+#X connect 10 0 3 2;
