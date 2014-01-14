@@ -33,11 +33,15 @@
 \, dis 4 \, lop 18 \, vol 80;
 #X msg 66 169 afq 3 \, efq 16 \, tim 0 \, att 1 \, dec 70 \, cur 18
 \, dis 0 \, lop 18 \, vol 70;
+#X msg 82 207 afq 10 \, efq 10 \, tim 0 \, att 86 \, dec 100 \, cur
+100 \, dis 0 \, lop 8 \, vol 70;
 #X connect 1 0 3 0;
 #X connect 1 1 4 0;
+#X connect 1 2 5 0;
 #X connect 2 0 1 0;
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
+#X connect 5 0 0 0;
 #X restore 590 71 pd \$0-presets;
 #X obj 590 48 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
 -1 1;
