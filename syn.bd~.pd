@@ -1,4 +1,4 @@
-#N canvas 720 51 707 830 10;
+#N canvas 574 39 707 830 10;
 #X obj 67 385 osc~;
 #X obj 67 342 line~;
 #X obj 67 154 t b b;
@@ -6,7 +6,7 @@
 #X obj 94 309 f;
 #X obj 67 286 pack;
 #X obj 67 363 mtof~;
-#X obj 107 287 ftom;
+#X obj 109 287 ftom;
 #X obj 82 213 ftom;
 #X obj 67 459 *~;
 #X obj 104 426 lop~;

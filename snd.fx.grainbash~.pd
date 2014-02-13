@@ -2,28 +2,28 @@
 #X obj 101 118 cnv 15 510 150 empty empty value 100 13 2 17 -249659
 -83269 0;
 #X obj 172 143 hsl 100 12 0 1 0 0 \$0-pitch \$0-pitch-r pitch -45 7
-0 13 -13330 -262144 -4160 8900 1;
+0 13 -13330 -262144 -4160 8400 1;
 #X obj 280 143 hsl 100 12 0 1 0 0 \$0-pitch-rnd \$0-pitch-rnd-r random/jitter
--4 -12 2 17 -13330 -262144 -86853 1300 1;
+-4 -12 2 17 -13330 -262144 -86853 2300 1;
 #X obj 171 158 hsl 100 12 0 1 0 0 \$0-duration \$0-duration-r duration
--70 7 0 13 -13330 -262144 -4160 4500 1;
+-70 7 0 13 -13330 -262144 -4160 3800 1;
 #X obj 280 158 hsl 100 12 0 1 0 0 \$0-duration-rnd \$0-duration-rnd-r
-empty -2 -6 0 10 -13330 -262144 -1 3700 1;
+empty -2 -6 0 10 -13330 -262144 -1 200 1;
 #X obj 171 173 hsl 100 12 0 1 0 0 \$0-delay \$0-delay-r delay -45 7
 0 13 -13330 -262144 -4160 0 1;
 #X obj 280 173 hsl 100 12 0 1 0 0 \$0-delay-rnd \$0-delay-rnd-r empty
--2 -6 0 10 -13330 -262144 -1 1000 1;
+-2 -6 0 10 -13330 -262144 -1 0 1;
 #X obj 171 189 hsl 100 12 0 1 0 0 \$0-metro \$0-metro-r metro -45 7
-0 13 -13330 -262144 -4160 2800 1;
+0 13 -13330 -262144 -4160 900 1;
 #X obj 280 189 hsl 100 12 0 1 0 0 \$0-metro-rnd \$0-metro-rnd-r empty
--2 -6 0 10 -13330 -262144 -1 200 1;
+-2 -6 0 10 -13330 -262144 -1 1200 1;
 #X obj 500 143 hsl 100 12 0 1 0 0 \$0-envelope \$0-envelope-r empty
--2 -6 0 10 -13330 -262144 -1 900 1;
+-2 -6 0 10 -13330 -262144 -1 3800 1;
 #X text 529 168 envelope;
 #X obj 500 158 hsl 100 12 0 1 0 0 \$0-envelope-exp \$0-envelope-exp-r
-empty -2 -6 0 10 -13330 -262144 -1 0 1;
+empty -2 -6 0 10 -13330 -262144 -1 4100 1;
 #X obj 446 202 hradio 15 1 0 10 \$0-load \$0-load-r preset -45 7 0
-12 -175484 -262144 -1 7;
+12 -175484 -262144 -1 5;
 #X obj 506 183 bng 15 250 50 0 \$0-store rwiuytiuwytriu store 18 8
 0 10 -262144 -1 -1;
 #X obj 557 183 bng 15 250 50 0 \$0-save troiuyiurtyiutwr save 18 8
@@ -33,29 +33,29 @@ empty -2 -6 0 10 -13330 -262144 -1 0 1;
 #X text 127 32 delay line granulizer;
 #X text 136 48 hard.off@gmail.com;
 #X obj 171 204 hsl 100 12 0 1 0 0 \$0-vcf \$0-vcf-r filter -52 7 0
-13 -13330 -262144 -4160 3300 1;
+13 -13330 -262144 -4160 7800 1;
 #X obj 171 234 hsl 100 12 0 1 0 0 \$0-feedback \$0-feedback-r feedback
--68 7 0 13 -13330 -262144 -4160 7000 1;
+-68 7 0 13 -13330 -262144 -4160 1500 1;
 #X obj 388 234 hsl 100 12 0 1 0 0 \$0-feedback-time \$0-feedback-time-r
-empty -2 -6 0 10 -13330 -262144 -1 2300 1;
-#X obj 280 234 hsl 100 12 0 1 0 0 \$0-feedback-rnd \$0-feedback-rnd-r
 empty -2 -6 0 10 -13330 -262144 -1 0 1;
+#X obj 280 234 hsl 100 12 0 1 0 0 \$0-feedback-rnd \$0-feedback-rnd-r
+empty -2 -6 0 10 -13330 -262144 -1 700 1;
 #X text 385 218 feedback time;
 #X obj 280 203 hsl 100 12 0 1 0 0 \$0-vcf-rnd \$0-vcf-rnd-r empty -2
--6 0 10 -13330 -262144 -1 1300 1;
+-6 0 10 -13330 -262144 -1 0 1;
 #X obj 496 234 hsl 100 12 0 1 0 0 \$0-feedback-return \$0-feedback-return-r
-empty -2 -6 0 10 -13330 -262144 -1 300 1;
+empty -2 -6 0 10 -13330 -262144 -1 0 1;
 #X text 493 218 feedback return;
 #X obj 171 219 hsl 100 12 0 1 0 0 \$0-autopan \$0-autopan-r autopan
--60 7 0 13 -13330 -262144 -4160 6500 1;
+-60 7 0 13 -13330 -262144 -4160 2200 1;
 #X obj 280 219 hsl 100 12 0 1 0 0 \$0-autopan-rnd \$0-autopan-rnd-r
-empty -2 -6 0 10 -13330 -262144 -1 3700 1;
-#X obj 171 249 hsl 100 12 0 1 0 0 \$0-feedback-lfo \$0-feedback-lfo-r
-fb-lfo -52 7 0 13 -13330 -262144 -4160 5500 1;
-#X obj 280 249 hsl 100 12 0 1 0 0 \$0-feedback-lfo-rnd \$0-feedback-lfo-rnd-r
 empty -2 -6 0 10 -13330 -262144 -1 0 1;
+#X obj 171 249 hsl 100 12 0 1 0 0 \$0-feedback-lfo \$0-feedback-lfo-r
+fb-lfo -52 7 0 13 -13330 -262144 -4160 6700 1;
+#X obj 280 249 hsl 100 12 0 1 0 0 \$0-feedback-lfo-rnd \$0-feedback-lfo-rnd-r
+empty -2 -6 0 10 -13330 -262144 -1 4100 1;
 #X obj 388 249 hsl 100 12 0 1 0 0 \$0-feedback-lfo-depth \$0-feedback-lfo-depth-r
-empty -2 -6 0 10 -13330 -262144 -1 1100 1;
+empty -2 -6 0 10 -13330 -262144 -1 8100 1;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array \$0-env 100 float 0;
 #X coords 0 1 99 0 100 40 1;
@@ -463,7 +463,7 @@ empty -2 -6 0 10 -13330 -262144 -1 1100 1;
 #X connect 127 1 126 0;
 #X restore 437 394 pd code;
 #X obj 549 258 hsl 60 10 0 1 0 0 \$0-mix \$0-mix-r mix 17 -6 0 12 -16662
--262144 -4160 5900 1;
+-262144 -4160 1133 1;
 #X obj 67 452 *~;
 #X obj 94 452 *~;
 #X obj 227 363 r \$0-mix;
@@ -496,9 +496,10 @@ empty -2 -6 0 10 -13330 -262144 -1 1100 1;
 #X obj 720 572 snd.fx.grainbash~-ab 13 \$0 \$0-R;
 #X obj 735 591 snd.fx.grainbash~-ab 15 \$0 \$0-R;
 #X obj 687 100 inlet;
-#X obj 688 130 route mix;
 #X obj 689 202 s \$0-mix-r;
 #X obj 688 163 / 100;
+#X obj 728 176 s \$0-load-r;
+#X obj 688 130 route mix load;
 #X connect 33 0 36 0;
 #X connect 33 0 41 0;
 #X connect 37 0 38 0;
@@ -521,7 +522,8 @@ empty -2 -6 0 10 -13330 -262144 -1 1100 1;
 #X connect 54 0 55 0;
 #X connect 55 0 44 1;
 #X connect 55 0 45 1;
-#X connect 72 0 73 0;
-#X connect 73 0 75 0;
-#X connect 75 0 74 0;
+#X connect 72 0 76 0;
+#X connect 74 0 73 0;
+#X connect 76 0 74 0;
+#X connect 76 1 75 0;
 #X coords 0 -1 1 1 512 172 1 100 100;

@@ -5,6 +5,8 @@ we can include file names;
 ./hits/hit04.wav;
 ./hits/hit05.wav;
 or random lines;
-that all have to be;
-ended with a semi colon;
+that all\, have to be;
+ended with\, a semi colon;
+first\, word;
+\, first comma;
 

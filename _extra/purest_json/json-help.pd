@@ -1,0 +1,196 @@
+#N canvas 40 51 1402 726 10;
+#X obj 833 431 json-encode;
+#X obj 833 500 json-decode;
+#X obj 51 -13 json-encode;
+#X obj 51 15 json-decode;
+#X text 131 -12 - encodes data into a JSON string.;
+#X text 131 14 - decodes a JSON string to lists.;
+#X msg 814 69 add id 1;
+#X text 811 36 Will add key id and value of 1 to object;
+#X msg 856 99 add name Residuum;
+#X msg 882 153 add album Der Diskokeller des Grauens;
+#X text 882 125 This will add a string with the spaces intact to the
+JSON object;
+#X msg 902 184 add year 2011;
+#X msg 920 241 add id 2;
+#X text 917 214 adding a different value will overwrite the previously
+stored one;
+#X msg 646 375 clear;
+#X text 605 344 This will clear the object;
+#X text 962 275 output the value;
+#X msg 963 294 bang;
+#N canvas 85 51 453 402 nested-objects 0;
+#X obj -74 -56 json-encode;
+#X obj -74 2 json-decode;
+#X msg 104 -101 add name Residuum;
+#X msg -74 -103 bang;
+#X obj -8 -147 json-encode;
+#X msg -8 -181 add album Der Diskokeller des Grauens \, add year 2011
+\, bang \,;
+#X msg -8 -101 add newest \$1;
+#X obj -74 -274 bng 15 250 50 0 empty empty Click_to_create_a_nested_object
+17 7 0 10 -262144 -1 -1;
+#X obj -74 -244 t b b b;
+#X obj -74 42 print pair;
+#X obj -74 -30 t a a;
+#X obj -3 42 print decoding_done;
+#X obj 11 2 print JSON_string;
+#X connect 0 0 10 0;
+#X connect 1 0 9 0;
+#X connect 1 1 11 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 8 1 5 0;
+#X connect 8 2 2 0;
+#X connect 10 0 1 0;
+#X connect 10 1 12 0;
+#X restore 46 451 pd nested-objects;
+#X obj 833 458 t a a;
+#N canvas 312 51 693 648 about-decoded-json-strings 0;
+#X obj 218 -185 json-encode;
+#X obj 94 -86 json-decode;
+#X msg 218 -232 bang;
+#X obj 218 -382 bng 15 250 50 0 empty empty Click_to_create_an_object
+17 7 0 10 -262144 -1 -1;
+#X obj 218 -352 t b b b b;
+#X msg 269 -316 add duration 3000;
+#X obj 218 -159 t a a a;
+#X obj 255 -89 json-decode;
+#X obj 255 55 line;
+#X floatatom 255 88 5 0 0 0 - - -, f 5;
+#X msg 255 35 \$1 \, \$2 \$3;
+#X obj 255 -30 route start end duration;
+#X text 264 -110 wrong;
+#X obj 94 72 line;
+#X floatatom 94 105 5 0 0 0 - - -, f 5;
+#X obj 94 -29 route start end duration;
+#X text 105 -121 right;
+#X obj 94 -58 list trim;
+#X obj 255 -59 list trim;
+#X obj 255 13 pack 0 0 0;
+#X msg 252 -286 add start 100;
+#X msg 235 -255 add end 500;
+#X obj 79 1 f;
+#X obj 94 30 pack 0 0 0;
+#X msg 94 52 \$1 \, \$2 \$3;
+#X text -158 -255 This will give you a chance to wait for other data
+from the JSON object.;
+#X text -159 -337 You should not assume too much about the order of
+keys and values in a JSON object. In this example \, a JSON string
+is decoded to drive a [line] object from start to stop using [route]
+and [pack]. When using [pack] you should not feed the left-most inlet
+with data immediately \, but store a value \, e.g. in a [f] and bang
+the store \, with the right outlet of [json-decode] or [rest-json].
+;
+#X obj 303 -127 print JSON_string;
+#X connect 0 0 6 0;
+#X connect 1 0 17 0;
+#X connect 1 1 22 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 1 21 0;
+#X connect 4 2 20 0;
+#X connect 4 3 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 1 0;
+#X connect 6 1 7 0;
+#X connect 6 2 27 0;
+#X connect 7 0 18 0;
+#X connect 8 0 9 0;
+#X connect 10 0 8 0;
+#X connect 11 0 19 0;
+#X connect 11 1 19 1;
+#X connect 11 2 19 2;
+#X connect 13 0 14 0;
+#X connect 15 0 22 1;
+#X connect 15 1 23 1;
+#X connect 15 2 23 2;
+#X connect 17 0 15 0;
+#X connect 18 0 11 0;
+#X connect 19 0 10 0;
+#X connect 20 0 0 0;
+#X connect 21 0 0 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 13 0;
+#X restore 44 480 pd about-decoded-json-strings;
+#N canvas 44 51 450 465 json-arrays 0;
+#X obj 42 73 json-encode;
+#X msg 42 33 clear \, array storage textfile \, array storage couchdb
+\, array storage array \, bang;
+#X obj 42 154 json-decode;
+#X obj 42 112 t a a;
+#X text 49 11 This will construct a json array.;
+#X obj 42 191 list trim;
+#X obj 42 224 route storage;
+#X obj 42 288 json-decode;
+#X obj 42 255 t a a;
+#X obj 42 349 print decoded;
+#X obj 132 155 print JSON_object_string;
+#X obj 105 324 print array_member_done;
+#X obj 127 288 print JSON_array;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 3 1 10 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 7 0 9 0;
+#X connect 7 1 11 0;
+#X connect 8 0 7 0;
+#X connect 8 1 12 0;
+#X restore 50 542 pd json-arrays;
+#X text 46 401 [json-decode] treats json arrays as a series of objects.
+;
+#X obj 833 537 print decoded_values;
+#X obj 992 537 print decoding_done;
+#X obj 923 501 print JSON_string;
+#X obj 49 588 import purest_json;
+#X msg 967 343 write /tmp/test.json;
+#X msg 965 405 read test.json;
+#X text 965 324 write the content as JSON to a file;
+#X text 962 386 read data from a JSON file;
+#X text 46 46 [json-encode] has six methods: add \, array \, clear
+\, bang \, write and read.;
+#X text 46 112 array adds a new value to an array.;
+#X text 46 130 clear clears the internally stored object.;
+#X text 46 147 bang outputs the stored object as a JSON string.;
+#X text 46 74 add adds a new key/value pair to the internally stored
+object. If you call add with a value that is already a JSON string
+\, then the object will be added as a nested object.;
+#X text 46 165 read reads JSON data from a file. This file must contain
+exactly one JSON object \, as [json-encode] only stores one object
+internally.;
+#X text 46 203 write writes the internally stored data as JSON to a
+file.;
+#X obj 347 227 qlist;
+#X text 46 225 add \, read and write methods work analog to;
+#X text 44 253 [json-decode] will accept a JSON string at its input
+and will output the decoded object as a series of lists of key/value
+pairs. Boolean values of TRUE/FALSE will be translated to 1 or 0 \,
+float and integer values will be output as floats. Nested objects and
+arrays are output as strings \, that can be parsed. After the object
+is fully parsed \, the right outlet will issue a bang \, so that you
+can differenciate between subsequent objects. The messages will come
+as list key value.;
+#X connect 0 0 19 0;
+#X connect 1 0 23 0;
+#X connect 1 1 24 0;
+#X connect 6 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X connect 14 0 0 0;
+#X connect 17 0 0 0;
+#X connect 19 0 1 0;
+#X connect 19 1 25 0;
+#X connect 27 0 0 0;
+#X connect 28 0 0 0;

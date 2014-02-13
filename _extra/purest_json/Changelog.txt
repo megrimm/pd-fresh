@@ -1,0 +1,120 @@
+Changelog
+---------
+1.0.0:
+- Info for users while loading object
+- Bug fixes in [json-encode]:
+	-- array handling
+	-- number handling
+- Refactoring
+
+0.15.0:
+- Cancellation is now faster
+- Switch to json-c 0.11
+- Refactoring of code
+- Breaking changes:
+	-- [oauth] and [rest]:
+		* [write( method is now called [file(
+		* [url( method is now called [init(
+		* init errors only output to console
+		* changes to status outlet:
+			** on success output bang
+			** on HTTP error output numerical HTTP status
+			** on cURL error output list: error code and message
+	-- [rest-json] has been removed
+	-- [json-decode]:
+		* string values will not be checked for numbers or boolean
+
+0.14.0:
+- Downloading to file
+- Cancelling requests
+- Switch to libcurl multi interface
+
+0.13.0:
+- Setting HTTP headers possible
+- Cancelling of requests possible while waiting (experimental)
+- Switched Makefile to libary template 1.0.14
+- Semantic versioning
+
+0.12.1:
+- Bugfix: Cookie authentication is working again.
+
+0.12:
+- Disabling checking peer for SSL requests in [rest] and [oauth] possible
+- [urlparams] does now overwrite previously set parameters 
+- RSA-SHA1 signature possible, otherwise info message is posted to Pd console
+
+- Bugfixes:
+	-- SSL requests on Windows possible
+	-- regression fixed for PUT requests
+
+0.11:
+- symbols can be longer than MAXPDLENGTH (1024 characters)
+- [json-decode] works with lists and any other data type as well
+- Setting request timeout for [rest] and [oauth] possible
+
+- Bugfixes:
+	-- [oauth] posts data again
+	-- Fixed segfault in Windows at errors
+
+- Cleaning up of source code and help files
+
+0.10:
+- no version 0.10 due to problems in Pd (cuts off trailing 0)
+
+0.9:
+- [json-encode] writes and reads JSON data to and from files
+- [oauth] does not use deprecated functions from liboauth 1.0
+- [oauth] and [rest] share functions
+- [json-encode] and [urlparams] share functions
+- Bugfixes:
+	-- POST sends correct parameter data
+	-- HTTP errors are displayed with error code
+
+0.8:
+- Added objects: [oauth] [urlparams] [rest]
+- [rest-json] is now an abstraction
+- Bugfixes
+- Better examples and help patches
+
+0.7.1:
+- Unlocking [rest-json] when HTTP status is not 200.
+- Fix for segfault at json_object_put().
+
+0.7:
+- Cookie authentication, useful for CouchDB login
+- [rest-json] has a third outlet
+- Refactoring
+
+0.6:
+- Lots of bugfixes
+
+0.5:
+- Locking [rest-json] more restrictively
+- Makefile is now ready for packaging
+- Debian package is available
+
+0.4.1:
+- Hopefully fixed threading issues
+
+0.4:
+- Fixed cross-thread access to rest object
+- Fixed stack overflow issue of threads
+- Refactoring
+
+0.3:
+- Fixed memory leaks
+- Added manual
+
+0.2.1:
+- Added this Changelog
+
+0.2:
+- Renamed library to purest_json
+- Outputting nested JSON objects and arrays as strings
+- Outputting JSON arrays as a series of objects
+- Using threading for HTTP requests
+- Using Pd-extended library template
+
+0.1:
+- Basic operations for connection to CouchDB
+- Basic JSON encoding and decoding
