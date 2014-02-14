@@ -1,0 +1,62 @@
+#N canvas 576 59 1029 581 10;
+#X obj 129 230 pix_video;
+#X obj 122 283 pix_texture;
+#X msg 142 202 reset;
+#X obj 29 -38 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 29 -15 gems.win 640 480;
+#X obj 129 327 rectangle 5.33333 4;
+#X obj 129 255 gems.getsize;
+#X obj 198 303 * 4;
+#X obj 117 458 gems.write @file gems.write_example @type jped @quality
+90 @rate 75;
+#X obj 45 319 tgl 50 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X msg 44 393 record \$1;
+#X obj 664 204 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 586 118 5 0 0 0 - - -;
+#X obj 361 321 pix_texture;
+#X floatatom 524 353 5 0 0 0 - - -;
+#X obj 666 276 file.path.top;
+#X text 689 200 3rd inlets loads images. You can bang it or send it
+a file name.;
+#X text 629 113 Second inlet allows to go back to a previously entered
+image index. Images indices are sent by the right outlet on every time
+you load an image.;
+#X text 574 350 2nd outlet : number of images loaded;
+#X obj 609 168 r \$0coll;
+#X obj 354 290 gems.getsize;
+#X obj 460 318 * 4;
+#X text 678 165 You can also send almost any message you would send
+to [coll] with the 2dn inlet.;
+#X obj 359 255 gems.images;
+#X msg 665 227 images/img1.jpg;
+#X msg 690 251 images/img0.jpg;
+#X obj 361 350 rectangle 5.33333 4;
+#X obj 129 176 gemhead 2;
+#X obj 358 224 gemhead 1;
+#X connect 0 0 6 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 5 0 8 0;
+#X connect 6 0 1 0;
+#X connect 6 3 7 0;
+#X connect 7 0 5 1;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 23 2;
+#X connect 12 0 23 1;
+#X connect 13 0 26 0;
+#X connect 15 0 23 2;
+#X connect 19 0 23 1;
+#X connect 20 0 13 0;
+#X connect 20 3 21 0;
+#X connect 21 0 26 1;
+#X connect 23 0 20 0;
+#X connect 23 1 14 0;
+#X connect 24 0 15 0;
+#X connect 25 0 15 0;
+#X connect 27 0 0 0;
+#X connect 28 0 23 0;

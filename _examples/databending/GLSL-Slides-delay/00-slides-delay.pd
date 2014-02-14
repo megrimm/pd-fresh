@@ -1,0 +1,55 @@
+#N canvas 461 25 962 456 10;
+#X obj 46 90 gemwin 50;
+#X msg 64 56 destroy;
+#X obj 212 38 gemhead;
+#X obj 212 134 glsl_fragment;
+#X obj 212 246 glsl_program;
+#X obj 623 60 pix_video;
+#X obj 623 35 gemhead;
+#X obj 623 81 pix_resize;
+#X obj 623 183 tranche 0;
+#X obj 623 140 pix_contrast;
+#X floatatom 657 117 5 0 0 0 - - -;
+#X floatatom 692 117 5 0 0 0 - - -;
+#X msg 46 25 create \, 1;
+#X msg 287 155 link \$1;
+#X obj 271 38 loadbang;
+#X obj 212 382 square 4;
+#N canvas 673 101 398 229 infos 0;
+#X text 24 68 Pour le Labomedia http://labomedia.net;
+#X text 24 108 Dans le cadre des OpenAteliers http://openatelier.labomedia.net
+;
+#X text 24 14 Patch tisse par Olivier Baudu olivier-at-labomedia-dot-net
+http://yamatierea.org/papaths;
+#X text 24 150 Avec l'aide precieuse de Benjamin Cadon et Jack Boyer
+;
+#X text 24 180 2012 - Publie sous les termes de la licence GPL V3.0
+;
+#X restore 46 132 pd infos;
+#X msg 271 59 open slides-delay.frag;
+#X obj 623 204 tranche 1;
+#X obj 623 225 tranche 2;
+#X obj 623 246 tranche 3;
+#X obj 623 267 tranche 4;
+#X msg 281 299 Tex0 0 \, Tex1 1 \, Tex2 2 \, Tex3 3 \, Tex4 4;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 13 0;
+#X connect 4 0 15 0;
+#X connect 4 1 22 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 9 0;
+#X connect 8 0 18 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 1;
+#X connect 11 0 9 2;
+#X connect 12 0 0 0;
+#X connect 13 0 4 0;
+#X connect 14 0 17 0;
+#X connect 17 0 3 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 22 0 4 0;
