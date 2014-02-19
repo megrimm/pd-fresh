@@ -1,0 +1,45 @@
+#N canvas 733 98 590 478 10;
+#X declare -path ../rc-patches;
+#X text 327 374 danomatika.com | robotcowboy.com;
+#X text 328 359 2011 Dan Wilcox GPL v3;
+#X text 328 389 https://github.com/danomatika/rc-patches;
+#X obj 39 58 gemhead;
+#X obj 276 299 bng 15 250 50 0 empty empty finished 17 7 0 10 -262144
+-1 -1;
+#X obj 157 300 unpack f f f;
+#X floatatom 157 391 5 0 0 1 length_in_frames - -;
+#X floatatom 191 362 5 0 0 1 width - -;
+#X floatatom 226 333 5 0 0 1 height - -;
+#X obj 61 85 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X floatatom 118 203 5 0 0 1 framerate - -;
+#X floatatom 197 223 5 0 0 1 position - -;
+#X floatatom 276 240 5 0 0 1 loopsize_in_frames - -;
+#X msg 61 108 play \$1;
+#X text 17 14 a simple video player wrapper around [pix_film];
+#X text 265 56 includes framecounter and texture;
+#X text 337 97 creation args: file framerate play?;
+#X text 87 84 play the video clip?;
+#X text 242 138 open a video file;
+#X msg 106 168 texture quality 0;
+#X text 220 168 also accepts commands to the builtin [pix_texture]
+;
+#X text 192 433 render the video to a rectangle;
+#X obj 39 270 vid.player3 _samples/anim.mov 30 1;
+#X obj 439 310 vid.window;
+#X msg 89 138 open _samples/anim.mov;
+#X obj 39 434 vid.rect 200 200 400 300;
+#X connect 3 0 22 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 9 0 13 0;
+#X connect 10 0 22 1;
+#X connect 11 0 22 2;
+#X connect 12 0 22 3;
+#X connect 13 0 22 0;
+#X connect 19 0 22 0;
+#X connect 22 0 25 0;
+#X connect 22 1 5 0;
+#X connect 22 2 4 0;
+#X connect 24 0 22 0;
