@@ -1,0 +1,35 @@
+#N canvas 537 360 778 329 10;
+#X obj 49 46 gemhead;
+#X obj 174 37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 233 121 print;
+#X obj 520 100 pack 0 0;
+#X floatatom 518 54 5 0 0 0 - - -;
+#X obj 551 77 t b f;
+#X floatatom 552 54 5 0 0 0 - - -;
+#X msg 519 122 scale \$1 \$2;
+#X obj 606 99 pack 0 0;
+#X floatatom 604 53 5 0 0 0 - - -;
+#X obj 637 76 t b f;
+#X floatatom 638 53 5 0 0 0 - - -;
+#X msg 605 121 offset \$1 \$2;
+#X obj 174 63 gems.win @dimen 320 320;
+#X obj 29 255 teapot;
+#X obj 64 164 gems.glsl.shader @vertex orange2/CH06-brick.vert.txt
+@fragment orange2/CH06-brick.frag.txt;
+#X connect 0 0 15 0;
+#X connect 1 0 13 0;
+#X connect 2 0 15 1;
+#X connect 3 0 7 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 5 1 3 1;
+#X connect 6 0 5 0;
+#X connect 7 0 15 2;
+#X connect 8 0 12 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 10 1 8 1;
+#X connect 11 0 10 0;
+#X connect 12 0 15 2;
+#X connect 15 0 14 0;

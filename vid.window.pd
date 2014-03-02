@@ -1,26 +1,24 @@
-#N canvas 233 207 893 632 10;
+#N canvas 486 132 530 394 10;
 #X obj 69 135 spigot;
-#X obj 41 0 gemkeyboard;
-#X obj 41 29 sel 53;
+#X obj 86 2 gemkeyboard;
+#X obj 86 31 sel 53;
 #X obj 41 291 gemwin;
-#X obj 122 0 key;
-#X obj 122 31 sel 27;
+#X obj 41 1 key;
+#X obj 41 32 sel 27;
 #X obj 194 6 inlet;
 #X obj 165 111 == 0;
 #X obj 120 135 spigot 1;
-#X obj 77 63 == 0;
+#X obj 68 62 == 0;
 #X obj 41 63 f 1;
 #X msg 69 194 0 \, destroy \, reset \, cursor 0 \, border 0 \, fullscreen
 2 \, create \, 1;
 #X msg 41 170 0 \, destroy \, reset \, dimen 640 480 \, create \, 1
 ;
-#X msg 127 297 0 \, destroy \, reset \, border 0 \, dimen 1440 900
-\, offset 0 -51 \, create \, 1;
 #X text 262 4 (c)2012 \, megrimm;
 #X obj 41 94 select 1 0;
 #X msg 120 231 0 \, destroy \, reset \, border 0 \, menubar 0 \, cursor
 0 \, fullscreen 1 \, create \, 1;
-#N canvas 704 324 450 300 window-record 0;
+#N canvas 704 324 486 488 window-record 0;
 #X msg 65 365 record \$1;
 #X obj 261 189 pack f f;
 #X obj 279 159 t b f;
@@ -47,7 +45,7 @@
 #X floatatom 172 436 5 0 0 0 - - -;
 #X obj 183 281 r REC-FILE;
 #X obj 65 51 r REC-VIDEO;
-#X msg 183 347 file ../data/record.mov;
+#X msg 183 347 file 0.mov;
 #X connect 0 0 16 0;
 #X connect 1 0 4 2;
 #X connect 1 0 18 0;
@@ -76,7 +74,7 @@
 #X connect 22 0 15 0;
 #X connect 23 0 17 0;
 #X connect 24 0 16 0;
-#X restore 537 460 pd window-record;
+#X restore 263 41 pd window-record;
 #X connect 0 0 11 0;
 #X connect 1 0 2 0;
 #X connect 2 0 10 0;
@@ -85,14 +83,13 @@
 #X connect 6 0 7 0;
 #X connect 6 0 0 1;
 #X connect 7 0 8 1;
-#X connect 8 0 16 0;
+#X connect 8 0 15 0;
 #X connect 9 0 10 1;
 #X connect 10 0 9 0;
-#X connect 10 0 15 0;
+#X connect 10 0 14 0;
 #X connect 11 0 3 0;
 #X connect 12 0 3 0;
-#X connect 13 0 3 0;
-#X connect 15 0 12 0;
-#X connect 15 1 0 0;
-#X connect 15 1 8 0;
-#X connect 16 0 3 0;
+#X connect 14 0 12 0;
+#X connect 14 1 0 0;
+#X connect 14 1 8 0;
+#X connect 15 0 3 0;

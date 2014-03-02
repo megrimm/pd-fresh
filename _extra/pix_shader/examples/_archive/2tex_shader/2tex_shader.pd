@@ -1,0 +1,64 @@
+#N canvas 321 22 872 732 10;
+#X obj 101 157 gemwin;
+#X obj 190 178 gemhead;
+#X msg 290 279 read;
+#N canvas 16 329 450 300 init 0;
+#X obj 81 183 outlet;
+#X obj 81 143 loadbang;
+#X msg 81 163 dimen 320 240;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X restore 143 157 pd init;
+#X msg 101 135 create \, 1;
+#X msg 300 211 read;
+#X floatatom 460 358 5 0 1 0 - - -;
+#X msg 460 378 param amount \$1 \$1 \$1 \$1;
+#X obj 197 157 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 259 378 param tex1 1;
+#X msg 349 378 param tex0 2;
+#X obj 190 207 t b a a;
+#X obj 229 414 glsl.slab2 @vert v001.co2R.vert @frag v001.co2.additiveR.frag
+@dim 512 512 @param tex1 1 @param tex0 2;
+#X obj 111 579 pix_texture;
+#X obj 111 559 gemhead;
+#X obj 111 519 loadbang;
+#X msg 111 539 0;
+#X obj 111 610 rectangle 4 4;
+#X msg 168 559 mode 1;
+#X obj 168 538 loadbang;
+#X obj 229 233 glsl.film @file car.jpg @q 512 512 @auto 1 @rect 1 @txu
+1;
+#X obj 229 298 glsl.film @file fractal.jpg @q 512 512 @auto 1 @rect
+1 @txu 2;
+#X text 613 225 first image/movie (texunit 1);
+#X text 613 305 second image/movie (texunit 2);
+#X obj 259 358 cnv 15 15 15 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 350 357 cnv 15 15 15 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 443 358 cnv 15 15 15 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 295 129 load two images/movies then send tex messages and amount
+;
+#X connect 1 0 11 0;
+#X connect 2 0 21 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 20 0;
+#X connect 6 0 7 0;
+#X connect 7 0 12 0;
+#X connect 8 0 1 0;
+#X connect 9 0 12 0;
+#X connect 10 0 12 0;
+#X connect 11 0 14 0;
+#X connect 11 2 20 0;
+#X connect 12 0 13 1;
+#X connect 13 0 17 0;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 14 0;
+#X connect 18 0 13 0;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;
+#X connect 21 0 12 0;

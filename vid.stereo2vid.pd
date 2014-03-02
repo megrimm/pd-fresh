@@ -1,4 +1,4 @@
-#N canvas 61 291 559 563 10;
+#N canvas 61 291 476 417 10;
 #X obj 60 201 pix_texture;
 #X obj 59 222 rectangle 4 4;
 #X obj 60 178 pix_hsv2rgb;

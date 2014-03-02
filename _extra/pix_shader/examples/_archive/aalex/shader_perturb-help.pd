@@ -1,0 +1,72 @@
+#N canvas 651 41 880 352 10;
+#X obj 49 46 gemhead;
+#X obj 65 204 pix_texture;
+#X obj 174 37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 233 126 print;
+#X floatatom 453 257 5 0 0 0 - - -;
+#X obj 49 85 pix_video;
+#X obj 65 240 rectangle 4 3;
+#X floatatom 658 263 5 0 0 0 - - -;
+#X obj 451 151 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 655 238 line;
+#X obj 453 238 line;
+#X obj 174 63 gems.win @dimen 640 640;
+#X obj 449 193 random.f 0 20;
+#X obj 655 189 random.f 0 1;
+#X obj 499 85 count.iter 0 0.01;
+#X obj 516 58 metro 20;
+#X obj 519 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 518 99 5 0 0 0 - - -;
+#X msg 453 286 amplitude_x \$1 \, amplitude_y \$1;
+#X msg 658 286 frequency_x \$1 \, frequency_y \$1;
+#X msg 500 126 offset_x \$1 \, offset_y \$1;
+#X obj 377 28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 64 165 gems.glsl.shader @vertex shaders/default.vert @fragment
+shaders/perturb.frag;
+#X obj 553 145 vsl 15 128 0 40 0 0 empty empty empty 0 -9 0 10 -260097
+-1 -1 9600 1;
+#X obj 760 127 vsl 15 128 0 0.1 0 0 empty empty empty 0 -9 0 10 -260097
+-1 -1 3300 1;
+#X obj 450 168 metro 2000;
+#X obj 654 218 pack f f;
+#X obj 671 89 init.lf 2000;
+#X obj 452 216 pack f f;
+#X obj 670 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 693 50 5 0 0 0 - - -;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 2 0 11 0;
+#X connect 3 0 22 1;
+#X connect 4 0 18 0;
+#X connect 5 0 22 0;
+#X connect 7 0 19 0;
+#X connect 8 0 25 0;
+#X connect 9 0 7 0;
+#X connect 10 0 4 0;
+#X connect 12 0 28 0;
+#X connect 13 0 26 0;
+#X connect 14 0 17 0;
+#X connect 15 0 14 0;
+#X connect 16 0 15 0;
+#X connect 17 0 20 0;
+#X connect 18 0 22 2;
+#X connect 19 0 22 2;
+#X connect 20 0 22 2;
+#X connect 21 0 8 0;
+#X connect 22 0 1 0;
+#X connect 23 0 4 0;
+#X connect 24 0 7 0;
+#X connect 25 0 12 0;
+#X connect 25 0 13 0;
+#X connect 26 0 9 0;
+#X connect 27 0 26 1;
+#X connect 27 0 28 1;
+#X connect 27 0 25 1;
+#X connect 28 0 10 0;
+#X connect 29 0 27 0;
+#X connect 30 0 27 0;

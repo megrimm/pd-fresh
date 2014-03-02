@@ -1,0 +1,72 @@
+						# ######################### #
+						# ZOOOOOOOOOOOOOOMG!        #
+						# IM IN UR BETAZ            #
+						# DEFACIN UR CHANGELOGZ     #
+						# @#(&@#@#!@@!!!!)          #
+						# ######################### #
+
+
+Beta 2 -  10.12.2007
+
+	New 3D Shaders
+		
+		v001.3d.glyph.jxs				- Use texture as 2D animation cache, with frame blending on sequential frames.
+                                                                                                                                                                                  
+	New Single Channel Effects                                                                                                                                                    
+	                                                                                                                                                                              
+		v001.cartopol.jxs	   	   		- Cartesian to Polar coordinate transform.                                                                                                
+		v001.channelmixer.jxs	   		- Mix channels amounts - similar to Adobe Photoshops Channel Mixer.                                                                       
+		v001.invert.jxs			   		- Quick and simple color invert.                                                                                                          
+		v001.film-bleachbypass.jxs 		- Bleach Bypass film treatment.                                                                                                           
+		v001.film-lomo.jxs		   		- Lomo camera emulation with vignetting, contrast boosting and sharpness controls.                                                        
+		v001.film-technicolor1.jxs 		- Technicolor System 1 emulation. 2 Strip additive process.                                                                               
+		v001.film-technicolor2.jxs 		- Technicolor System 2 emulation. 2 Strip subtractive process.                                                                            
+		v001.film-technicolor3.jxs 		- Technicolor System 3 emulation. 3 Strip subtractive process.                                                                                        
+		v001.levels.jxs		   	   		- Photoshop style levels and curves control with texture LUT for speed.                                                                   
+		v001.lumaglyph.jxs	   	   		- Draw arbitrary glyphs based on incoming texture luma values.                                                                            
+		v001.pixelize.jxs	   	   		- Downsample spatial resolution.                                                                                                          
+		v001.poltocar.jxs	   	   		- Polar to Cartesian coordinate transform.                                                                                                
+		v001.stripes.jxs	   	   		- Mask image with colored stripes with rotation and mirroring of stripes with antialiased edges.                                          
+		v001.scanlines.jxs	   	   		- CRT-esque scan lines.                                                                                                                   
+		v001.tintlight.jxs	   	   		- Overlay mode tinting.                                                                                                                   
+
+	Updates/Bug fixes
+
+		v001.fader.jxs					- Updated for arbitrary color fading. No longer black or white. Now takes vec3 color input, and amount.
+		v001.3d.parallax.jxs 			- fixed a bug, parallax effect now works properly.
+		v001.blackandwhite.jxs 			- added lumacomponents variable to better control luma generation should source image be heavily tinted to one channel.
+
+		Updated help files to have fullscreen via escape key.
+		Updates overview to launch helpfiles.
+
+Beta 1 - Initial Release
+
+	Mixers
+
+		A/B Mixers with blend modes
+		A/B/Mask mixers
+
+	Video Effects:
+
+		Black and White
+		Clamp
+		Color Separator
+		Dent
+		Duotone
+		Exposure
+		Fader
+		Lighttunnel
+		Mirror
+		Pinch
+		Posterize
+		Shred
+		Stretch
+		Threshhold
+		Twirl
+	3D:
+
+		Normal Map
+		Parallax Map
+		Vertex Noise Distortion
+		Vertex Sin Distortion
+		Building Block Shader

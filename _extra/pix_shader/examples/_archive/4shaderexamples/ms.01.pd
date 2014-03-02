@@ -1,0 +1,38 @@
+#N canvas 522 43 662 554 10;
+#X obj 67 161 gemwin;
+#X msg 67 121 create \, 1;
+#X msg 97 141 destroy;
+#X obj 67 101 loadbang;
+#X obj 67 211 gemhead;
+#X obj 204 207 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 67 311 square;
+#X obj 67 291 color 1 1 1;
+#X msg 144 243 open ms.01.vert;
+#X msg 248 243 open ms.01.frag;
+#X obj 67 271 ms.glsl ms.01.vert ms.01.frag;
+#X obj 241 54 cnv 15 100 100 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 276 89 cnv 15 30 30 empty empty empty 20 12 0 14 -104052 -66577
+0;
+#X text 367 60 <-- that's what you should seee...;
+#X text 230 205 reload;
+#X obj 187 330 cnv 15 400 120 empty empty empty 20 12 0 14 -104052
+-66577 0;
+#X text 206 350 This simple shader draws a bluish texture and maps
+it to the attached object (square).;
+#X text 206 380 Every shader program consists of two parts \, a vertex
+shader and a fragment shader \, which have to be linked together in
+a glsl_program.;
+#X text 206 420 See the two files for some more details.;
+#X text 259 270 <-- (this is an abstraction);
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 10 0;
+#X connect 5 0 8 0;
+#X connect 5 0 9 0;
+#X connect 7 0 6 0;
+#X connect 8 0 10 1;
+#X connect 9 0 10 2;
+#X connect 10 0 7 0;

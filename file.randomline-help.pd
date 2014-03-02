@@ -1,11 +1,11 @@
 #N canvas 520 22 580 356 10;
 #X msg 71 247 set \$1;
-#X msg 71 269 first\\\,;
+#X msg 71 269 that;
 #X obj 70 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 157 87 loadbang;
 #X obj 70 145 file.randomline;
-#X symbolatom 90 198 25 0 0 0 - - -, f 25;
+#X symbolatom 90 198 25 0 0 0 - - -;
 #X obj 90 173 l2s;
 #X text 218 264 <-- This works for filenames;
 #X text 260 195 <-- This is for symbols with spaces;

@@ -1,0 +1,12 @@
+<jittershader name="ripples">
+	<param name="waveFreq" type="float" default="100" />
+	<param name="waveAmp" type="float" default="0.03" />
+	<param name="time" type="float" default="1" />
+	<language name="glsl" version="1.0">
+		<bind param="waveFreq" program="ripples" />
+		<bind param="waveAmp" program="ripples" />
+		<bind param="time" program="ripples" />
+		<program name="basic"   type="vertex"   source="sh_basic_vp.vert" />
+		<program name="ripples" type="fragment" source="ripples.frag" />
+	</language>
+</jittershader>

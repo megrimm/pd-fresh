@@ -1,0 +1,112 @@
+#N canvas 292 235 885 452 10;
+#X floatatom 27 322 10 20 20000 0 - - -;
+#X floatatom 227 325 5 0 200 0 - - -;
+#X obj 230 306 hsl 128 15 -12 12 0 0 empty bin-gain-set empty -2 -8
+0 10 -228856 -1 -1 6350 1;
+#X obj 30 304 hsl 128 15 -180 180 0 0 empty bin-angle-set empty -2
+-8 0 10 -228856 -1 -1 6350 1;
+#X obj 635 139 bng 15 250 50 0 bin_openfile empty open-sound-file 17
+7 0 12 -4034 -1 -1;
+#N canvas 884 52 294 244 init 0;
+#X msg 97 88 0;
+#X msg 64 150 \; pd dsp 1 \;;
+#X obj 31 -8 loadbang;
+#X obj 97 109 s bin-gain-set;
+#X obj 31 15 t b b b;
+#X msg 137 58 0;
+#X obj 137 79 s bin-angle-set;
+#X connect 0 0 3 0;
+#X connect 2 0 4 0;
+#X connect 4 0 1 0;
+#X connect 4 1 0 0;
+#X connect 4 2 5 0;
+#X connect 5 0 6 0;
+#X restore 759 66 pd init;
+#X obj 22 35 cnv 15 500 90 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 650 216 r bin;
+#X obj 27 360 s bin;
+#X obj 635 249 +binaural~;
+#N canvas 832 124 499 290 binaural 0;
+#X text 20 31 angle - This is where you set the position of the sound.
+The angle can be varied from -180 degrees to 180 degrees. 0 degrees
+is straight ahead \, 90 is to the right \, -90 is to the left \, 180
+and -180 are both directly behind the listener.;
+#X text 20 121 filter one/filter two - These buttons allow you to select
+between two binaural filter sets. filter one is derived from Bill Gardner
+and Keith Martin's measurements of the KEMAR dummy head microphone
+at the MIT Media Lab (http://sound.media.mit.edu/KEMAR.html). The diffuse-field
+equalized HRTFs are used in this plugin. filter two is the original
+SoundHack binaural filter developed by Dr. Durand Begault.;
+#X restore 675 45 pd binaural details;
+#X obj 635 286 dac~;
+#X msg 27 340 angle \$1;
+#X text 50 287 -180 to 180 degrees;
+#X msg 227 344 gain \$1;
+#X text 246 287 -12 to 12 dB;
+#X obj 418 324 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X msg 418 344 filterSet \$1;
+#X obj 27 245 line;
+#X obj 27 168 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 27 189 metro 2000;
+#X msg 27 210 -180 \, 180 2000;
+#X text 25 8 +binaural~;
+#X text 27 39 +binaural~ is a filter which places a sound at a specific
+position around the listener's head. It does this by using filters
+which simulate the filtering effect of the head and outer ear for sounds
+at all angles. The filters in +binaural~ are optimized for headphones
+and are only for 0 degree elevation at a 44100 sample rate.;
+#N canvas 135 177 667 386 bin_soundfile 0;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array bin_soundfile 188893 float 2;
+#X coords 0 1 188893 -1 200 140 1;
+#X restore 34 32 graph;
+#X obj 286 33 openpanel;
+#X obj 286 96 soundfiler;
+#X obj 286 181 phasor~ 0.5;
+#X obj 286 208 *~;
+#X obj 72 289 /;
+#X obj 72 242 t b f;
+#X obj 72 265 samplerate~;
+#X obj 286 274 outlet~;
+#X obj 72 219 r bin_filelength;
+#X obj 72 316 s bin_phasorfreq;
+#X obj 286 11 r bin_openfile;
+#X msg 286 64 read -resize -maxsize 2e+06 \$1 bin_soundfile;
+#X obj 286 121 s bin_filelength;
+#X obj 286 156 r bin_phasorfreq;
+#X obj 328 208 r bin_filelength;
+#X obj 286 232 tabread4~ bin_soundfile;
+#X connect 1 0 12 0;
+#X connect 2 0 13 0;
+#X connect 3 0 4 0;
+#X connect 4 0 16 0;
+#X connect 5 0 10 0;
+#X connect 6 0 7 0;
+#X connect 6 1 5 1;
+#X connect 7 0 5 0;
+#X connect 9 0 6 0;
+#X connect 11 0 1 0;
+#X connect 12 0 2 0;
+#X connect 14 0 3 0;
+#X connect 15 0 4 1;
+#X connect 16 0 8 0;
+#X restore 635 169 pd bin_soundfile;
+#X connect 0 0 12 0;
+#X connect 1 0 14 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X connect 7 0 9 0;
+#X connect 9 0 11 0;
+#X connect 9 1 11 1;
+#X connect 12 0 8 0;
+#X connect 14 0 8 0;
+#X connect 16 0 17 0;
+#X connect 17 0 8 0;
+#X connect 18 0 3 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 18 0;
+#X connect 24 0 9 0;

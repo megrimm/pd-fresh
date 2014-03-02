@@ -1,4 +1,4 @@
-#N canvas 579 24 601 499 10;
+#N canvas 704 44 601 499 10;
 #X floatatom 227 250 5 0 0 0 x - -;
 #X floatatom 261 280 5 0 0 0 y - -;
 #X floatatom 295 305 5 0 0 0 w - -;
@@ -34,6 +34,7 @@ center?;
 ;
 #X text 316 277 this object \, however does not ...;
 #X obj 193 392 vid.rect 20 20 100 100 corner;
+#X obj 100 467 vid.window;
 #X connect 0 0 25 1;
 #X connect 1 0 25 2;
 #X connect 2 0 25 3;

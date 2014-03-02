@@ -1,0 +1,45 @@
+#N canvas 669 34 625 378 10;
+#X declare -path abs;
+#X obj 65 204 pix_texture;
+#X obj 174 37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 233 126 print;
+#X floatatom 430 172 5 0 0 0 - - -;
+#X obj 65 140 pix_video;
+#X obj 65 228 rectangle 4 3;
+#X obj 174 63 gems.win @dimen 640 640;
+#X obj 431 35 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -260097
+-1 -1 0 1;
+#X obj 64 165 gems.glsl.shader @vertex shaders/default.vert @fragment
+shaders/lumagate.frag;
+#X obj 429 199 list.pak.2 0 1;
+#X msg 429 222 lum \$1 \$2;
+#X floatatom 505 174 5 0 0 0 - - -;
+#X obj 506 37 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -260097
+-1 -1 0 1;
+#X msg 276 128 reload;
+#X obj 273 338 rectangle 4 3;
+#X obj 269 288 gemhead 100;
+#X obj 70 88 gemhead 200;
+#X obj 274 313 colorRGB 0 1 0 1;
+#X obj 68 116 gems.alpha.mode 6 7;
+#X obj 273 268 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 129 329 declare -path abs;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 2 0 8 1;
+#X connect 3 0 9 0;
+#X connect 4 0 8 0;
+#X connect 7 0 3 0;
+#X connect 8 0 0 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 2;
+#X connect 11 0 9 1;
+#X connect 12 0 11 0;
+#X connect 13 0 8 1;
+#X connect 15 0 17 0;
+#X connect 16 0 18 0;
+#X connect 17 0 14 0;
+#X connect 18 0 4 0;
+#X connect 19 0 15 0;
