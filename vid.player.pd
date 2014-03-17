@@ -1,4 +1,4 @@
-#N canvas 501 96 868 761 10;
+#N canvas 151 43 868 761 10;
 #X obj 22 19 inlet;
 #X obj 318 681 outlet;
 #X obj 318 508 pix_film;

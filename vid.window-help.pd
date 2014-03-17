@@ -1,7 +1,8 @@
-#N canvas 699 34 467 280 10;
+#N canvas 764 22 467 280 10;
 #X obj 59 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X text 139 115 <-- ESC key puts window in/out of Fullscreen;
+#X text 185 115 <-- ESC key puts window in/out of Fullscreen;
 #X text 79 91 <-- fullscreen 1/2;
-#X obj 59 116 vid.window;
+#X obj 60 117 vid.window 1280 720;
+#X text 78 177 without creation arguments default is 640 x 480;
 #X connect 0 0 3 0;

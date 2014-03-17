@@ -1,34 +1,34 @@
-#N canvas 791 23 649 658 10;
-#X obj 32 20 gemhead;
-#X obj 31 554 pix_texture;
-#X msg 69 131 play;
-#X obj 293 21 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#N canvas 0 22 696 716 10;
+#X obj 42 30 gemhead;
+#X obj 41 564 pix_texture;
+#X msg 79 141 play;
+#X obj 303 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 134 552 <-- writes video to a texture;
-#X text 134 578 <-- write texture to a rectangle;
-#X text 418 49 <-- hit "esc" to open/resize window;
-#X text 322 20 <-- toggle for second monitor in fullscreen;
-#X text 263 104 <-- open a file and play immediately;
-#X text 86 18 <-- begins the rendering chain;
-#X text 110 129 <-- play / loop the file;
-#X msg 40 78 open;
-#X msg 57 106 open _samples/anim.mov \, play;
-#X obj 94 519 dac~;
-#X msg 80 154 stop;
-#X text 115 153 <-- stop the file/loop from playing;
-#X msg 93 199 loop \$1;
-#X obj 93 179 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text 144 562 <-- writes video to a texture;
+#X text 144 588 <-- write texture to a rectangle;
+#X text 428 59 <-- hit "esc" to open/resize window;
+#X text 332 30 <-- toggle for second monitor in fullscreen;
+#X text 273 114 <-- open a file and play immediately;
+#X text 96 28 <-- begins the rendering chain;
+#X text 120 139 <-- play / loop the file;
+#X msg 50 88 open;
+#X msg 67 116 open _samples/anim.mov \, play;
+#X obj 104 529 dac~;
+#X msg 90 164 stop;
+#X text 125 163 <-- stop the file/loop from playing;
+#X msg 103 209 loop \$1;
+#X obj 103 189 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 124 436 / 100;
-#X msg 105 245 slice \$1;
-#X obj 105 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 134 446 / 100;
+#X msg 115 255 slice \$1;
+#X obj 115 235 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 143 197 <-- loop the file indefinitely;
-#X text 168 242 <-- random loop slicer;
-#X msg 123 271 30;
-#X msg 133 293 40;
-#X msg 124 459 jump \$1;
-#X text 172 277 <-- just to a point (by % of sample length);
+#X text 153 207 <-- loop the file indefinitely;
+#X text 178 252 <-- random loop slicer;
+#X msg 133 281 30;
+#X msg 143 303 40;
+#X msg 134 469 jump \$1;
+#X text 182 287 <-- just to a point (by % of sample length);
 #N canvas 1088 349 320 360 sequencer 0;
 #X obj 71 112 sel 0 1 2 3 4 5 6 7;
 #X floatatom 123 18 5 0 0 0 - - -;
@@ -69,8 +69,8 @@
 #X connect 13 0 7 0;
 #X connect 14 0 7 0;
 #X connect 15 0 7 0;
-#X restore 147 397 pd sequencer;
-#X obj 147 377 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 157 407 pd sequencer;
+#X obj 157 387 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 140 267 267 266 metrojump 0;
 #X obj -1166 127 f;
@@ -95,28 +95,28 @@
 #X connect 7 0 5 0;
 #X connect 9 0 3 0;
 #X connect 10 0 0 1;
-#X restore 144 334 pd metrojump;
-#X obj 144 316 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 154 344 pd metrojump;
+#X obj 154 326 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 30 609 (c)2013 \, megrimm;
-#X floatatom 149 356 5 0 0 0 - - -;
-#X obj 405 414 loadbang;
-#X msg 405 438 \; pd dsp 1 \;;
-#X obj 31 489 vid.player~;
-#X obj 234 382 + 1;
-#X obj 234 342 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 40 619 (c)2013 \, megrimm;
+#X floatatom 159 366 5 0 0 0 - - -;
+#X obj 415 424 loadbang;
+#X msg 415 448 \; pd dsp 1 \;;
+#X obj 41 499 vid.player~;
+#X obj 244 392 + 1;
+#X obj 244 352 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 234 361 random 1000;
-#X obj 234 404 / 10;
-#X obj 31 580 rectangle 7.11 4;
-#X msg 213 311 2500;
-#X msg 247 311 3500;
-#X obj 353 332 snd.bonk~;
-#X obj 353 310 adc~;
-#X obj 353 372 spigot;
-#X obj 386 353 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 244 371 random 1000;
+#X obj 244 414 / 10;
+#X obj 41 590 rectangle 7.11 4;
+#X msg 223 321 2500;
+#X msg 257 321 3500;
+#X obj 363 342 snd.bonk~;
+#X obj 363 320 adc~;
+#X obj 363 382 spigot;
+#X obj 396 363 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 293 48 vid.window 720 480;
+#X obj 303 58 vid.window 720 480;
 #X connect 0 0 35 0;
 #X connect 1 0 40 0;
 #X connect 2 0 35 0;
