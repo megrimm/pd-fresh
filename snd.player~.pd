@@ -1,4 +1,4 @@
-#N canvas 369 137 950 678 10;
+#N canvas 218 96 950 678 10;
 #X obj 304 361 vline~;
 #X obj 304 420 tabread4~ \$0-soundfile;
 #X obj 304 611 outlet~;
@@ -26,15 +26,15 @@
 #X text 524 636 (c)2012 \, megrimm;
 #X obj 319 561 vline~;
 #X obj 304 590 *~;
-#X obj 381 308 delay;
+#X obj 381 320 delay;
 #X obj 600 611 outlet;
-#X obj 381 331 s \$0-vlineend;
+#X obj 381 343 s \$0-vlineend;
 #X obj 600 584 r \$0-vlineend;
 #X obj 318 59 r \$0-vlineend;
 #X obj 318 124 spigot;
 #X obj 351 79 r \$0-loop;
 #X obj 320 284 r \$0-stop;
-#X obj 420 307 s \$0-vlinetrig;
+#X obj 420 319 s \$0-vlinetrig;
 #X obj 319 443 r \$0-vlinetrig;
 #X obj 366 514 delay;
 #X obj 413 484 r \$0-stop;
@@ -111,6 +111,12 @@
 #X obj 547 121 r \$0-slicenums;
 #X obj 834 69 list append \$1;
 #X obj 834 92 sel 0;
+#X obj 92 359 r \$0-millsecs;
+#X obj 92 447 f;
+#X obj 92 472 / 1;
+#X floatatom 122 387 5 0 0 0 - - -;
+#X obj 122 412 t b f;
+#X floatatom 92 494 10 0 0 0 - - -;
 #X connect 0 0 1 0;
 #X connect 0 0 18 0;
 #X connect 1 0 26 0;
@@ -223,3 +229,9 @@
 #X connect 109 0 105 0;
 #X connect 110 0 111 0;
 #X connect 111 1 40 0;
+#X connect 112 0 113 0;
+#X connect 113 0 114 0;
+#X connect 114 0 117 0;
+#X connect 115 0 116 0;
+#X connect 116 0 113 0;
+#X connect 116 1 114 1;

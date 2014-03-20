@@ -1,0 +1,36 @@
+#N canvas 193 90 616 470 10;
+#X obj 113 425 dac~;
+#X obj 112 31 adc~;
+#X floatatom 200 300 5 0 0 0 - - -;
+#X obj 200 165 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5461 1;
+#X obj 200 102 loadbang;
+#X msg 200 136 43;
+#X obj 410 159 vsl 15 128 0 600 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6350 1;
+#X floatatom 411 305 5 0 0 0 - - -;
+#X msg 235 136 300;
+#X text 226 196 <-- Sensitivity;
+#X text 225 211 (adjust to your fingers;
+#X text 227 225 or to your instrument);
+#X text 331 263 Attack -->;
+#X msg 498 137 \; pd dsp 1 \;;
+#X msg 200 322 sens \$1;
+#X msg 409 334 attack \$1;
+#X obj 498 111 loadbang;
+#X obj 113 357 snd.fx.volattack~;
+#X connect 1 0 17 0;
+#X connect 1 1 17 0;
+#X connect 2 0 14 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 0 8 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 15 0;
+#X connect 8 0 6 0;
+#X connect 14 0 17 1;
+#X connect 15 0 17 1;
+#X connect 16 0 13 0;
+#X connect 17 0 0 0;
+#X connect 17 0 0 1;
