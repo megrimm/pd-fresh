@@ -1,4 +1,4 @@
-#N canvas 392 128 528 608 10;
+#N canvas 414 136 528 608 10;
 #X floatatom 85 266 5 0 100 0 - - -;
 #X floatatom 28 353 5 0 0 0 - - -;
 #X text 124 265 Percentage To Pass;
@@ -8,7 +8,7 @@
 #X obj 139 375 r bass_ctl;
 #X msg 146 406 reset;
 #X obj 83 433 bassemu~/bassemu~;
-#X floatatom 48 226 5 0 0 0 - - -;
+#X floatatom 40 275 5 0 0 0 - - -;
 #N canvas 0 22 825 583 synthcontrols 0;
 #X text 169 89 CutOff;
 #X text 223 89 Reso;
@@ -118,7 +118,7 @@
 -1 -1 4800 1;
 #X obj 62 237 i;
 #X obj 78 47 vsl 25 129 -1 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 5900 1;
+-1 -1 9700 1;
 #X obj 88 237 i;
 #X obj 104 47 vsl 25 129 -1 127 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 3600 1;
@@ -167,7 +167,7 @@
 #X text 136 3 BPM;
 #X text 393 2 Run;
 #X obj 483 234 == 1;
-#X obj 0 19 tgl 25 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1;
+#X obj 0 19 tgl 25 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1;
 #X obj 26 19 tgl 25 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 52 19 tgl 25 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
@@ -188,7 +188,7 @@
 ;
 #X obj 260 19 tgl 25 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
-#X obj 286 19 tgl 25 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+#X obj 286 19 tgl 25 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
 ;
 #X obj 312 19 tgl 25 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;

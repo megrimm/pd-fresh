@@ -18,7 +18,7 @@
 1;
 #X msg 151 201 jump \$1;
 #X floatatom 151 180 5 0 0 0 - - -;
-#X obj 99 241 num.linepause 200 1000;
+#X obj 99 241 num.linex 200 1000;
 #X connect 0 0 1 0;
 #X connect 2 0 15 0;
 #X connect 3 0 4 0;

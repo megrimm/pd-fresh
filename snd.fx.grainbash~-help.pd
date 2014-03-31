@@ -1,4 +1,4 @@
-#N canvas 103 22 655 471 10;
+#N canvas 138 49 655 471 10;
 #X obj 283 425 dac~;
 #N canvas 0 22 546 426 ezplay 0;
 #X obj -31 141 tabplay~ \$0-sample;
@@ -41,8 +41,16 @@
 #X coords 0 -1 1 1 90 60 1 100 100;
 #X restore 273 26 pd ezplay;
 #X obj 46 214 snd.fx.grainbash~;
+#X msg 547 160 random \$1;
+#X msg 544 106 1000;
+#X msg 503 101 0;
+#X msg 596 107 5000;
 #X connect 1 0 2 0;
 #X connect 1 0 2 1;
 #X connect 2 0 0 0;
 #X connect 2 1 0 1;
+#X connect 3 0 2 2;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
 #X coords 0 0 1 1 400 140 0;

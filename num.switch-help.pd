@@ -1,0 +1,30 @@
+#N canvas 259 304 330 323 10;
+#X obj 97 69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X floatatom 40 119 5 0 0 0 - - -;
+#X floatatom 40 21 5 0 0 0 - - -;
+#X floatatom 68 43 5 0 0 0 - - -;
+#X floatatom 97 117 5 0 0 0 - - -;
+#X obj 41 183 metro 500;
+#X obj 41 160 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 98 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 98 252 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 41 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 41 229 num.switch;
+#X text 118 87 <--switch between two sources;
+#X text 119 226 <-- create a gate;
+#X obj 40 91 num.switch;
+#X connect 0 0 13 2;
+#X connect 2 0 13 0;
+#X connect 3 0 13 1;
+#X connect 5 0 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 10 2;
+#X connect 10 0 9 0;
+#X connect 10 1 8 0;
+#X connect 13 0 1 0;
+#X connect 13 1 4 0;

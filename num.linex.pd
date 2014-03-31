@@ -6,7 +6,7 @@
 #X msg 365 358 stop;
 #X obj 365 318 r \$0-pause;
 #X obj 353 98 s \$0-length;
-#X obj 410 76 s \$0-time;
+#X obj 430 98 s \$0-time;
 #X obj 368 457 s \$0-position;
 #X obj 354 390 line 0 10;
 #X obj 377 147 r \$0-position;
@@ -36,7 +36,7 @@
 #X obj 100 208 sel 0;
 #X obj 100 250 s \$0-update;
 #X obj 137 186 del 10;
-#X obj 444 10 loadbang;
+#X obj 424 31 loadbang;
 #X obj 353 55 unpack 0 0;
 #X msg 408 358 0;
 #X obj 62 273 s \$0-stop;
@@ -54,9 +54,10 @@
 #X obj 25 55 route start stop pause speed loop jump;
 #X obj 469 545 r \$0-loop;
 #X obj 469 566 == 0;
-#X obj 444 45 f \$1;
-#X obj 482 45 f \$2;
+#X obj 424 55 f \$1;
+#X obj 458 55 f \$2;
 #X obj 424 587 spigot 1;
+#X text 73 636 (c)2014 \, megrimm;
 #X connect 0 0 38 0;
 #X connect 3 0 52 0;
 #X connect 4 0 9 0;
