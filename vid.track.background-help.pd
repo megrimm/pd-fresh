@@ -6,8 +6,8 @@
 #X obj 164 165 loadbang;
 #X msg 164 186 0.2;
 #X msg 165 246 refframe \$1;
-#X floatatom 39 452 5 0 0 0 - - -;
-#X floatatom 97 415 5 0 0 0 - - -;
+#X floatatom 78 440 5 0 0 0 - - -;
+#X floatatom 117 413 5 0 0 0 - - -;
 #X msg 177 303 onoff \$1;
 #X msg 177 276 1;
 #X msg 213 277 0;
@@ -16,8 +16,8 @@
 #X text 200 131 <-- reset the background;
 #X floatatom 156 364 5 0 0 0 - - -;
 #X text 194 363 <-- blob size;
-#X text 136 414 <-- Y axis;
-#X text 79 452 <-- X axis;
+#X text 156 412 <-- Y axis;
+#X text 118 440 <-- X axis;
 #X obj 35 23 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X text 116 47 <-- ESC key puts window in/out of Fullscreen;
@@ -33,6 +33,8 @@
 #X obj 39 340 vid.track.background;
 #X obj 35 48 vid.window;
 #X msg 431 393 open _samples/dummy.wav \, 1;
+#X obj 39 474 pix_texture;
+#X obj 39 495 rectangle 5.5 4;
 #X connect 0 0 29 0;
 #X connect 1 0 29 1;
 #X connect 2 0 5 0;
@@ -50,7 +52,9 @@
 #X connect 24 0 25 0;
 #X connect 24 0 25 1;
 #X connect 26 0 27 0;
-#X connect 29 0 6 0;
-#X connect 29 1 7 0;
-#X connect 29 2 14 0;
+#X connect 29 0 32 0;
+#X connect 29 1 6 0;
+#X connect 29 2 7 0;
+#X connect 29 3 14 0;
 #X connect 31 0 24 0;
+#X connect 32 0 33 0;
