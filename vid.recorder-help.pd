@@ -1,1 +1,2 @@
 #N canvas 0 22 450 300 10;
+#X obj 138 157 vid.recorder;

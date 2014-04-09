@@ -1,0 +1,22 @@
+#N canvas 667 233 761 603 12;
+#X obj 71 245 beat 4;
+#X obj 71 222 makenote 60 60;
+#X msg 71 196 60;
+#X obj 35 155 fiddle~ 1024 1 20 3;
+#X text 197 151 fiddle~ outputs a bang whenever it thinks a new note
+arrived \, just use this bang to create a faked midi note using makenote
+and feed this data into beat...;
+#X msg 210 222 reset;
+#X obj 20 10 inlet~;
+#X obj 87 424 outlet;
+#X obj 209 434 outlet;
+#X obj 328 418 outlet;
+#X connect 0 0 7 0;
+#X connect 0 1 8 0;
+#X connect 0 2 9 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 1 0;
+#X connect 3 1 2 0;
+#X connect 5 0 0 0;
+#X connect 6 0 3 0;
