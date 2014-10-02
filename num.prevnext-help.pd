@@ -12,6 +12,9 @@
 #X text 142 116 <-- set lowest value;
 #X text 158 141 <-- set highest value;
 #X text 175 178 <-- also takes min/max creation arg;
+#X obj 69 256 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 13 0;
 #X connect 1 0 7 0;
 #X connect 2 0 7 0;
 #X connect 3 0 7 0;
