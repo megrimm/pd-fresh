@@ -1,0 +1,16 @@
+#N canvas 464 447 555 336 10;
+#X msg 80 40 17400;
+#X msg 92 66 8000;
+#X obj 63 175 dac~;
+#X msg 340 195 \; pd dsp 1 \;;
+#X obj 340 167 loadbang;
+#X obj 157 170 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 63 102 osc~ 17400;
+#X text 134 98 "The Mosquito" has two frequency settings \, one of
+approximately 17.4 kHz[4] that can generally be heard only by young
+people \, and another at 8 kHz that can be heard by most people.;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 4 0 3 0;
+#X connect 6 0 2 0;
+#X connect 6 0 2 1;

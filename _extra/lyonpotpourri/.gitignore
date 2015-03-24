@@ -1,7 +1,0 @@
-*.o
-# Mac OS X
-*.dylib
-# GNU/Linux
-*.so
-# Windows
-

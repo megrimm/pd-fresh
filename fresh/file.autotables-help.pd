@@ -1,0 +1,5 @@
+#N canvas 12 455 450 300 10;
+#X msg 148 65 50;
+#X obj 148 117 file.autotables;
+#X text 194 65 number of tables you need;
+#X connect 0 0 1 0;
