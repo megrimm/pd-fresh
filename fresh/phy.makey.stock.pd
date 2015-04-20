@@ -38,9 +38,9 @@
 #X obj 232 64 sel 119 97 115 100 102 103;
 #X obj 457 26 keyname;
 #X obj 457 63 sel 0;
-#X obj 463 508 MouseState;
-#X text 536 510 <-- replace vanilla?;
-#X text 458 530 Anyway to get mousestates makeys?;
+#X obj 283 492 MouseState;
+#X text 356 494 <-- replace vanilla?;
+#X text 278 514 Anyway to get mousestates makeys?;
 #X obj 496 156 s \$0-arrows;
 #X obj 139 636 r \$0-arrows;
 #N canvas 892 394 293 331 once 0;
@@ -100,6 +100,10 @@
 #X obj 82 481 r \$0-symbol-Space;
 #X text 537 182 Left Right Up Down Space;
 #X text 459 679 (c)2012 \, megrimm;
+#X obj 280 562 keyup;
+#X text 324 562 <-- to to turn sounds off;
+#X text 276 600 NOTE: To stop infinite repeating keys turn key repeat
+off in system prefernces and use keyup to turn off;
 #X connect 0 0 29 0;
 #X connect 2 0 36 0;
 #X connect 3 0 11 0;

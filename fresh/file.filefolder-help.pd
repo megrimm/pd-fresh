@@ -3,24 +3,32 @@
 #X msg 66 80 bang;
 #X floatatom 153 297 5 0 0 0 - - -, f 5;
 #X floatatom 153 381 5 0 0 0 - - -, f 5;
-#X msg 114 196 getdir;
-#X text 167 193 <-- if the abstraction is in a differnt place than
-the main patch this will get the main patch directory;
-#X text 227 135 <-- loads files in a path relative to patch;
+#X msg 129 232 getdir;
+#X text 242 167 <-- loads files in a path relative to patch;
 #X text 106 76 <-- prints contents loaded;
 #X text 198 296 <-- output line number;
 #X text 198 382 <-- number of lines read;
 #X msg 76 107 open;
-#X msg 102 164 open ~/Desktop/* \, bang;
+#X msg 117 200 open ~/Desktop/* \, bang;
 #X obj 66 324 file.filefolder;
-#X msg 122 228 add /avid;
-#X msg 89 138 open _samples/*.wav;
-#X connect 1 0 12 0;
-#X connect 2 0 12 1;
-#X connect 4 0 12 0;
-#X connect 10 0 12 0;
-#X connect 11 0 12 0;
-#X connect 12 0 0 0;
-#X connect 12 1 3 0;
-#X connect 13 0 12 0;
-#X connect 14 0 12 0;
+#X msg 137 264 add /avid;
+#X msg 104 170 open _samples/*.wav;
+#X msg 90 136 size;
+#X msg 51 31 open _samples/*.wav \, size \, bang;
+#X text 182 229 <-- if the abstraction is in a differnt place than
+the main patch this will get the main patch directory (NOT WORKING)
+;
+#X text 263 200 <-- NOT WORKING;
+#X text 209 265 <-- NOT WORKING;
+#X text 125 137 <-- get number of files read;
+#X text 116 105 <-- open file from panel;
+#X connect 1 0 11 0;
+#X connect 2 0 11 1;
+#X connect 4 0 11 0;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 0;
+#X connect 15 0 11 0;

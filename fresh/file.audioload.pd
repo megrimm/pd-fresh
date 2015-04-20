@@ -1,0 +1,28 @@
+#N canvas 580 23 502 471 10;
+#X obj 140 321 outlet;
+#X obj 140 298 soundfiler;
+#X obj 140 26 inlet;
+#X msg 140 276 read -resize \$1 \$2-left \$2-right;
+#X obj 212 230 + 1;
+#X obj 140 134 t s b;
+#X obj 185 229 f;
+#X obj 198 179 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 140 255 pack s 0;
+#X msg 239 176 0;
+#X obj 140 67 route reset;
+#X msg 201 29 bang;
+#X connect 1 0 0 0;
+#X connect 2 0 10 0;
+#X connect 3 0 1 0;
+#X connect 4 0 6 1;
+#X connect 5 0 8 0;
+#X connect 5 1 6 0;
+#X connect 6 0 4 0;
+#X connect 6 0 8 1;
+#X connect 7 0 6 0;
+#X connect 8 0 3 0;
+#X connect 9 0 6 1;
+#X connect 10 0 9 0;
+#X connect 10 1 5 0;
+#X connect 11 0 10 0;

@@ -1,0 +1,17 @@
+#N canvas 522 23 450 300 10;
+#X obj 193 162 file.audioload;
+#X obj 197 53 text define -k sample-list;
+#A set _samples/amen.wav \; _samples/dummy.wav \; _samples/satie.wav
+\;;
+#X obj 197 29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 56 126 print;
+#X obj 57 94 text get sample-list;
+#X floatatom 59 57 5 0 0 0 - - -, f 5;
+#X obj 241 249 file.autotables;
+#X msg 248 209 3;
+#X connect 2 0 1 0;
+#X connect 4 0 3 0;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
+#X connect 7 0 6 0;

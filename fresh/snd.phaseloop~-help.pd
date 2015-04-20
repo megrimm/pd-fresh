@@ -1,0 +1,7 @@
+#N canvas 145 275 500 429 10;
+#X obj 152 196 table table-name;
+#X floatatom 227 80 5 0 0 0 - - -, f 5;
+#X floatatom 212 152 20 0 0 0 - - -, f 20;
+#X obj 65 128 snd.phaseloop~ table-name;
+#X connect 1 0 3 1;
+#X connect 3 1 2 0;
