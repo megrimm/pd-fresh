@@ -1,0 +1,12 @@
+#N canvas 0 22 477 224 10;
+#X obj 145 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 147 136 5 0 0 0 - - -, f 5;
+#X obj 245 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 138 88 fresh/num.counter 3;
+#X text 145 15 a simple number counter;
+#X text 265 85 <-- needs a create argument;
+#X connect 0 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 1 0;
