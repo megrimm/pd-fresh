@@ -1,0 +1,19 @@
+#N canvas 0 23 368 312 10;
+#X obj 77 215 *~;
+#X obj 65 247 dac~;
+#X obj 106 185 line~;
+#X msg 106 159 \$1 10;
+#X obj 106 133 pow 4;
+#X obj 77 61 inlet~;
+#X obj 153 98 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -163060
+-1 -1 0 1;
+#X text 137 104 ganho;
+#X obj 130 61 inlet;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 0 1;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 0;
+#X connect 8 0 4 0;

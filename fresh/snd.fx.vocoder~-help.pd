@@ -1,19 +1,27 @@
-#N canvas 555 183 385 328 10;
+#N canvas 548 180 385 328 10;
 #X obj 35 250 dac~;
 #X obj 46 140 adc~;
-#X obj 259 96 vsl 10 64 0 100 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2500 1;
-#X msg 259 168 squelch \$1;
+#X obj 267 84 vsl 10 64 0 100 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4800 1;
+#X msg 267 161 squelch \$1;
 #X text 44 27 Basic vocoder ('timbre stamp') based on Pd help patch
 3.audio.examples/I09.timbre.stamp.pd.;
-#X obj 135 158 phasor~ 150;
-#X obj 138 133 phasor~ 200;
 #X obj 46 198 snd.fx.vocoder~ 30;
-#X connect 1 0 7 0;
-#X connect 1 1 7 0;
+#X floatatom 98 104 0 0 0 0 - - -;
+#X obj 98 128 sig~ 200;
+#X obj 98 153 phasor~;
+#X floatatom 168 103 0 0 0 0 - - -;
+#X obj 168 127 sig~ 150;
+#X obj 168 153 phasor~;
+#X connect 1 0 5 0;
+#X connect 1 1 5 0;
 #X connect 2 0 3 0;
-#X connect 3 0 7 2;
-#X connect 5 0 7 1;
-#X connect 6 0 7 1;
-#X connect 7 0 0 0;
-#X connect 7 0 0 1;
+#X connect 3 0 5 2;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 1;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 5 1;

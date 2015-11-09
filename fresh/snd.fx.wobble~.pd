@@ -46,6 +46,7 @@
 #X obj 234 35 route bpm glide tone wobble;
 #X obj 165 13 inlet;
 #X obj 24 17 inlet~;
+#X obj 253 82 s \$0-bpm;
 #X connect 0 0 42 0;
 #X connect 1 0 10 0;
 #X connect 2 0 3 0;

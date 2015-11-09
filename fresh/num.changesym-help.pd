@@ -5,7 +5,7 @@
 #X msg 183 59 XYZ;
 #X obj 151 162 print CHANGED?;
 #X text 147 28 [change] for symbols;
-#X obj 151 127 num.changesym ABC;
+#X obj 151 127 fresh/num.changesym ABC;
 #X connect 0 0 6 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;

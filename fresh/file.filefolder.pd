@@ -1,4 +1,4 @@
-#N canvas 691 59 458 785 10;
+#N canvas 691 59 376 767 10;
 #X obj 36 38 inlet;
 #X obj 34 711 outlet;
 #X obj 36 339 symbol;
@@ -11,7 +11,7 @@
 #X obj 202 66 s \$0-gotothis;
 #X obj 63 387 s \$0-clearmsg;
 #X obj 78 436 r \$0-clearmsg;
-#X text 242 607 (c)2012 \, megrimm;
+#X text 106 713 (c)2012 \, megrimm;
 #X text 35 11 get and store file and folder names;
 #X obj 36 157 route bang;
 #X obj 73 135 s \$0-addtopath;

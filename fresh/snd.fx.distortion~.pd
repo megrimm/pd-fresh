@@ -11,7 +11,7 @@
 #X obj 294 298 table \$0-disto 10000;
 #X obj 31 197 /~;
 #X obj 160 71 +~ 100;
-#N canvas 27 440 450 300 sqrt 0;
+#N canvas 27 440 455 388 sqrt 0;
 #X obj 20 63 t b b;
 #X obj 20 159 f;
 #X obj 63 159 + 1;
@@ -56,7 +56,7 @@
 #X restore 313 169 pd sqrt;
 #X obj 313 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 0 0 640 460 sigmoid 0;
+#N canvas 739 302 640 460 sigmoid 0;
 #X obj 23 59 t b b;
 #X obj 23 148 f;
 #X obj 61 148 + 1;
@@ -95,7 +95,7 @@
 #X restore 298 131 pd sigmoid;
 #X obj 298 112 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 0 0 739 509 x_over_xplus 0;
+#N canvas 0 22 739 509 x_over_xplus 0;
 #X obj 17 58 t b b;
 #X obj 17 141 f;
 #X obj 55 141 + 1;
@@ -139,7 +139,7 @@
 #X restore 328 214 pd x_over_xplus;
 #X obj 328 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 0 0 588 371 poly 0;
+#N canvas 0 22 588 371 poly 0;
 #X obj 16 14 inlet;
 #X obj 16 55 t b b;
 #X obj 16 140 f;
@@ -173,7 +173,7 @@
 #X connect 12 1 9 1;
 #X connect 13 0 8 0;
 #X restore 345 258 pd poly;
-#X obj 345 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 346 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 298 32 inlet;
 #X obj 298 84 sel 0 1 2 3;

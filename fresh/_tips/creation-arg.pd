@@ -1,0 +1,99 @@
+#N canvas 240 23 809 699 10;
+#X text 36 641 updated for Pd version 0.34;
+#X obj 30 49 send \$1;
+#X obj 125 49 + \$2;
+#X floatatom 202 48 0 0 0 0 - - -;
+#X obj 202 99 print;
+#X msg 202 73 blah \$1;
+#X text 22 123 This may sound inconsistant \, but it's not--object
+and message boxes are both actually messages \, but in the case of
+the Object box the message is passed at creation time \, and for the
+Message box \, at message time.;
+#X msg 119 228 bang;
+#X obj 119 256 symbol \$1;
+#X msg 29 228 bang;
+#X obj 29 256 float \$2;
+#X floatatom 29 283 5 0 0 0 - - -, f 5;
+#X symbolatom 119 285 10 0 0 0 - - -, f 10;
+#X text 22 193 So how do you put creation arguments in messages? Use
+"float" and "symbol" as shown:;
+#X msg 30 339 bang;
+#X obj 30 363 float \$2;
+#X msg 30 390 five \$1;
+#X text 27 317 Then if you wish \, connect to a message box as in:
+;
+#X obj 30 415 print;
+#X msg 35 480 bang;
+#X obj 35 532 symbol \$1;
+#X obj 129 528 f \$2;
+#X obj 35 508 t b b;
+#X obj 34 555 pack symbol float;
+#X msg 34 581 six \$1 \$2;
+#X obj 34 608 print;
+#X text 29 447 For messages combining more than one creation argument
+try:;
+#X text 23 10 In Object boxes \, dollar signs refer to the abstraction's
+creation arguments. In Messages \, they change dynamically:;
+#X obj 225 513 symbol \$1;
+#X obj 225 571 route three;
+#X obj 225 604 print;
+#X msg 225 485 bang;
+#X obj 288 604 print 2;
+#X obj 225 542 list trim;
+#X obj 415 601 list trim;
+#X obj 415 641 print;
+#X obj 414 550 symbol \$1;
+#X obj 415 578 list prepend set;
+#X obj 369 481 loadbang;
+#X text 478 487 loadbang creation arg without error;
+#X obj 369 524 select 0;
+#X obj 369 504 list append \$1;
+#X obj 670 276 outlet;
+#X text 419 302 If the argument is not equal to 0 \, use it. Pd init
+arguments to 0 so unused arguments will be 0;
+#X obj 420 157 select 0;
+#X text 418 339 This is useful to have internals inited \, but not
+reset if there is no argument specified.;
+#X obj 420 231 select 0;
+#X text 530 216 if 2nd arg \, then use as default value;
+#X obj 420 137 list append \$1;
+#X obj 420 210 list append \$2;
+#X obj 421 64 route bang;
+#X obj 420 39 list;
+#X msg 420 12 bang me;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 12 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 19 0 22 0;
+#X connect 20 0 23 0;
+#X connect 21 0 23 1;
+#X connect 22 0 20 0;
+#X connect 22 1 21 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 28 0 33 0;
+#X connect 29 0 30 0;
+#X connect 29 1 32 0;
+#X connect 31 0 28 0;
+#X connect 33 0 29 0;
+#X connect 34 0 35 0;
+#X connect 36 0 37 0;
+#X connect 37 0 34 0;
+#X connect 38 0 41 0;
+#X connect 40 1 36 0;
+#X connect 41 0 40 0;
+#X connect 44 0 49 0;
+#X connect 44 1 42 0;
+#X connect 46 1 42 0;
+#X connect 48 0 44 0;
+#X connect 49 0 46 0;
+#X connect 50 0 48 0;
+#X connect 50 1 42 0;
+#X connect 51 0 50 0;
+#X connect 52 0 51 0;

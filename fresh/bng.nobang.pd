@@ -1,12 +1,12 @@
-#N canvas 130 293 279 274 10;
+#N canvas 130 293 239 259 10;
 #X obj 42 72 route bang;
 #X obj 42 44 inlet;
 #X obj 42 204 outlet;
-#X obj 107 205 outlet;
-#X msg 107 136 stop;
-#X obj 158 42 inlet;
-#X obj 107 177 delay \$1;
-#X obj 107 106 b;
+#X obj 99 205 outlet;
+#X msg 99 151 stop;
+#X obj 144 46 inlet;
+#X obj 99 177 delay \$1;
+#X obj 99 106 b;
 #X obj 42 105 t b b b;
 #X connect 0 0 8 0;
 #X connect 0 1 7 0;

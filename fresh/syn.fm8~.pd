@@ -1,0 +1,37 @@
+#N canvas 0 23 532 392 10;
+#X obj 110 218 cos~;
+#X obj 110 190 +~;
+#X obj 110 332 outlet~;
+#X obj 154 158 *~;
+#X obj 49 162 phasor~;
+#X obj 326 200 line~;
+#X msg 326 174 \$1 10;
+#X obj 329 122 hsl 128 15 0.001 1 1 0 empty empty empty -2 -8 0 10
+-262130 -1 -1 0 1;
+#X obj 326 149 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262130 -1 -1 0 256;
+#X obj 49 82 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-204786 -1 -1 0 256;
+#X obj 49 41 inlet;
+#X obj 326 41 inlet;
+#X text 340 255 tamanho do bloco;
+#X text 335 96 índice de modulação;
+#X obj 131 265 delwrite~ \$0-pm-fb3 1;
+#X obj 154 70 delread~ \$0-pm-fb3 0;
+#X text 65 118 filtro média:;
+#X obj 154 118 biquad~ 0 0 0.5 0.5 0;
+#X obj 362 281 block~ 1;
+#X connect 0 0 14 0;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 1 1;
+#X connect 4 0 1 0;
+#X connect 5 0 3 1;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 9 0 4 0;
+#X connect 10 0 9 0;
+#X connect 11 0 7 0;
+#X connect 15 0 17 0;
+#X connect 17 0 3 0;

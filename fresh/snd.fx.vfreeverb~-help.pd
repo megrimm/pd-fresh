@@ -1,0 +1,36 @@
+#N canvas 758 81 503 449 10;
+#X obj 103 124 hsl 128 15 0 1 0 1 empty empty 'roomsize' 20 8 0 10
+-262144 -260097 -1 10100 0;
+#X obj 123 167 hsl 128 15 0 2.4 0 1 empty empty damp 20 8 0 10 -262144
+-260097 -1 11600 0;
+#X floatatom 109 145 5 0 0 0 - - -, f 5;
+#X floatatom 129 187 5 0 0 0 - - -, f 5;
+#X obj 163 260 hsl 128 15 0 1 0 1 empty empty wet 20 8 0 10 -262144
+-260097 -1 8800 0;
+#X obj 143 210 hsl 128 15 0 1 0 1 empty empty dry 20 8 0 10 -262144
+-260097 -1 3400 0;
+#X floatatom 174 283 5 0 0 0 - - -, f 5;
+#X floatatom 148 234 5 0 0 0 - - -, f 5;
+#X text 62 402 Katja Vetter May 2012;
+#X obj 61 367 dac~;
+#X text 177 314 <-- freeverb implemented with Pd vanilla objects;
+#X obj 61 63 readsf~;
+#X obj 61 316 snd.fx.vfreeverb~;
+#X msg 61 41 open _samples/amen.wav \, 1;
+#X obj 100 84 s \$0-sndloop;
+#X obj 61 19 r \$0-sndloop;
+#X connect 0 0 2 0;
+#X connect 0 0 12 2;
+#X connect 1 0 3 0;
+#X connect 1 0 12 3;
+#X connect 4 0 6 0;
+#X connect 4 0 12 5;
+#X connect 5 0 7 0;
+#X connect 5 0 12 4;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 11 1 14 0;
+#X connect 12 0 9 0;
+#X connect 12 1 9 1;
+#X connect 13 0 11 0;
+#X connect 15 0 13 0;

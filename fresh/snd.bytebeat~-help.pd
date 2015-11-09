@@ -1,0 +1,28 @@
+#N canvas 524 169 797 453 10;
+#X obj 20 318 dac~;
+#X floatatom 19 33 5 0 0 0 - - -, f 5;
+#X msg 194 108 $v1&($v1>>4)>>3&$v1>>7;
+#X msg 182 85 ((((($v1>>12)^($v1>>12)-2)%11*$v1)/4|$v1>>13)&127);
+#X text 23 386 megrimm 2012;
+#X text 183 244 <-- takes a creation argument;
+#X text 85 8 dexpr~ allows an [expr~] object to be changed dynamically
+;
+#X msg 161 62 $v1<<(($v1>>8&$v1)|($v1>>14&$v1));
+#X obj 20 243 snd.bytebeat~ ($v1*2)+10;
+#X obj 290 159 loadbang;
+#X msg 290 186 find t;
+#X msg 347 185 replace $v1;
+#X msg 203 137 ((t>>4&t)|(t>>8|t%7)+17*sin(t));
+#X obj 203 209 num.lst.replace;
+#X connect 1 0 8 0;
+#X connect 2 0 8 1;
+#X connect 3 0 8 1;
+#X connect 7 0 8 1;
+#X connect 8 0 0 1;
+#X connect 8 0 0 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 13 1;
+#X connect 11 0 13 1;
+#X connect 12 0 13 0;
+#X connect 13 0 8 1;
