@@ -1,0 +1,19 @@
+#N canvas 641 268 493 360 10;
+#X obj 89 179 vfx.txtrans;
+#X obj 89 277 rectangle 4 3;
+#X obj 89 48 gemhead;
+#X obj 334 43 vid.window;
+#X obj 89 74 pix_video;
+#X floatatom 152 139 5 0 0 0 - - -, f 5;
+#X obj 155 118 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 153 97 rotate the video image;
+#X obj 89 248 pix_texture;
+#X msg 152 157 rotate \$1;
+#X connect 0 0 8 0;
+#X connect 2 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 9 0;
+#X connect 6 0 5 0;
+#X connect 8 0 1 0;
+#X connect 9 0 0 1;

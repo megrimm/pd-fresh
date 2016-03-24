@@ -1,0 +1,19 @@
+#N canvas 110 69 536 318 10;
+#X obj 83 213 mix.output~;
+#X text 281 21 <-- open a file and play immediately;
+#X msg 80 22 open _samples/amen.wav \, play;
+#X obj 81 52 snd.player~ _samples/amen.wav;
+#X msg 40 24 play;
+#X obj 159 188 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -163060
+-1 -1 7400 1;
+#X floatatom 162 130 5 0 0 0 - - -, f 5;
+#X text 202 127 <-- amount to shift freq in Hz.;
+#X obj 81 149 fx.freqshift~;
+#X connect 2 0 3 0;
+#X connect 3 0 8 1;
+#X connect 3 0 8 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 2;
+#X connect 6 0 8 2;
+#X connect 8 0 0 0;
+#X connect 8 1 0 1;

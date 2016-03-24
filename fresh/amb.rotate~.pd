@@ -1,0 +1,36 @@
+#N canvas 356 224 858 507 10;
+#X text 23 476 http://www.york.ac.uk/inst/mustech/3d_audio/ambis2.htm
+;
+#X obj 21 89 inlet~;
+#X obj 140 89 inlet~;
+#X obj 274 89 inlet~;
+#X obj 424 89 inlet~;
+#X obj 21 430 outlet~;
+#X obj 140 428 outlet~;
+#X obj 274 425 outlet~;
+#X obj 424 423 outlet~;
+#X text 459 339 W and Z remain unchanged;
+#X obj 574 89 inlet~;
+#X text 63 88 w;
+#X text 184 88 x;
+#X text 321 87 y;
+#X text 471 88 z;
+#X text 624 89 A = positive angle of rotation;
+#X text 459 290 Simplified:;
+#X obj 140 206 expr~ $v1 * cos($v2) - $v3 * sin($v2);
+#X obj 274 245 expr~ $v1 * sin($v2) + $v3 * cos($v2);
+#X text 459 313 x' = x * cos A - y * sin A \; y' = x * sin A + y *
+cos A;
+#X text 735 469 rg ' 15;
+#X text 20 41 Rotation about the z-axis! (anti-clockwise movement in
+the horizontal plane).;
+#X connect 1 0 5 0;
+#X connect 2 0 17 0;
+#X connect 2 0 18 0;
+#X connect 3 0 17 2;
+#X connect 3 0 18 2;
+#X connect 4 0 8 0;
+#X connect 10 0 17 1;
+#X connect 10 0 18 1;
+#X connect 17 0 6 0;
+#X connect 18 0 7 0;

@@ -1,0 +1,48 @@
+#N canvas 585 234 940 396 10;
+#X obj 100 257 outlet~;
+#X obj 100 78 inlet~;
+#X obj 175 274 outlet~;
+#X obj 257 287 outlet~;
+#X obj 344 303 outlet~;
+#X obj 175 247 *~;
+#X obj 257 260 *~;
+#X obj 344 279 *~;
+#X obj 375 76 inlet;
+#X obj 375 116 vline~;
+#X text 415 76 < elevation;
+#X text 404 299 < WXYZ is output for decoding;
+#X obj 100 230 *~ 0.707;
+#X obj 272 197 expr~ sin($v1) * cos($v2);
+#X obj 228 154 expr~ cos($v1) * cos($v2);
+#X obj 546 133 expr~ sin($v1);
+#X text 95 336 Reading: http://www.york.ac.uk/inst/mustech/3d_audio/ambis2.htm
+;
+#X text 435 195 Left-Right (Y);
+#X text 410 153 Front-Back (X);
+#X text 643 133 Up-Down (Z);
+#X text 10 230 Even distro >;
+#X text 679 257 X = input signal * Cos A * Cos B \; Y = input signal
+* Sin A * Cos B \; Z = input signal * Sin B \; W = input signal * 0.707
+\;;
+#X text 99 31 Manually Encoding a B Format Signal for Spatial Audio
+;
+#X msg 375 96 \$1 5;
+#X obj 228 117 inlet~;
+#X connect 1 0 12 0;
+#X connect 1 0 5 0;
+#X connect 1 0 6 0;
+#X connect 1 0 7 0;
+#X connect 5 0 2 0;
+#X connect 6 0 3 0;
+#X connect 7 0 4 0;
+#X connect 8 0 23 0;
+#X connect 9 0 14 1;
+#X connect 9 0 13 1;
+#X connect 9 0 15 0;
+#X connect 12 0 0 0;
+#X connect 13 0 6 1;
+#X connect 14 0 5 1;
+#X connect 15 0 7 1;
+#X connect 23 0 9 0;
+#X connect 24 0 14 0;
+#X connect 24 0 13 0;

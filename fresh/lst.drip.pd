@@ -1,31 +1,19 @@
-#N canvas 497 140 512 524 10;
-#X obj 19 287 list split 1;
-#X obj 19 204 until;
-#X obj 19 242 list append;
-#X obj 45 171 t b l;
-#X obj 149 287 bang;
-#X text 34 21 example 3: serializing a message without delays;
-#X text 17 55 The "until" object can be used as shown to iterate through
-all the items of a list.;
-#X text 178 147 <- click to test;
-#X text 101 171 First store list \, then start the loop;
-#X text 118 199 "until" bangs its output until told to stop by a "bang"
-to its right inlet.;
-#X text 137 241 Store the remaining list.;
-#X text 194 286 third outlet of "split" tells us to stop.;
-#X text 67 318 Second outlet of "split" becomes the new list for "list
-append" above.;
-#X text 75 377 First outlet is the output.;
-#X obj 104 447 outlet;
-#X obj 27 111 inlet;
-#X obj 221 441 outlet;
-#X connect 0 0 14 0;
+#N canvas 497 140 334 339 10;
+#X obj 61 176 list split 1;
+#X obj 61 93 until;
+#X obj 61 131 list append;
+#X obj 61 58 t b l;
+#X obj 199 116 bang;
+#X obj 61 234 outlet;
+#X obj 61 33 inlet;
+#X obj 178 228 outlet;
+#X connect 0 0 5 0;
 #X connect 0 1 2 1;
 #X connect 0 2 4 0;
-#X connect 0 2 16 0;
+#X connect 0 2 7 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 3 0 1 0;
 #X connect 3 1 2 1;
 #X connect 4 0 1 1;
-#X connect 15 0 3 0;
+#X connect 6 0 3 0;

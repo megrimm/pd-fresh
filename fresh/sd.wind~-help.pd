@@ -1,0 +1,29 @@
+#N canvas 395 23 306 362 10;
+#X obj 56 256 sd.wind~;
+#X obj 56 295 dac~;
+#X obj 119 117 hsl 128 15 0 100 0 0 empty empty rumble_<--->_howl 2
+8 0 9 -261682 -1 -1 3000 1;
+#X obj 118 74 hsl 128 15 0 100 0 0 empty empty pitch 2 8 0 9 -261234
+-1 -1 8800 1;
+#X obj 120 162 hsl 128 15 0 100 0 0 empty empty wide_<--->_thin 2 8
+0 9 -262130 -1 -1 800 1;
+#X msg 115 94 pitch \$1;
+#X msg 116 137 rumble \$1;
+#X msg 117 181 size \$1;
+#X obj 121 205 hsl 128 15 0 100 0 0 empty empty auto_speed 2 8 0 9
+-204800 -1 -1 11800 1;
+#X msg 118 224 speed \$1;
+#X msg 115 49 vol \$1;
+#X floatatom 115 32 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 6 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 9 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 10 0;

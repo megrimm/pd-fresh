@@ -48,14 +48,14 @@ creation arguments. In Messages \, they change dynamically:;
 #X text 478 487 loadbang creation arg without error;
 #X obj 369 524 select 0;
 #X obj 369 504 list append \$1;
-#X obj 670 276 outlet;
+#X obj 571 257 outlet;
 #X text 419 302 If the argument is not equal to 0 \, use it. Pd init
 arguments to 0 so unused arguments will be 0;
 #X obj 420 157 select 0;
 #X text 418 339 This is useful to have internals inited \, but not
 reset if there is no argument specified.;
 #X obj 420 231 select 0;
-#X text 530 216 if 2nd arg \, then use as default value;
+#X text 565 209 if 2nd arg \, then use as default value;
 #X obj 420 137 list append \$1;
 #X obj 420 210 list append \$2;
 #X obj 421 64 route bang;

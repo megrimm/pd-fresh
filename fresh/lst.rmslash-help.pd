@@ -1,0 +1,6 @@
+#N canvas 421 67 307 491 10;
+#X obj 108 211 print;
+#X msg 119 100 remove/me/slash;
+#X obj 102 160 lst.rmslash;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
