@@ -1,0 +1,15 @@
+#N canvas 550 47 489 235 10;
+#X obj 44 70 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X symbolatom 44 139 22 0 0 0 - - -, f 22;
+#X obj 55 118 print TIMESTAMP;
+#X msg 119 74 offset \$1;
+#X msg 119 54 4;
+#X obj 44 95 utl.timestamp;
+#X text 44 16 format a ISO 8601 timestamp;
+#X text 189 73 <--offset time to get needed timezone;
+#X connect 0 0 5 0;
+#X connect 3 0 5 1;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 5 0 2 0;
