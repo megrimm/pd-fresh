@@ -1,60 +1,35 @@
-#N canvas 749 56 630 631 10;
-#X obj 177 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 718 23 505 454 10;
+#X obj 54 37 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 234 87 speed \$1;
-#X msg 243 124 random \$1;
-#X msg 252 160 smooth \$1;
-#X obj 174 321 dac~;
-#X floatatom 234 69 5 0 0 0 - - -, f 5;
-#X floatatom 243 108 5 0 0 0 - - -, f 5;
-#X floatatom 252 144 5 0 0 0 - - -, f 5;
-#X floatatom 189 157 5 0 0 0 - - -, f 5;
-#X text 273 67 0 -> 100;
-#X text 279 104 0 -> 100;
-#X text 287 141 0 -> 100;
-#X obj 351 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X msg 408 86 speed \$1;
-#X msg 417 123 random \$1;
-#X msg 426 159 smooth \$1;
-#X floatatom 408 68 5 0 0 0 - - -, f 5;
-#X floatatom 417 107 5 0 0 0 - - -, f 5;
-#X floatatom 426 143 5 0 0 0 - - -, f 5;
-#X floatatom 363 156 5 0 0 0 - - -, f 5;
-#X text 447 66 0 -> 100;
-#X text 453 103 0 -> 100;
-#X text 461 140 0 -> 100;
-#X obj 384 289 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 117 137 speed \$1;
+#X msg 126 174 random \$1;
+#X msg 135 210 smooth \$1;
+#X obj 51 393 dac~;
+#X floatatom 117 119 5 0 0 0 - - -, f 5;
+#X floatatom 126 158 5 0 0 0 - - -, f 5;
+#X floatatom 135 194 5 0 0 0 - - -, f 5;
+#X floatatom 64 72 5 0 0 0 - - -, f 5;
+#X text 156 117 0 -> 100;
+#X text 162 154 0 -> 100;
+#X text 170 191 0 -> 100;
+#X obj 102 297 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 384 289 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 102 297 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 225 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 225 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 483 289 print DONE;
-#X obj 177 200 syn.rndwav~;
-#X obj 351 199 syn.rndwav~;
-#X connect 0 0 28 0;
-#X connect 1 0 28 1;
-#X connect 2 0 28 1;
-#X connect 3 0 28 1;
+#X obj 54 272 syn.rndwav~;
+#X msg 143 234 rndwav;
+#X text 195 232 <-- generate random wavform template patern;
+#X text 76 38 <-- write random wave to array based off template;
+#X text 102 70 <-- frequency;
+#X connect 0 0 14 0;
+#X connect 1 0 14 1;
+#X connect 2 0 14 1;
+#X connect 3 0 14 1;
 #X connect 5 0 1 0;
 #X connect 6 0 2 0;
 #X connect 7 0 3 0;
-#X connect 8 0 28 0;
-#X connect 12 0 29 0;
-#X connect 13 0 29 1;
-#X connect 14 0 29 1;
-#X connect 15 0 29 1;
-#X connect 16 0 13 0;
-#X connect 17 0 14 0;
-#X connect 18 0 15 0;
-#X connect 19 0 29 0;
-#X connect 28 0 4 0;
-#X connect 28 0 4 1;
-#X connect 28 1 25 0;
-#X connect 29 0 4 0;
-#X connect 29 0 4 1;
-#X connect 29 1 23 0;
-#X connect 29 1 27 0;
+#X connect 8 0 14 0;
+#X connect 14 0 4 0;
+#X connect 14 0 4 1;
+#X connect 14 1 12 0;
+#X connect 15 0 14 1;
