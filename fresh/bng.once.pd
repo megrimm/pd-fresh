@@ -1,17 +1,17 @@
-#N canvas 613 76 431 322 10;
+#N canvas 613 76 461 581 10;
 #X obj 58 65 inlet;
-#X obj 58 251 outlet;
-#X obj 242 75 bang;
-#X msg 242 94 1;
-#X obj 58 176 spigot;
-#X msg 210 95 0;
-#X text 13 289 (c) 2006 IOhannes m zmoelnig \, licensed under GnuGPL
+#X obj 58 464 outlet;
+#X obj 242 171 bang;
+#X msg 242 190 1;
+#X obj 58 272 spigot;
+#X msg 210 191 0;
+#X text 23 508 (c) 2006 IOhannes m zmoelnig \, licensed under GnuGPL
 v2.0;
-#X obj 242 55 inlet reset;
+#X obj 242 67 inlet reset;
 #X text 48 12 [once]: better than [oneshot];
-#X obj 181 128 int 1;
-#X obj 58 94 trigger anything bang;
-#X obj 58 202 trigger anything bang;
+#X obj 181 224 int 1;
+#X obj 58 190 trigger anything bang;
+#X obj 58 298 trigger anything bang;
 #X connect 0 0 10 0;
 #X connect 2 0 3 0;
 #X connect 3 0 9 1;

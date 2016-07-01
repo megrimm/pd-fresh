@@ -1,13 +1,16 @@
 
  { "fresh audio"
  	{ "audio playback"
-        {  } 
+        {  fresh/snd.player~ fresh/snd.phaseloop~ fresh/snd.slicebonk~~} 
 	} 
     { "audio effects"
         {  fresh/fx.bitcrush~ fresh/fx.chorus~ fresh/fx.delaydub~ fresh/fx.distortion~ fresh/fx.freeverb~ fresh/fx.fuzz~ fresh/fx.grainbash~ fresh/fx.karplus~ fresh/fx.omnifilter~ fresh/fx.streamstretch~ fresh/fx.stutter~ fresh/fx.vocoder~ fresh/fx.volattack~ fresh/fx.wobble~ } 
 	} 
 	{ "audio mixing"
         {  fresh/mix.between~ fresh/mix.dynadc~ fresh/mix.dyncatch~ fresh/mix.dynthrow~ fresh/mix.output~ fresh/mix.recorder~ } 
+	} 
+	{ "audio equillization"
+        {  fresh/snd.eq.compressor~ fresh/snd.eq.punch~ fresh/snd.eq.riaa~ } 
 	} 
 	{ "audio synthesizers"
         {  fresh/mix.between~ fresh/mix.dynadc~ fresh/mix.dyncatch~ fresh/mix.dynthrow~ fresh/mix.output~ } 
@@ -47,148 +50,112 @@
 		{ fresh/file.audioload fresh/file.autoarrays fresh/file.filefolder fresh/file.filepath fresh/file.randomline fresh/file.swapext} 
 	}
 }
- 
 
-{ "control" 
-	{ "conditionals"
-		{  sel moses change  } 
+{ "-" }
+
+{ "vanilla" 
+	{ "glue"
+		{  bang float symbol int send receive select route pack unpack trigger spigot moses until print makefilename change swap value  } 
 	} 
-	{ "flip"  
-		{  reverse abs }  
-	}  
-	{ "do once"  
-		{  fresh/bng.once onebang  }  
-	}  
-	{ "iterate"
-		{ cxc_counter } 
+	{ "time"  
+		{  delay metro line timer cputime realtime pipe }  
 	}
-}  
-
-{ "operations"
-	{ "simple math"
-		{ "+" "-" "*" "/" ">" ">=" "=" "!=" "=<" "<" "%"  } 
+	{ "tables"  
+		{ tabread tabread4 tabwrite soundfiler}  
+	}
+	{ "subwindows"  
+		{ pd table inlet outlet inlet~ outlet~}  
+	}
+	{ "data templates"  
+		{ struct drawcurve filledcurve drawpolygon filledpolygon plot drawnumber}  
+	}
+	{ "accessing data"  
+		{ pointer get set element getsize setsize append sublist}  
+	}
+	{ "input output"  
+		{ loadbang openpanel savepanel key keyup keyname}  
 	} 
+	{ "networks"  
+		{ netsend netreceive}  
+	} 
+	{ "storage"  
+		{ qlist textfile bag poly}  
+	} 
+} 
+
+{ "vanilla math" 
+	{ "arithmetic"
+		{  + - * / pow  } 
+	} 
+	{ "relational tests"  
+		{  == != > < >= <= }  
+	}
+	{ "bit twiddling"
+		{  & && ||| %  }  
+	}  
+	{ "convert acoustical units"
+		{  mtof ftom powtodb rmstodb dbtopow dbtorms}  
+	}  
 	{ "higher math"
-		{random sin cos tan atan atan2 exp log abs sqrt pow acos asin } 
-	} 
-	{ "logic"
-		{ "&" "|" "&&" "||" ">>" "<<" } 
-	} 
-	{ "mapping"
-		{  amplitude_n autoscale breakpoint center_point circular cubic_seat circular_sigmoid curve_log } 
-	} 
-} 
-
-{  "file management"  
-	{ "gui"
-		{ openpanel savepanel mp3write~ pix_record } 
-	} 
-} 
- 
-{ "data conversion"  
-	{ "lists"  
-		{ tolist } 
-	} 
-	{ "cartesian" 
-		{ cartesian2sperical mapping/vector } 
-	} 
-	{ "polar" 
-		{ mapping/polar2cartesian pol2sph pol2rec~ } 
-	} 
-	{ "ascii"
-		{ atoi makefilename prepend_ascii splitfilename } 
-	} 
-	{  "integer"  
-		{  itoa int list2int } 
-	} 
-	{ "symbol"
-		{ iem_symtoalist fromsymbol tosymbol } 
-	} 
-	{ "limit data"
-		{ clip~ edge~ }  
-	} 
-	{ "midi"
-		{ mtof midiformat midiparse }  
-	} 
-	{ "frequency"
-		{ ftom } 
-	} 
-	{ "smoothing"
-		 { autoscale smooth speedlimiter- line } 
-	} 
-}
-
-{ "audio"
-	{ "audio output"
-		{ output~ ezdac~ }
-	} 
-	{ "audio input"
-		{ adc~ } 
-	} 
-	{ "transitions"
-		{ curve_fade  } 
-	} 
-	{ "effects"
-		{ hip~ lop~ beatify~ svf~ filterortho~ comb~}  
-	} 
-	{ "analysis"
-		{ bonk~ sigmund~ fiddle~ bfft~} 
+		{ mod div sin cos tan atan atan2 sqrt log exp abs} 
+	}
+	{ "lower math"
+		{ random expr } 
+	}
+	{ "greater or lesser of 2 numbers"
+		{ max min } 
+	}
+	{ "force a number into a range"
+		{ clip } 
 	}
 } 
 
-{ "video"
-	{ "controls"
-		{ playlist~ pix_film gemWin } 
+{ "vanilla midi" 
+	{ "midi input"
+		{  notein ctlin pgmin bendin touchin polytouchin midiin sysexin  } 
 	} 
-	{ "effects"
-		{ pix_kaleidoscope pix_refraction pix_alpha }  
+	{ "convert acoustical units"  
+		{  mtof~ ftom~ rmstodb~ dbtorms~ rmstopow~ powtorms~ }  
 	}
 } 
- 
-{ "communication"
-	{ "OSC"
-		{ sendOSC dumpOSC routeOSC} 
+
+{ "vanilla audio" 
+	{ "glue"
+		{  dac~ adc~ sig~ line~ vline~ threshold~ snapshot~ vsnapshot~ bang~ samplerate~ send~ receive~ throw~ cathc~ block~ switch~ readsf~ writesf~  } 
 	} 
-	{ "web"
-		{ mp3amp~ mp3cast~ udpsend udpreceive tcpsend tcpreceive} 
-	} 
-	{ "networking"
-		{maxlib/netserver maxlib/netclient netreceive netsend}
+	{ "oscillators and tables"  
+		{  phasor~ cos~ osc~ tabwrite~ tabplay~ tabread~ tabread4~ tabosc4~ tabsend~ tabreceive~ }  
 	}
-}
+	{ "filters"  
+		{  vcf~ noise~ env~ hip~ lop~ bp~ biquad~ samphold~ print~ rpole~ rzero~ rzero_rev~ cpole~ czero~ }  
+	} 
+	{ "delay"  
+		{  delwrite~ delread~ vd~ }  
+	} 
+} 
 
-{ "3D"
-	{ "primitives"
-		{ sphere cube polygon curve } 
+{ "vanilla audio math" 
+	{ "arithmetic"
+		{  +~ -~ *~ /~  } 
 	} 
-	{ "particle systems"
-		{ part_head part_velocity part_source part_killiod part_draw } 
-	} 
-	{ "camera"
-		{ ch_gemwin } 
-	} 
-	{ "lights"
-		{ world_light "world_light 101" light} 
-	} 
-}
-
-{ "drawing"
-	{ "shapes"
-		{ rectangle circle polygon triangle } 
-	} 
-	{ "text"
-		{ text3d text } 
-	}  
-	{ "in the patch"
-		{table array mapping/timeroll}
+	{ "fourier transforms"  
+		{  fft~ ifft~ rfft~ rifft~ framp~ }  
 	}
- }
+	{ "maximum or minimum of 2 inputs"  
+		{  max~ min~ }  
+	} 
+	{ "misc"  
+		{  q8_rsqrt~ q8_sqrt~ wrap~ }  
+	} 
+} 
 
- { "input"
-	{ "computer"
-		{ cursor keyname  ambient_light_sensor }  
+{ "--" }
+
+{ "gem video" 
+	{ "input output"
+		{  pix_film pix_image } 
 	} 
-	{ "peripherals"
-		{ hid gemmouse gemkeyboard } 
-	} 
+	{ "effects"  
+		{  pix_gain }  
+	}
 } 
