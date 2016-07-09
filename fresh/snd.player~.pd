@@ -1,4 +1,4 @@
-#N canvas 337 116 1054 675 10;
+#N canvas 337 116 1080 673 10;
 #X obj 304 361 vline~;
 #X obj 304 420 tabread4~ \$0-soundfile;
 #X obj 304 611 outlet~;

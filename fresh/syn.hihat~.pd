@@ -17,7 +17,7 @@
 #X obj 67 205 * 130;
 #X obj 211 295 loadbang;
 #X obj 52 582 outlet~;
-#X obj 211 324 \$0;
+#X obj 211 317 \$0;
 #X obj 212 63 route vol dec crh;
 #X obj 212 261 s \$0-hihat-vol;
 #X obj 244 209 s \$0-hihat-dec;
@@ -33,22 +33,20 @@
 #X obj 245 163 * 49.5;
 #X obj 278 114 + 220;
 #X obj 278 89 * 117.8;
-#X msg 211 353 \; \$1-table24 sinesum 256 1 1 1 1 0 0 0 0 1 0 0 0 0
+#X msg 211 340 \; \$1-table24 sinesum 256 1 1 1 1 0 0 0 0 1 0 0 0 0
 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 \,
 normalize 1;
-#X obj 290 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 210 419 table \$0-table24 259;
+#X obj 210 406 table \$0-table24 259;
 #X obj 52 89 tabosc4~ \$0-table24;
 #X obj 67 136 tabosc4~ \$0-table24;
 #X connect 0 0 4 0;
-#X connect 1 0 38 0;
+#X connect 1 0 37 0;
 #X connect 2 0 6 0;
 #X connect 2 0 1 0;
 #X connect 3 0 5 0;
 #X connect 4 0 7 0;
 #X connect 5 0 4 1;
-#X connect 6 0 37 0;
+#X connect 6 0 36 0;
 #X connect 7 0 8 0;
 #X connect 8 0 17 0;
 #X connect 9 0 14 0;
@@ -75,6 +73,5 @@ normalize 1;
 #X connect 31 0 30 0;
 #X connect 32 0 22 0;
 #X connect 33 0 32 0;
-#X connect 35 0 18 0;
-#X connect 37 0 0 0;
-#X connect 38 0 0 1;
+#X connect 36 0 0 0;
+#X connect 37 0 0 1;

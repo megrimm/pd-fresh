@@ -1,7 +1,7 @@
 
  { "fresh audio"
  	{ "audio playback"
-        {  fresh/snd.player~ fresh/snd.phaseloop~ fresh/snd.slicebonk~~} 
+        {  fresh/snd.player~ fresh/snd.phaseloop~ fresh/snd.slicebonk~} 
 	} 
     { "audio effects"
         {  fresh/fx.bitcrush~ fresh/fx.chorus~ fresh/fx.delaydub~ fresh/fx.distortion~ fresh/fx.freeverb~ fresh/fx.fuzz~ fresh/fx.grainbash~ fresh/fx.karplus~ fresh/fx.omnifilter~ fresh/fx.streamstretch~ fresh/fx.stutter~ fresh/fx.vocoder~ fresh/fx.volattack~ fresh/fx.wobble~ } 
@@ -13,13 +13,19 @@
         {  fresh/snd.eq.compressor~ fresh/snd.eq.punch~ fresh/snd.eq.riaa~ } 
 	} 
 	{ "audio synthesizers"
-        {  fresh/mix.between~ fresh/mix.dynadc~ fresh/mix.dyncatch~ fresh/mix.dynthrow~ fresh/mix.output~ } 
+        {  fresh/syn.acbass~ fresh/syn.bassdrum~ fresh/syn.fm8~ fresh/syn.hihat~ fresh/syn.rndwav~ fresh/syn.snare~ fresh/syn.speech~ } 
+	}
+	{ "audio sound design"
+        { fresh/sd.wind~ fresh/sd.nat.rumble~ fresh/sd.fire.hissing~ fresh/sd.fire.lapping~ fresh/sd.fire.forest~ fresh/sd.fire.creaking~ fresh/sd.fire.crackles~ } 
+	} 
+	{ "audio noise"
+        { fresh/nz.pink~ } 
 	} 
 }
 
 { "fresh video"
 	{ "video playback" 
-		{ fresh/vid.player fresh/vid.player~ fresh/vid.playerbuf fresh/vid.playerbuf~ fresh/vid.image }  
+		{ fresh/vid.player fresh/vid.player~ fresh/vid.image }  
 	}  
 	{ "video effects" 
 		{ fresh/vfx.gain fresh/vfx.glitch }  
@@ -31,7 +37,7 @@
 		{ fresh/vid.syn.snd2vid fresh/vid.syn.fire fresh/vid.syn.sparks }  
 	} 
 	{ "video track-and-map"  
-		{ fresh/vid.mapper fresh/vid.trackbg }  
+		{ fresh/vid.mapper.gui fresh/vid.mapper fresh/vid.trackbg }  
 	} 
 	{ "video text"  
 		{ fresh/vid.text }  
@@ -40,14 +46,29 @@
 }
 
 { "fresh control"
+	{ "numbers"
+		{ fresh/num.autoscale fresh/num.between fresh/num.changesym fresh/num.count fresh/num.counter fresh/num.init fresh/num.linex fresh/num.map fresh/num.mutator fresh/num.pack fresh/num.prevnext fresh/num.repeat fresh/num.scale fresh/num.switch fresh/num.taptempo fresh/num.treetrav fresh/num.urn fresh/num.vmetro } 
+	}
 	{ "lists" 
 		{  fresh/lst.collect fresh/lst.collection fresh/lst.delimit fresh/lst.drip fresh/lst.replace }  
 	}  
     { "bang"  
 		{  fresh/bng.once fresh/bng.block fresh/bng.bngx fresh/bng.nobang fresh/bng.pass }  
-	}  
+	} 
+	{ "random"
+		{ fresh/rnd.range fresh/rnd.metro fresh/rnd.flow } 
+	}
+	{ "sequencing"
+		{ fresh/seq.jazzdrum fresh/seq.ungrid fresh/seq.walking } 
+	}
 	{ "files"
 		{ fresh/file.audioload fresh/file.autoarrays fresh/file.filefolder fresh/file.filepath fresh/file.randomline fresh/file.swapext} 
+	}
+	{ "utilities"
+		{ fresh/utl.timestamp } 
+	}
+	{ "physical"
+		{ fresh/phy.makey.stock fresh/phy.makey.mod } 
 	}
 }
 
@@ -153,9 +174,12 @@
 
 { "gem video" 
 	{ "input output"
-		{  pix_film pix_image } 
+		{  pix_film pix_image pix_video } 
 	} 
 	{ "effects"  
-		{  pix_gain }  
+		{  pix_gain pix_motionblur pix_kaleidoscope pix_lumaoffset pix_posterize pix_puzzle pix_rtx }  
+	}
+	{ "mixing"
+		{  pix_mix pix_diff pix_add pix_subtract pix_multiply } 
 	}
 } 

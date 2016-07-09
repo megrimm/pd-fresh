@@ -1,10 +1,10 @@
-#N canvas 665 179 419 289 10;
-#X obj 130 133 hsl 128 15 1 0 0 0 \$1-\$2/bit \$1-\$2/bit bitcrush
--2 -6 1 9 -262144 -1 -1 0 0;
-#X obj 58 65 readsf~;
-#X msg 58 38 open _samples/amen.wav \, 1;
-#X obj 58 203 dac~;
-#X obj 58 157 fx.bitcrush~;
+#N canvas 597 75 320 273 10;
+#X obj 137 148 hsl 128 15 1 0 0 0 \$1-\$2/bit \$1-\$2/bit bitcrush
+-2 -6 1 9 -262144 -1 -1 11100 0;
+#X obj 65 80 readsf~;
+#X msg 65 53 open _samples/amen.wav \, 1;
+#X obj 65 218 dac~;
+#X obj 65 172 fx.bitcrush~;
 #X connect 0 0 4 2;
 #X connect 1 0 4 0;
 #X connect 1 0 4 1;
