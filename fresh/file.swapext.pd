@@ -1,4 +1,4 @@
-#N canvas 632 432 460 403 10;
+#N canvas 632 432 378 399 10;
 #X obj 22 34 symbol;
 #X obj 22 11 inlet;
 #X obj 22 334 outlet;
@@ -16,7 +16,7 @@
 #X obj 22 158 list split;
 #X obj 79 138 - 4;
 #X text 118 253 TODO: dynamic file extention swap based on the period?
-charecter 46;
+charecter 46, f 34;
 #X connect 0 0 10 0;
 #X connect 1 0 0 0;
 #X connect 3 0 7 0;
