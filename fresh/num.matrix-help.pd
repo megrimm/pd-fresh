@@ -1,15 +1,14 @@
-#N canvas 513 40 450 300 10;
-#X floatatom 178 81 5 0 0 0 - - -, f 5;
-#X msg 181 129 all \$1;
-#X obj 181 186 clone vid.circle 9;
-#X obj 339 118 gemwin;
-#X msg 339 54 create \, 1;
-#X msg 353 73 0 \, destroy;
-#X obj 181 107 lin.smooth 1000;
-#X obj 181 162 clone num.matrix 9;
-#X connect 0 0 6 0;
-#X connect 1 0 7 0;
-#X connect 4 0 3 0;
-#X connect 5 0 3 0;
-#X connect 6 0 1 0;
-#X connect 7 0 2 0;
+#N canvas 176 23 450 276 10;
+#X obj 151 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 255 98 dimen 2 3;
+#X obj 149 129 num.matrix 2 3;
+#X obj 230 50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 230 168 print BACKWARD;
+#X obj 148 194 print FORWARD;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 5 0;
+#X connect 2 1 4 0;
+#X connect 3 0 2 1;

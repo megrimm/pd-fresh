@@ -48,7 +48,7 @@
 #X connect 15 0 3 0;
 #X connect 16 0 9 0;
 #X restore 236 147 pd send GET request;
-#N canvas 0 22 295 303 connect 0;
+#N canvas 0 23 295 303 connect 0;
 #X obj 48 64 symbol;
 #X msg 82 195 connect \$1 80;
 #X obj 48 144 list split 2;
@@ -57,7 +57,7 @@
 #X text 142 155 extract server ip;
 #X obj 48 32 inlet;
 #X obj 82 227 outlet;
-#X obj 48 117 s2l /;
+#X obj 48 117 zexy/symbol2list /;
 #X connect 0 0 8 0;
 #X connect 1 0 7 0;
 #X connect 2 0 3 0;
