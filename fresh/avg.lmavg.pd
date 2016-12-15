@@ -28,6 +28,7 @@ added together and divided by the sum of the multipliers (15 + 14 +
 #X obj 209 270 list split \$1;
 #X obj 248 195 mod \$1;
 #X obj 191 45 loadbang;
+#X text 184 467 megrimm 2016;
 #X connect 0 0 5 1;
 #X connect 0 1 1 1;
 #X connect 1 0 5 0;

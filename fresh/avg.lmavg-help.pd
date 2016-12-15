@@ -8,7 +8,7 @@
 #X text 49 232 megrimm 2016;
 #X text 46 21 linear moving average a stream of floats;
 #X text 86 177 <-- linear moving average;
-#X obj 48 120 num.lmavg 10;
+#X obj 48 120 avg.lmavg 10;
 #X connect 0 0 9 1;
 #X connect 1 0 9 0;
 #X connect 9 0 2 0;
