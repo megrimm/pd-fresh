@@ -6,6 +6,7 @@
 #X obj 291 114 f \$1;
 #X obj 297 76 loadbang;
 #X obj 183 165 list split;
+#X obj 299 240 outlet;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 3 0 6 1;
@@ -14,3 +15,4 @@
 #X connect 6 0 0 1;
 #X connect 6 0 2 0;
 #X connect 6 2 0 1;
+#X connect 6 2 7 0;

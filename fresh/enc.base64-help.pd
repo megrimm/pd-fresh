@@ -1,0 +1,7 @@
+#N canvas 1047 571 450 300 10;
+#X obj 127 145 enc.base64;
+#X obj 127 179 print;
+#X msg 127 58 54 65 76 87 98 98 87 87;
+#X text 83 13 encodes any list of bytes in base64;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
