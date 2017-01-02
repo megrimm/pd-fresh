@@ -1,5 +1,5 @@
-#N canvas 281 180 238 260 10;
-#X text 35 235 1996 by Karlheinz Essl;
+#N canvas 281 180 240 283 10;
+#X text 33 236 1996 by Karlheinz Essl;
 #X obj 80 37 inlet;
 #X obj 86 210 outlet;
 #X obj 33 208 outlet;

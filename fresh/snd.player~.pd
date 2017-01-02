@@ -1,4 +1,4 @@
-#N canvas 111 160 962 674 10;
+#N canvas 1181 163 962 674 10;
 #X obj 305 320 vline~;
 #X obj 305 615 outlet~;
 #X obj 11 9 inlet;
@@ -53,7 +53,7 @@
 #X obj 642 274 f;
 #X obj 652 250 t b f;
 #X obj 639 103 t b f;
-#X obj 639 297 / 1;
+#X obj 642 297 / 1;
 #X obj 666 123 s \$0-speedfl;
 #X obj 667 274 r \$0-speedfl;
 #X text 668 296 <-- optimize;

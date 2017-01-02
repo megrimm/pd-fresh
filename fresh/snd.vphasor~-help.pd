@@ -6,9 +6,9 @@
 #X obj 95 229 metro 20;
 #X obj 95 206 loadbang;
 #X obj 26 254 vsnapshot~;
-#X floatatom 26 110 5 0 0 0 - - -;
+#X floatatom 26 110 5 0 0 0 - - -, f 5;
 #X obj 169 296 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2404 1;
+-1 -1 0 1;
 #X obj 166 254 vsnapshot~;
 #X obj 166 157 phasor~ 0.5;
 #X text 158 57 first argument: frequency (Hz);
@@ -26,23 +26,23 @@
 #N canvas 659 72 327 81 NETPD 0;
 #X msg 15 16 version 0 1 0;
 #X restore 304 186 pd NETPD 2 0;
-#X text 21 13 [rh_phasor~] - a message based [phasor~ ] replacement
-;
-#X text 17 334 [rh_phasor~ ] is similar to [phasor~ ] \, but it additionally
-sends a bang at exactly each wrapping point.;
 #X text 27 408 * It only accepts positive frequencies (yet);
 #X obj 26 158 snd.vphasor~ 0.5;
+#X text 21 13 [snd.vphasor~] - a message based [phasor~ ] replacement
+;
+#X text 17 334 [snd.vphasor~ ] is similar to [phasor~ ] \, but it additionally
+sends a bang at exactly each wrapping point.;
 #X connect 2 0 4 0;
 #X connect 2 0 7 0;
 #X connect 3 0 2 0;
 #X connect 4 0 0 0;
 #X connect 5 0 8 0;
-#X connect 5 0 24 0;
+#X connect 5 0 22 0;
 #X connect 7 0 6 0;
 #X connect 8 0 7 0;
 #X connect 14 0 5 0;
 #X connect 15 0 5 0;
 #X connect 16 0 5 0;
 #X connect 17 0 5 0;
-#X connect 24 0 4 0;
-#X connect 24 1 1 0;
+#X connect 22 0 4 0;
+#X connect 22 1 1 0;

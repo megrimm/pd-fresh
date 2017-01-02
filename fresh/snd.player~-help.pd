@@ -54,6 +54,8 @@ in the parent *.pd to be able to use relative directory names:;
 #X obj 447 550 array define array-01;
 #X msg 115 454 array array-01;
 #X text 213 453 <-- switch array;
+#X text 172 228 <-- slice numbers;
+#X text 179 270 <-- slice speed;
 #X connect 1 0 45 0;
 #X connect 2 0 45 0;
 #X connect 3 0 45 0;
