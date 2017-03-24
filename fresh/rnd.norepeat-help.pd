@@ -1,0 +1,10 @@
+#N canvas 731 259 324 236 10;
+#X obj 76 91 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 163 99 5 0 0 0 - - -, f 5;
+#X floatatom 76 157 5 0 0 0 - - -, f 5;
+#X obj 76 123 rnd.norepeat 10;
+#X text 71 50 random with non reapeating numbers;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 3 0 2 0;

@@ -1,1 +1,2 @@
-#N canvas 0 23 450 300 10;
+#N canvas 537 163 528 437 10;
+#X obj 181 148 pri.comport;

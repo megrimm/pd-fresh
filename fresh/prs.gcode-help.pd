@@ -1,0 +1,20 @@
+#N canvas 219 23 390 331 10;
+#X msg 106 123 open;
+#X msg 95 101 bang;
+#X obj 95 188 prs.gcode;
+#X text 39 9 only works when gcode starts right away (no header) with
+something like G1 X5.89 Y6.92 E8.76, f 52;
+#X text 39 47 in this format G1 X Y and E8.76 get stripped leaving
+the X Y floats only, f 50;
+#X obj 106 212 unpack f f;
+#X floatatom 106 233 5 0 0 0 - - -, f 5;
+#X floatatom 163 232 5 0 0 0 - - -, f 5;
+#X obj 95 262 print XY;
+#X msg 115 147 open prs.gcode.gcode;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 0 8 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 9 0 2 0;
