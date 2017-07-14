@@ -1,0 +1,1 @@
+$ mkdir ~/Library/Pd && mkdir ~/Documents/Pd && ln -s ~/Library/Pd ~/Documents/Pd/libraries

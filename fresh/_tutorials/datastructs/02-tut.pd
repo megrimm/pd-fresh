@@ -1,0 +1,15 @@
+#N canvas 180 82 808 543 12;
+#N canvas 516 400 566 336 grob-02 1;
+#X obj 133 139 struct grob-02;
+#X text 29 64 This defines a data structure named "grob-02" \, which
+carries no data empty and thus is useless.;
+#X restore 124 356 pd grob-02;
+#X text 89 48 Container for graphical objects;
+#X text 116 96 1) The "pd grob-02" subpatch here servers as a container
+for a graphical object named "grob-02".;
+#X text 117 222 3) you can of course also put the graph structure into
+the main patch \, but then it soon gets hard to group it with its own
+drawing instructions. We'll come to these immediatly.;
+#X text 117 151 2) To make it a real graph object \, it needs to contain
+a "struct" definition. The "struct" object is used to give the name
+\, by which to access a data structure.;

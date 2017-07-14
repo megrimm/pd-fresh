@@ -1,0 +1,113 @@
+#N struct grob-14 float x float y array numbers num;
+#N struct num float y float h;
+#N canvas 333 165 875 677 12;
+#N canvas 23 198 377 503 paint 1;
+#X scalar grob-14 100 120 \; 0 0 \; -35 0 \; -31 0 \; 57 0 \; 69 0
+\; 77 0 \; 71 0 \; 54 0 \; 27 0 \; \;;
+#X restore 670 143 pd paint;
+#N canvas 181 126 894 509 init 0;
+#X obj 273 145 s pd-paint;
+#X msg 273 119 clear;
+#X obj 202 202 pointer;
+#X msg 106 191 100;
+#X msg 166 62 bang;
+#X obj 170 20 loadbang;
+#X msg 169 170 traverse pd-paint \, bang;
+#X text 216 71 Initialization;
+#X msg 145 193 120;
+#X obj 156 123 t b b b;
+#X msg 113 75 bang;
+#X obj 165 93 t b b;
+#X text 46 58 add another;
+#X obj 331 41 inlet;
+#X obj 88 29 inlet;
+#X obj 128 269 append grob-14 x y;
+#X connect 1 0 0 0;
+#X connect 2 0 15 2;
+#X connect 3 0 15 0;
+#X connect 4 0 11 0;
+#X connect 6 0 2 0;
+#X connect 8 0 15 1;
+#X connect 9 0 3 0;
+#X connect 9 1 8 0;
+#X connect 9 2 6 0;
+#X connect 10 0 9 0;
+#X connect 11 0 9 0;
+#X connect 11 1 1 0;
+#X connect 13 0 4 0;
+#X connect 14 0 10 0;
+#X restore 642 58 pd init;
+#N canvas 686 559 581 359 num 0;
+#X obj 91 184 filledpolygon 900 900 1 0 -5 10 -5 10 5 0 5;
+#X text 80 32 The float value can only be moved on the y-axis;
+#X text 112 154 A red box visualizes the float value:;
+#X obj 193 66 struct num float y;
+#X restore 652 87 pd num;
+#X msg 463 510 traverse pd-paint \, next;
+#X obj 463 539 pointer;
+#X msg 303 523 1;
+#X msg 402 514 next;
+#X msg 261 523 9;
+#X obj 711 29 bng 15 250 50 0 empty empty clear_and_add_one 0 -6 0
+8 -262144 -1 -1;
+#X obj 615 26 bng 15 250 50 0 empty empty add_another 0 -6 0 8 -262144
+-1 -1;
+#X text 21 16 Element'ary School;
+#X text 50 54 Arrays contain various elements \, which in turn could
+also be arrays. We need a way to access the individual elements.;
+#N canvas 445 540 648 345 grob-14 0;
+#X text 42 137 Arrays are painted using "plot" drawing instructions:
+;
+#X text 44 21 This declares an array named "numbers" whose elements
+are described by the template "num". Note that array declarations take
+three arguments: the word "array" \, the name of the array and the
+name of the elements.;
+#X obj 46 264 filledcurve 9 9 1 0 -5 0 5 10 5 10 -5;
+#X obj 46 317 drawpolygon 9 1 0 0 150 0;
+#X obj 57 166 plot numbers 90 5 15 0 15;
+#X obj 46 288 filledcurve 9 9 1 150 -5 150 5 160 5 160 -5;
+#X text 46 233 Blue dots and a line used here just as a handle:;
+#X obj 65 100 struct grob-14 float x float y array numbers num;
+#X restore 653 111 pd grob-14;
+#X obj 223 353 element grob-14 numbers;
+#X msg 435 287 traverse pd-paint \, next;
+#X floatatom 223 322 5 0 8 2 select_which_element? - -;
+#X obj 435 316 pointer;
+#X obj 261 567 setsize grob-14 numbers;
+#X obj 223 386 get num y;
+#X floatatom 223 414 5 0 0 0 - - -;
+#X floatatom 115 361 5 0 0 0 - - -;
+#X obj 55 383 * -1;
+#X floatatom 55 361 5 0 0 0 - - -;
+#X text 36 332 y is again inverted;
+#X text 49 104 For this we need to use the "element" object. It allows
+us to select individual elements when send a pointer and an index number.
+;
+#X obj 484 568 getsize grob-14 numbers;
+#X floatatom 484 598 5 0 0 0 - - -;
+#X text 111 212 1) struct name;
+#X text 111 232 2) array name;
+#X text 434 254 First get pointer:;
+#X msg 514 316 next;
+#X obj 83 450 set num y;
+#X text 56 189 "element" takes these arguments:;
+#X connect 3 0 4 0;
+#X connect 4 0 17 1;
+#X connect 4 0 25 0;
+#X connect 4 1 3 0;
+#X connect 5 0 17 0;
+#X connect 6 0 4 0;
+#X connect 7 0 17 0;
+#X connect 8 0 1 1;
+#X connect 9 0 1 0;
+#X connect 13 0 18 0;
+#X connect 13 0 31 1;
+#X connect 14 0 16 0;
+#X connect 15 0 13 0;
+#X connect 16 0 13 1;
+#X connect 18 0 19 0;
+#X connect 20 0 31 0;
+#X connect 21 0 31 0;
+#X connect 22 0 21 0;
+#X connect 25 0 26 0;
+#X connect 30 0 16 0;

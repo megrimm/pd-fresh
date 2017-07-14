@@ -1,0 +1,24 @@
+#N canvas 180 82 808 543 12;
+#N canvas 378 384 616 289 grob-03 0;
+#X obj 107 129 struct grob-03 float number;
+#X text 24 47 This defines a data structure named "grob" \, which holds
+a float called "number".;
+#X restore 130 416 pd grob-03;
+#X text 73 24 Adding data to our data structure;
+#X text 116 88 A data structure is \, the name hints at it \, a container
+which carries data in a structured way.;
+#X text 123 370 This "grob-03" struct now carries a float called number:
+;
+#X text 113 143 The data carried can be of the following four basic
+types:;
+#X text 147 172 1) floats;
+#X text 148 194 2) symbols;
+#X text 147 215 3) arrays containing several elements of one other
+data structure type.;
+#X text 147 254 4) lists containing elements of various other data
+structure types.;
+#X text 124 311 Arrays are like the "table" arrays in Pd \, which only
+contain floats. Lists are like a subpatch which can contain objects
+of various types.;
+#X text 118 462 NB: Mathematically minded people like to call floats
+and symbols "scalars" as well.;
