@@ -1,7 +1,0 @@
-#N canvas 70 124 450 300 10;
-#X obj 202 199 print;
-#X obj 193 144 keypress 97;
-#X obj 201 57 key;
-#X floatatom 201 87 5 0 0 0 - - -, f 5;
-#X connect 1 0 0 0;
-#X connect 2 0 3 0;
