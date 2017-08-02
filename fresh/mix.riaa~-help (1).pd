@@ -1,4 +1,5 @@
-#N canvas 679 23 463 503 10;
+#N canvas 141 22 463 503 10;
+#X obj 24 203 snd.eq.riaa~;
 #X obj 24 423 dac~;
 #X obj 24 83 openpanel;
 #X obj 24 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -11,7 +12,7 @@
 #X msg 353 162 \; pd dsp 1 \;;
 #X obj 353 135 loadbang;
 #X obj 120 62 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 7;
+-1 4;
 #X text 141 59 <-- 44.1 - playback;
 #X text 141 75 <-- 48 - playback;
 #X text 140 92 <-- 88.2 - playback;
@@ -24,18 +25,17 @@
 #X text 141 152 <-- 88.2 - production;
 #X text 141 167 <-- 96 - production;
 #X obj 117 237 _extra/filterview;
-#X obj 24 203 mix.riaa~;
-#X connect 1 0 4 0;
-#X connect 2 0 1 0;
-#X connect 3 0 22 0;
-#X connect 3 1 22 1;
-#X connect 4 0 3 0;
-#X connect 5 0 6 1;
-#X connect 6 0 0 0;
-#X connect 6 0 0 1;
-#X connect 7 0 3 0;
-#X connect 9 0 8 0;
-#X connect 10 0 22 2;
-#X connect 22 0 6 0;
-#X connect 22 1 6 0;
-#X connect 22 2 21 0;
+#X connect 0 0 7 0;
+#X connect 0 1 7 0;
+#X connect 0 2 22 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 4 1 0 1;
+#X connect 5 0 4 0;
+#X connect 6 0 7 1;
+#X connect 7 0 1 0;
+#X connect 7 0 1 1;
+#X connect 8 0 4 0;
+#X connect 10 0 9 0;
+#X connect 11 0 0 2;
