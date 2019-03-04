@@ -1,0 +1,17 @@
+#N canvas 253 150 450 300 10;
+#X obj 167 79 symbol;
+#X obj 167 99 t b s;
+#X msg 199 170 set \$1;
+#X obj 167 193 makefilename xx;
+#X obj 199 150 makefilename %%s/%s;
+#X obj 167 125 ggee/getdir 2;
+#X obj 167 54 inlet;
+#X obj 167 248 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 1 1 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 7 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 0 0;

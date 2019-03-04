@@ -1,0 +1,33 @@
+#N canvas 174 313 525 456 10;
+#X obj 66 265 print;
+#X msg 91 157 test.mov;
+#X msg 82 132 test.jpeg;
+#X msg 147 206 length \$1;
+#X text 228 206 <-- length of extention to remove;
+#X floatatom 147 187 5 0 0 0 - - -, f 5;
+#X obj 66 232 file.extrm 2;
+#X text 62 30 removes the X amount of charecters from the end of a
+symbol, f 35;
+#X msg 122 352 open \$1;
+#X obj 122 264 symbol;
+#X obj 122 331 makefilename;
+#X msg 122 286 set \$1%s.jpg;
+#X floatatom 130 311 5 0 0 0 - - -, f 5;
+#X obj 122 375 print open;
+#X text 175 309 <-- move to see;
+#X obj 68 96 openpanel;
+#X obj 68 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 1;
+#X connect 5 0 3 0;
+#X connect 6 0 0 0;
+#X connect 6 0 9 0;
+#X connect 8 0 13 0;
+#X connect 9 0 11 0;
+#X connect 10 0 8 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
+#X connect 15 0 6 0;
+#X connect 16 0 15 0;

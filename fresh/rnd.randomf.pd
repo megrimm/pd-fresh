@@ -1,0 +1,12 @@
+#N canvas 307 232 416 286 10;
+#X obj 330 132 f \$1;
+#X obj 330 109 loadbang;
+#X obj 48 192 outlet;
+#X obj 48 54 inlet;
+#X obj 318 53 inlet;
+#X obj 48 159 expr (random(0 \, $f2 * 100000)) / 100000;
+#X connect 0 0 5 1;
+#X connect 1 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 1;
+#X connect 5 0 2 0;
