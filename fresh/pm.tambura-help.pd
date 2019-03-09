@@ -1,4 +1,4 @@
-#N canvas 235 23 374 527 10;
+#N canvas 306 23 374 527 10;
 #X obj 43 403 dac~ 1 2;
 #X obj 114 381 snapshot~;
 #X obj 114 402 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -157,7 +157,7 @@
 #X connect 70 0 51 0;
 #X connect 71 0 52 0;
 #X restore 42 227 pd control;
-#X obj 43 301 faustgen~/faustgen~ pm.tambura/pm.tambura, f 19;
+#X obj 43 301 faustgen~/faustgen~ pm.tambura, f 19;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;

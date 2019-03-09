@@ -1,0 +1,27 @@
+#N canvas 147 225 867 537 10;
+#X text 42 17 Julian Parker reverb 2013;
+#X obj 40 392 faustgen~ pm.jpverb;
+#X text 378 180 depth = 50*hslider("mDepth" \, 0.1 \, 0 \, 1 \, 0.001)
+\; freq = hslider("mFreq" \, 2 \, 0 \, 10 \, 0.01) \; wet = hslider("wet"
+\, 0.5 \, 0 \, 1 \, 0.01) \; low = hslider("lowX" \, 1 \, 0 \, 1 \,
+0.01) \; mid = hslider("midX" \, 1 \, 0 \, 1 \, 0.01) \; high = hslider("highX"
+\, 1 \, 0 \, 1 \, 0.01) \; early_diff = hslider("earlyDiff" \, 0.707
+\, 0 \, 0.99 \, 0.001) \; low_cutoff = hslider("lowBand" \, 500 \,
+100 \, 6000 \, 0.1) \; high_cutoff = hslider("highBand" \, 2000 \,
+1000 \, 10000 \, 0.1) \; size = hslider("size" \, 1 \, 0.5 \, 3 \,
+0.01) \; T60 = hslider("t60" \, 1 \, 0.1 \, 60 \, 0.1) \; damping =
+hslider("damp" \, 0 \, 0 \, 0.999 \, 0.0001) \; calib = 1.7 \; // Calibration
+constant given by T60 in seconds when fb = 0.5 total_length = calib*0.1*(size*5/4
+-1/4) \; fb = 10^(-3/((T60)/(total_length))) \;;
+#X obj 41 105 readsf~;
+#X msg 41 73 open _samples/amen.wav \, 1;
+#X obj 39 456 dac~;
+#X obj 238 148 loadbang;
+#X msg 238 173 \; pd dsp 1 \;;
+#X text 237 11 JPverb — Algorithmic reverberator \, designed to produce
+long and rich reverberant tails;
+#X connect 1 0 5 0;
+#X connect 1 1 5 1;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 6 0 7 0;
