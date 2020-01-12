@@ -4,7 +4,7 @@ from math import pow
 
 # Set "write_pd" to 1 to automatically write files to use in a Pd table, set to
 # 0 to only print the analysis.
-#
+# http://sevish.com/scaleworkshop/
 # Files written will have the same name as the input files with ".tab"
 # appended.
 write_pd = 1
