@@ -1,0 +1,33 @@
+#N canvas 367 23 486 464 12;
+#X obj 71 291 txt.prob;
+#X obj 158 159 random 10;
+#X obj 158 182 + 60;
+#X obj 158 140 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 71 323 unpack f f;
+#X floatatom 166 206 5 0 0 0 - - -;
+#X floatatom 138 352 5 0 0 0 - - -;
+#X floatatom 71 379 5 0 0 0 - - -;
+#X text 113 380 <-- current;
+#X text 179 351 <-- previous;
+#X msg 158 228 train \$1;
+#X obj 73 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 85 97 random;
+#X msg 159 254 clear;
+#X text 70 27 markov chains with [text];
+#X text 64 412 (c)2020 \, megrimm;
+#X text 231 228 <-- train the chain;
+#X text 136 97 <-- grab random first number;
+#X text 96 68 <-- generate random number from probability matrix;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 0 10 0;
+#X connect 3 0 1 0;
+#X connect 4 0 7 0;
+#X connect 4 1 6 0;
+#X connect 10 0 0 1;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 1;

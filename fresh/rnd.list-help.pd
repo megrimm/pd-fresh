@@ -1,0 +1,13 @@
+#N canvas 279 140 435 290 10;
+#X obj 121 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 121 166 print;
+#X msg 172 76 1 2 3 cat dog 4 5 pig;
+#X msg 182 96 -10 % + bla 999;
+#X text 28 13 generates random elements picking from the list provided
+at the second inlet.;
+#X obj 121 136 rnd.list;
+#X connect 0 0 5 0;
+#X connect 2 0 5 1;
+#X connect 3 0 5 1;
+#X connect 5 0 1 0;
