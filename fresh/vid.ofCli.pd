@@ -1,0 +1,15 @@
+#N canvas 538 25 450 300 12;
+#X obj 153 126 ofelia d -k \$0-cli;
+#A __set M.myTable = {1 \, 2 \, 3 \, 4} \; \; function M.cmd(c) \;
+local io = require "io" \; local handle = io.popen(c) \; local result
+= handle:read("*a") \; handle:close() \; return result \; end \;;
+#X obj 153 97 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 155 187 print;
+#X msg 196 65 cmd ls;
+#X msg 206 90 cmd ls -a;
+#X text 289 90 <-- put in table. see [ofelia set];
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;

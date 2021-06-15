@@ -1,8 +1,8 @@
-#N canvas 657 52 1 1 10;
+#N canvas 657 52 297 317 10;
 #X obj 32 192 dac~;
 #X msg 162 140 \; pd dsp 1;
 #X msg 162 179 \; pd dsp 0;
-#X symbolatom 32 39 30 0 0 0 - - -, f 30;
+#X symbolatom 32 39 30 0 0 0 - - -;
 #X obj 162 108 loadbang;
 #X msg 52 60 this is a message to symbol;
 #X obj 32 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
