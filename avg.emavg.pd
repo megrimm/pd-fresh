@@ -1,0 +1,50 @@
+#N canvas 360 38 524 457 10;
+#X obj 125 25 inlet;
+#X obj 47 25 inlet;
+#X obj 47 389 outlet;
+#X text 272 35 EMA = Price(t) * k + EMA(y) * (1 – k) t = today \,
+y = yesterday \, N = number of days in EMA \, k = 2/(N+1), f 37;
+#X text 271 11 exponential moving average;
+#X obj 141 234 expr 2/($f1+1);
+#X obj 47 256 expr $f1 * $f2 + $f3 * (1 - $f2);
+#X obj 236 234 t f;
+#X obj 141 151 f;
+#X obj 173 151 + 1;
+#X obj 141 172 + 1;
+#X obj 47 83 t f b;
+#X obj 141 212 min;
+#X obj 57 287 s \$0-ema;
+#X obj 236 192 r \$0-ema;
+#X obj 188 67 s \$0-smps;
+#X obj 156 192 r \$0-smps;
+#X text 272 78 todo: right now this will just give the EMA of all floats
+received 1) i would need way to "reset the whole thing" 2) i would
+need way to store ema ammounts if i was to create a X day moving averate
+so that i could recall x-1 \, x-2 \, etc to recalculate EMA based on
+a number of days, f 37;
+#X obj 156 130 r \$0-reset;
+#X obj 243 212 r \$0-reset;
+#X obj 125 46 route reset;
+#X obj 125 89 s \$0-reset;
+#X msg 125 69 0;
+#X text 146 392 megrimm 2016;
+#X connect 0 0 20 0;
+#X connect 1 0 11 0;
+#X connect 5 0 6 1;
+#X connect 6 0 2 0;
+#X connect 6 0 13 0;
+#X connect 7 0 6 2;
+#X connect 8 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 1;
+#X connect 10 0 12 0;
+#X connect 11 0 6 0;
+#X connect 11 1 8 0;
+#X connect 12 0 5 0;
+#X connect 14 0 7 0;
+#X connect 16 0 12 1;
+#X connect 18 0 8 1;
+#X connect 19 0 7 0;
+#X connect 20 0 22 0;
+#X connect 20 1 15 0;
+#X connect 22 0 21 0;

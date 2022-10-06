@@ -1,0 +1,13 @@
+#N canvas 100 23 573 309 10;
+#X text 137 72 will send bang after NOT recieving a bang after a certain
+amount of time;
+#X obj 150 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 156 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 270 207 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 146 167 bng.nobang 1000;
+#X connect 1 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;

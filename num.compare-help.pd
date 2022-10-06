@@ -1,0 +1,11 @@
+#N canvas 539 74 450 300 12;
+#X obj 141 138 num.compare;
+#X floatatom 135 79 5 0 0 0 - - - 0;
+#X floatatom 183 88 5 0 0 0 - - - 0;
+#X floatatom 232 94 5 0 0 0 - - - 0;
+#X floatatom 142 187 5 0 0 0 - - - 0;
+#X text 146 33 compare multiple numbers;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 0 2;

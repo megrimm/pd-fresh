@@ -1,0 +1,12 @@
+#N canvas 307 232 461 393 10;
+#X floatatom 162 143 5 0 0 0 - - -, f 5;
+#X floatatom 59 244 8 0 0 0 - - -, f 8;
+#X obj 59 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 60 199 rnd.randomf 0.5;
+#X text 61 307 drop in replacement for gem/randomF OR markex/randomF
+;
+#X text 48 45 Generates a random float between 0 and N;
+#X connect 0 0 3 1;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;

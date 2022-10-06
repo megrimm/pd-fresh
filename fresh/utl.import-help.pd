@@ -1,4 +1,0 @@
-#N canvas 567 268 450 300 10;
-#X obj 201 100 utl.import zexy;
-#X obj 202 203 time;
-#X text 245 204 <-- doesnt work ... why?;

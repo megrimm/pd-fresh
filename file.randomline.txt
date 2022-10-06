@@ -1,0 +1,12 @@
+we can include file names;
+./hits/hit01.wav;
+./hits/hit02.wav;
+./hits/hit03.wav;
+./hits/hit04.wav;
+./hits/hit05.wav;
+or random lines;
+that all\, have to be;
+ended with\, a semi colon;
+first\, word;
+\, first comma;
+

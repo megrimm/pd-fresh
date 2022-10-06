@@ -1,0 +1,17 @@
+#N canvas 397 84 574 238 10;
+#X floatatom 51 113 5 0 0 0 - - - 0;
+#X floatatom 51 30 5 0 0 0 - - - 0;
+#X floatatom 118 60 5 0 0 0 - - - 0;
+#X floatatom 186 59 5 0 0 0 - - - 0;
+#X obj 51 139 change;
+#X floatatom 51 178 5 0 0 0 - - - 0;
+#X text 199 85 <-- outputs a "1" when input is between or equal to
+the two numbers supplied;
+#X text 94 26 <-- input number;
+#X obj 51 85 num.between 10 20;
+#X connect 0 0 4 0;
+#X connect 1 0 8 0;
+#X connect 2 0 8 1;
+#X connect 3 0 8 2;
+#X connect 4 0 5 0;
+#X connect 8 0 0 0;

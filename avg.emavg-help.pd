@@ -1,0 +1,14 @@
+#N canvas 0 23 387 298 10;
+#X floatatom 48 59 5 0 0 0 - - -, f 5;
+#X floatatom 48 180 5 0 0 0 - - -, f 5;
+#X text 89 56 <-- float stream;
+#X text 49 232 megrimm 2016;
+#X msg 110 126 reset;
+#X text 46 22 exponential moving average a stream of floats;
+#X text 86 177 <-- exponential moving average;
+#X floatatom 99 86 5 0 0 0 - - -, f 5;
+#X obj 48 150 avg.emavg;
+#X connect 0 0 8 0;
+#X connect 4 0 8 1;
+#X connect 7 0 8 1;
+#X connect 8 0 1 0;

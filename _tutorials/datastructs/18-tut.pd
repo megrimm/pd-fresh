@@ -1,0 +1,158 @@
+#N struct grob-lib-w float x float y array numbers num-w;
+#N struct num-w float x float y float w;
+#N canvas 399 173 789 633 12;
+#N canvas 0 0 450 300 paint 0;
+#X scalar grob-lib-w 102 168 \; 0 0 0 \; 50.3937 0 56.7953 \; 96.063
+0 29.9213 \; 204.724 0 0 \; \;;
+#X coords 0 0 450 300 450 300 1;
+#X restore 319 191 pd paint;
+#X text 26 17 Graphical ADSR;
+#X obj 150 396 vsl 15 128 0 100 0 0 empty empty A 0 -8 0 8 -262144
+-1 -1 6400 1;
+#X obj 174 396 vsl 15 128 0 100 0 0 empty empty D 0 -8 0 8 -262144
+-1 -1 5800 1;
+#X obj 198 396 vsl 15 128 0 100 0 0 empty empty S 0 -8 0 8 -262144
+-1 -1 3800 1;
+#X obj 220 396 vsl 15 128 0 200 0 0 empty empty R 0 -8 0 8 -262144
+-1 -1 6900 1;
+#X obj 135 548 s A;
+#X obj 240 548 s R;
+#X obj 203 548 s S;
+#X obj 171 548 s D;
+#X obj 106 398 vsl 15 128 0 100 0 0 empty empty Level 0 -8 0 8 -262144
+-1 -1 4800 1;
+#X obj 91 546 s L;
+#N canvas 0 0 959 676 calculations 0;
+#X obj 46 44 r A;
+#X msg 45 123 x \$1;
+#X obj 45 156 wxy-set grob-lib-w numbers num-w;
+#X obj 45 67 t f b;
+#X msg 92 95 1;
+#X obj 239 122 r \$0-point;
+#X msg 148 285 1;
+#X obj 36 221 r L;
+#X msg 35 277 w \$1;
+#X obj 35 309 wxy-set grob-lib-w numbers num-w;
+#X obj 36 251 t f b;
+#X obj 234 282 r \$0-point;
+#X obj 657 99 r R;
+#X obj 701 272 r \$0-point;
+#X obj 656 124 t b f b;
+#X msg 704 168 3;
+#X obj 638 183 +;
+#X msg 625 213 x \$1;
+#X obj 512 304 wxy-set grob-lib-w numbers num-w;
+#X obj 557 134 t f b;
+#X obj 557 112 r A+D;
+#X obj 115 400 r D;
+#X obj 344 432 r S;
+#X msg 61 544 x \$1;
+#X obj 61 518 +;
+#X obj 115 423 t b f b;
+#X msg 190 539 w \$1;
+#X msg 231 534 2;
+#X obj 56 587 wxy-set grob-lib-w numbers num-w;
+#X obj 343 453 t f b;
+#X obj 64 402 r A;
+#X obj 64 424 t f b;
+#X obj 108 544 s A+D;
+#X obj 291 529 r \$0-point;
+#X text 31 24 read Attack value \, set point 1 x;
+#X text 8 202 read Level value \, set point 1 w;
+#X text 21 374 Read attack and delay \, add both and set point 2 x
+;
+#X text 400 445 read Sustain value \, set w of point 2;
+#X text 420 66 read sum of A and D \, add to Release \, set last point's
+x;
+#X text 454 561 Note: Points are counted starting at 0 We have these
+points: 0 \, 1 \, 2 \, 3;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 3 1 4 0;
+#X connect 4 0 2 1;
+#X connect 5 0 2 2;
+#X connect 6 0 9 1;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X connect 10 0 8 0;
+#X connect 10 1 6 0;
+#X connect 11 0 9 2;
+#X connect 12 0 14 0;
+#X connect 13 0 18 2;
+#X connect 14 0 16 0;
+#X connect 14 1 16 1;
+#X connect 14 2 15 0;
+#X connect 15 0 18 1;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 19 0 16 0;
+#X connect 19 1 15 0;
+#X connect 20 0 19 0;
+#X connect 21 0 25 0;
+#X connect 22 0 29 0;
+#X connect 23 0 28 0;
+#X connect 24 0 23 0;
+#X connect 24 0 32 0;
+#X connect 25 0 24 0;
+#X connect 25 1 24 1;
+#X connect 25 2 27 0;
+#X connect 26 0 28 0;
+#X connect 27 0 28 1;
+#X connect 29 0 26 0;
+#X connect 29 1 27 0;
+#X connect 30 0 31 0;
+#X connect 31 0 24 0;
+#X connect 31 1 27 0;
+#X connect 33 0 28 2;
+#X restore 265 137 pd calculations;
+#X text 61 104 See in "pd calculations" how the various point coordinates
+are set.;
+#X obj 81 261 pointer;
+#X obj 81 295 s \$0-point;
+#X obj 81 201 bng 24 250 50 0 empty empty select_graphic_first 0 -6
+0 10 -262144 -1 -1;
+#X msg 81 234 traverse pd-paint \, next;
+#N canvas 0 0 926 432 build 0;
+#X msg 537 149 bang;
+#X msg 629 150 clear;
+#X obj 629 181 s pd-paint;
+#X text 123 149 <----------------;
+#X text 358 147 <----------------;
+#X text 583 148 <--;
+#X msg 308 149 100;
+#X floatatom 99 201 5 0 8 0 - - -;
+#X obj 308 184 x-append pd-paint grob-lib-w;
+#X obj 79 226 setsize grob-lib-w numbers;
+#X msg 79 149 4;
+#X obj 335 227 s \$0-point;
+#X text 204 34 To completely rebuild the ADSR-graphics \, click here
+from right to left.;
+#X obj 227 107 t b b b b;
+#X obj 226 88 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X connect 0 0 8 1;
+#X connect 1 0 2 0;
+#X connect 6 0 8 0;
+#X connect 7 0 9 0;
+#X connect 8 0 9 1;
+#X connect 8 0 11 0;
+#X connect 10 0 9 0;
+#X connect 13 0 10 0;
+#X connect 13 1 6 0;
+#X connect 13 2 0 0;
+#X connect 13 3 1 0;
+#X connect 14 0 13 0;
+#X restore 688 581 pd build;
+#X text 461 166 This is graph-on-parent! Tricky.;
+#X text 328 552 Don't forget to have grob-library.pd open!!;
+#X text 60 52 "plot" could be used to visualize an ADSR envelope generator.
+;
+#X connect 2 0 6 0;
+#X connect 3 0 9 0;
+#X connect 4 0 8 0;
+#X connect 5 0 7 0;
+#X connect 10 0 11 0;
+#X connect 14 0 15 0;
+#X connect 16 0 17 0;
+#X connect 17 0 14 0;

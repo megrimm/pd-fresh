@@ -1,0 +1,21 @@
+#N canvas 490 83 442 433 10;
+#X obj 178 59 snd.fiddle~;
+#X obj 178 232 *~;
+#X obj 178 202 osc~;
+#X obj 178 138 unpack f f;
+#X text 259 81 <-- banged on attack;
+#X obj 241 84 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 178 24 adc~;
+#X obj 180 281 dac~;
+#X floatatom 111 181 5 0 0 0 - - -;
+#X connect 0 0 3 0;
+#X connect 0 1 5 0;
+#X connect 1 0 7 0;
+#X connect 1 0 7 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 0 8 0;
+#X connect 3 1 1 1;
+#X connect 6 0 0 0;
+#X connect 6 1 0 0;

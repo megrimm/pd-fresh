@@ -1,0 +1,15 @@
+#N canvas 123 312 506 266 10;
+#X floatatom 103 37 5 0 0 0 - - -, f 5;
+#X floatatom 103 133 5 0 0 0 - - -, f 5;
+#X floatatom 53 134 5 0 0 0 - - -, f 5;
+#X text 165 96 <-- midi to frequency expression;
+#X obj 103 98 mid.ftom;
+#X obj 53 97 ftom;
+#X floatatom 148 76 5 0 0 0 - - -, f 5;
+#X text 185 72 <-- reference pitch (default a4 = 440hz);
+#X text 61 187 megrimm 2016;
+#X connect 0 0 4 0;
+#X connect 0 0 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X connect 6 0 4 1;

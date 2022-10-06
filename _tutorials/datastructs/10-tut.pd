@@ -1,0 +1,55 @@
+#N struct grob-10 float x float y float color;
+#N canvas 290 86 814 583 12;
+#N canvas 20 291 754 435 paint 1;
+#X scalar grob-10 0 0 100 \;;
+#X restore 296 464 pd paint;
+#X obj 671 108 s pd-paint;
+#X msg 671 82 clear;
+#X obj 600 165 pointer;
+#X msg 558 172 100;
+#X msg 558 47 bang;
+#X obj 558 76 t b b b b;
+#X obj 558 23 loadbang;
+#X msg 587 135 traverse pd-paint \, bang;
+#X text 636 50 Initialization;
+#N canvas 378 384 616 289 grob-10 0;
+#X obj 84 53 drawnumber color;
+#X obj 79 18 struct grob-10 float x float y float color;
+#X obj 82 143 drawpolygon color 20 0 30 100 30;
+#X obj 90 239 drawnumber y 105 20 900 y=;
+#X obj 88 215 drawnumber x 105 0 900 x=;
+#X text 51 82 "grob-10" draws a single 20px wide line from (0 \, 20)
+to (100 \, 20) \, whose color can be changed through the "drawnumber"
+object above.;
+#X text 39 190 There also is a red coordinate display now!!;
+#X restore 70 463 pd grob-10;
+#X text 41 16 Finally a bit of Graphics;
+#X text 22 62 So far we only painted a boring number \, lets add some
+graphics. Pd offers various shapes to visualize numbers in data structures.
+;
+#X text 19 126 The most simple one is "drawpolygon" which can be used
+to draw lines.;
+#X text 21 180 drawpolygon takes arguments specifying:;
+#X text 40 220 * RGB color (0=black \, 999=white \, 900=red \, 90=green
+\, 9=blue \, 555=grey \, etc.);
+#X text 40 258 * line width;
+#X obj 561 197 append grob-10 color;
+#X text 21 378 "grob-10" draws a single 20px wide line from (0 \, 20)
+to (100 \, 20) \, whose color can be changed through a "drawnumber"
+object;
+#X text 46 528 You can see the surrounding box by entering edit mode
+in "pd paint" and selecting the full struct object.;
+#X text 40 283 * two or more (float \, float) pairs giving coordinates.
+;
+#X text 25 315 The coordinates of the polygons are taken relative to
+the coordinates of the surrounding box as specified by float x \, float
+y in the struct definition.;
+#X connect 2 0 1 0;
+#X connect 3 0 17 1;
+#X connect 4 0 17 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 6 2 8 0;
+#X connect 6 3 2 0;
+#X connect 7 0 5 0;
+#X connect 8 0 3 0;

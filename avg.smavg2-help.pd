@@ -1,0 +1,18 @@
+#N canvas 0 23 423 348 10;
+#X floatatom 123 98 5 0 0 0 - - -, f 5;
+#X floatatom 48 59 5 0 0 0 - - -, f 5;
+#X floatatom 48 180 5 0 0 0 - - -, f 5;
+#X text 157 95 <-- number of last floats to calculate;
+#X text 89 56 <-- float stream;
+#X text 150 117 <-- takes creation argument;
+#X text 86 177 <-- moving average;
+#X text 48 17 simple moving average a stream of floats simalar to zexy/mavg
+, f 40;
+#X text 45 263 megrimm 2016;
+#X obj 117 226 mrpeach/runningmean;
+#X obj 245 225 maxlib/average;
+#X text 45 226 also see:;
+#X obj 48 120 avg.smavg2 10;
+#X connect 0 0 12 1;
+#X connect 1 0 12 0;
+#X connect 12 0 2 0;

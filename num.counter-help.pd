@@ -1,0 +1,29 @@
+#N canvas 502 74 608 432 10;
+#X obj 4 -57 cnv 15 600 66 empty empty counter 18 30 0 48 -1 -260097
+0;
+#N canvas 483 222 450 300 LICENSE 0;
+#X text 18 8 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version. This program
+is distributed in the hope that it will be useful \, but WITHOUT ANY
+WARRANTY \; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+for more details. You should have received a copy of the GNU General
+Public License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X restore 522 344 pd LICENSE;
+#X text 14 347 http://yvanvolochine.com;
+#X obj 233 251 print;
+#X obj 233 89 bng 15 250 50 0 empty empty increment 17 7 0 10 -262144
+-1 -1;
+#X text 25 29 Count =);
+#X obj 233 189 counter 0 13;
+#X obj 346 161 bng 15 250 50 0 empty empty reset 17 7 0 10 -262144
+-1 -1;
+#X msg 314 134 4;
+#X text 314 117 jump;
+#X connect 4 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 2;
+#X connect 8 0 6 2;

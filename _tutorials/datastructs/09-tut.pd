@@ -1,0 +1,68 @@
+#N struct grob-09 float number float x float y;
+#N canvas 290 86 814 583 12;
+#N canvas 0 270 317 199 paint 1;
+#X scalar grob-09 114 143 47 \;;
+#X restore 308 268 pd paint;
+#X obj 671 108 s pd-paint;
+#X msg 671 82 clear;
+#X obj 600 165 pointer;
+#X msg 558 172 100;
+#X msg 558 47 bang;
+#X obj 558 76 t b b b b;
+#X obj 558 23 loadbang;
+#X msg 587 135 traverse pd-paint \, bang;
+#X text 636 50 Initialization;
+#N canvas 378 384 616 289 grob-09 0;
+#X obj 63 67 struct grob-09 float number float x float y;
+#X obj 171 224 drawnumber number;
+#X text 52 37 We only added "float x" and "float y" coordinates:;
+#X text 36 98 Position inside the struct definition does not matter
+\, names however do matter here: Always use "x" and "y" for coordinates!
+;
+#X restore 76 269 pd grob-09;
+#X obj 559 197 append grob-09 number;
+#X text 41 18 Position is everything;
+#X text 35 67 Up to now our "grob-xx" structure was pinned in the upper
+left corner.;
+#X text 108 160 float x;
+#X text 108 184 float y;
+#X text 36 110 It is however possible to position struct objects in
+the subpatch using two special fields \, namely:;
+#X text 38 217 They give the x- rsp. y-coordinates of the object in
+the painting area. The grob-09 structure has added those fields:;
+#X obj 48 522 set grob-09 x y;
+#X obj 178 491 pointer;
+#X msg 178 465 traverse pd-paint \, next;
+#X text 42 311 We can set and get x and y like any other field:;
+#X floatatom 48 484 5 0 0 2 x - -;
+#X floatatom 93 421 5 0 0 2 y - -;
+#X floatatom 458 446 5 0 0 3 x - -;
+#X floatatom 588 447 5 0 0 3 y - -;
+#X obj 458 418 get grob-09 x y;
+#X obj 458 388 pointer;
+#X msg 458 362 traverse pd-paint \, next;
+#X obj 93 453 t b f;
+#X obj 58 339 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 4700 1;
+#X text 81 381 y is "reversed" and has 0 at the top!;
+#X text 175 438 FIRST click here:;
+#X connect 2 0 1 0;
+#X connect 3 0 11 1;
+#X connect 4 0 11 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 6 2 8 0;
+#X connect 6 3 2 0;
+#X connect 7 0 5 0;
+#X connect 8 0 3 0;
+#X connect 19 0 18 2;
+#X connect 20 0 19 0;
+#X connect 22 0 18 0;
+#X connect 23 0 29 0;
+#X connect 26 0 24 0;
+#X connect 26 1 25 0;
+#X connect 27 0 26 0;
+#X connect 28 0 27 0;
+#X connect 29 0 22 0;
+#X connect 29 1 18 1;
+#X connect 30 0 23 0;

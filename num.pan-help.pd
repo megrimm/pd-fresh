@@ -1,0 +1,67 @@
+#N canvas 200 65 730 641 12;
+#X floatatom 109 101 5 0 0 0 - - - 0;
+#X floatatom 316 237 5 0 0 0 - - - 0;
+#X floatatom 109 397 5 0 0 0 - - - 0;
+#X msg 169 345 1;
+#X floatatom 205 396 5 0 0 0 - - - 0;
+#X floatatom 315 395 5 0 0 0 - - - 0;
+#X msg 265 348 2;
+#X msg 376 347 3;
+#X text 154 24 pan around a number of speakers;
+#X obj 27 378 osc~ 440;
+#X obj 35 497 *~;
+#X obj 51 574 dac~ 1 2 3;
+#X obj 85 499 *~;
+#X obj 139 494 *~;
+#X obj 109 373 num.pan 1;
+#X obj 205 373 num.pan 2;
+#X obj 316 371 num.pan 3;
+#X text 297 96 <-- num of speakers;
+#X msg 265 95 3;
+#X obj 109 126 expr fmod($f1 \, $f2);
+#X obj 316 214 + 1;
+#X obj 109 152 t f f;
+#X obj 109 267 change;
+#X floatatom 109 22 5 0 0 0 - - - 0;
+#X obj 109 75 - 1;
+#X obj 109 212 expr abs(min(max(abs(remainder($f1 \, 3)) \, 0) \, 1)-1)
+, f 25;
+#X text 407 141 <<-- this trickyness allow the sound to keep rotating
+around the speakers seemlessly. IDK \, seems like there is an easier
+way but this is what I ended up with., f 43;
+#X text 100 310 -----------------------------------------;
+#X text 94 47 -----------------------------------------;
+#X text 274 484 todo: - would be nice to have a larger spead instead
+of just crossfading from one speaker to the next - lend list to activate
+multiple speakers - pan multiple speakers - pan multiple sounds, f
+38;
+#X floatatom 124 294 5 0 0 0 - - - 0;
+#X connect 0 0 19 0;
+#X connect 1 0 14 0;
+#X connect 1 0 15 0;
+#X connect 1 0 16 0;
+#X connect 2 0 10 1;
+#X connect 3 0 14 1;
+#X connect 4 0 12 1;
+#X connect 5 0 13 1;
+#X connect 6 0 15 1;
+#X connect 7 0 16 1;
+#X connect 9 0 10 0;
+#X connect 9 0 12 0;
+#X connect 9 0 13 0;
+#X connect 10 0 11 0;
+#X connect 12 0 11 1;
+#X connect 13 0 11 2;
+#X connect 14 0 2 0;
+#X connect 15 0 4 0;
+#X connect 16 0 5 0;
+#X connect 18 0 19 1;
+#X connect 19 0 21 0;
+#X connect 20 0 1 0;
+#X connect 21 0 25 0;
+#X connect 21 1 20 0;
+#X connect 22 0 14 0;
+#X connect 22 0 30 0;
+#X connect 23 0 24 0;
+#X connect 24 0 0 0;
+#X connect 25 0 22 0;

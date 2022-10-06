@@ -1,0 +1,20 @@
+#N canvas 136 79 552 395 10;
+#X msg 199 199 read \$1 \, rewind;
+#X msg 95 199 write \$1.txt;
+#X obj 95 113 openpanel;
+#X obj 95 76 bng 24 250 50 0 empty empty load_seq_midi_file 28 7 1
+10 -4034 -1 -1;
+#X obj 95 155 t a a;
+#X symbolatom 104 136 64 0 0 0 - - -, f 64;
+#X text 71 26 Here's how you can convert a midi file to a seq-textfile
+usable in c_seqplay:;
+#X text 71 314 Explanation: [seq] saves as textfile \, if you use a
+"write"-file ending in ".txt".;
+#X obj 95 275 cyclone/seq;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 4 1 0 0;

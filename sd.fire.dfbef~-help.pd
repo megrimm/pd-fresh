@@ -1,0 +1,13 @@
+#N canvas 161 154 279 346 10;
+#X obj 101 224 dac~;
+#X obj 96 160 sd.fire.dfbef~ 10 0.05;
+#X obj 96 64 sd.fire.crackles~;
+#X obj 96 36 noise~;
+#X floatatom 161 130 5 0 0 0 - - -, f 5;
+#X floatatom 218 131 5 0 0 0 - - -, f 5;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 1;
+#X connect 5 0 1 2;

@@ -1,0 +1,23 @@
+#N canvas 597 248 619 369 10;
+#X floatatom 272 49 5 0 0 0 - - - 0;
+#X msg 280 75 8;
+#X msg 286 96 16;
+#X msg 292 120 32;
+#X msg 299 144 64;
+#X text 330 106 <-- block size should be same as image sent;
+#X obj 306 251 vid.window;
+#X obj 178 107 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 195 99 saturation;
+#X obj 129 29 adc~;
+#X obj 127 298 vid.snd2vid;
+#X msg 332 205 destroy;
+#X connect 0 0 10 3;
+#X connect 1 0 10 3;
+#X connect 2 0 10 3;
+#X connect 3 0 10 3;
+#X connect 4 0 10 3;
+#X connect 7 0 10 2;
+#X connect 9 0 10 0;
+#X connect 9 1 10 1;
+#X connect 11 0 6 0;

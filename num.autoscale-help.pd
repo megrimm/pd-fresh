@@ -1,0 +1,60 @@
+#N canvas 59 70 1100 476 10;
+#X floatatom 56 237 5 0 0 0 Input - -, f 5;
+#X msg 200 260 dump;
+#X floatatom 56 376 5 0 0 0 Output - -, f 5;
+#X obj 59 408 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4505 1;
+#X obj 166 330 unpack 0 0;
+#X floatatom 165 358 5 0 0 0 - - -, f 5;
+#X floatatom 233 356 5 0 0 0 - - -, f 5;
+#X msg 150 90 reset;
+#X obj 130 60 tgl 15 0 empty empty Autoscaling: 17 7 0 12 -262144 -1
+-1 1 1;
+#X text 234 59 switch input range detection on/off;
+#X msg 180 190 input 0 100;
+#X msg 180 220 input 0 100 \, 0;
+#X msg 170 150 output 0 127 4;
+#X msg 170 120 output 0 100;
+#X text 241 330 Input range;
+#X text 196 90 Resets input range to tiny rsp. huge;
+#X text 270 120 Sets output range;
+#X text 277 151 Sets output range and mapping.;
+#X text 277 191 Sets input range;
+#X text 294 220 Sets input range and switch off autoscaling in one
+message.;
+#X text 240 261 Dumps current input range to 2nd outlet;
+#X text 679 378 RjDj Library (https://github.com/rjdj/rjlib) - 2011
+;
+#X obj 56 297 fresh/num.autoscale;
+#X text 36 20 num.autoscale - scale a range of numbers to another range
+;
+#X text 677 53 Name: m_autoscale;
+#X text 677 73 Summary: Scale a range of numbers to another range.
+The input range is dynamically chosen from the minimum and maximum
+input values.;
+#X text 677 123 Argument 0: output-low (float) <default = 0>;
+#X text 677 143 Argument 1: output-high (float) <default = 1>;
+#X text 677 186 Inlet 0: Number ranger to scale;
+#X text 677 226 Outlet 0: Scaled number range;
+#X text 677 206 Inlet 1: various message - see example;
+#X text 677 246 Outlet 1: current input range (e.g. 0 1) if a 'dump'
+message is sent to Inlet 1;
+#X text 677 296 Description: m_autoscale dynamically maps an incoming
+input range to a set output range. The lowest value inputted will become
+the lowest value in the output range \, likewise for the highest value.
+Switching off 'autoscaling' will stop the inputs bounds changing.;
+#X text 677 163 Argument 2: mapping curve (float) <default = linear>
+;
+#X connect 0 0 22 0;
+#X connect 1 0 22 1;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 7 0 22 1;
+#X connect 8 0 22 1;
+#X connect 10 0 22 1;
+#X connect 11 0 22 1;
+#X connect 12 0 22 1;
+#X connect 13 0 22 1;
+#X connect 22 0 2 0;
+#X connect 22 1 4 0;

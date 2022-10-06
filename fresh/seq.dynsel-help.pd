@@ -1,9 +1,0 @@
-#N canvas 0 22 1 1 10;
-#X obj 88 160 seq.dynsel;
-#X msg 94 115 3;
-#X msg 143 114 9;
-#X text 84 26 the idea is to have a dynamically created sel based sequencer
-;
-#X text 86 70 this is just a sketch and is NOT WORKING;
-#X connect 1 0 0 0;
-#X connect 2 0 0 0;

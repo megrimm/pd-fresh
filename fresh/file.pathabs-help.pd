@@ -1,7 +1,0 @@
-#N canvas 0 23 450 300 10;
-#X obj 159 137 file.pathabs;
-#X obj 159 201 print;
-#X msg 162 70 file.pathabs.pd;
-#X text 255 137 <-- returns an absolute path;
-#X connect 0 0 1 0;
-#X connect 2 0 0 0;

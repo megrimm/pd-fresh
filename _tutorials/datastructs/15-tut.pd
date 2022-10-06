@@ -1,0 +1,33 @@
+#N struct grob-lib float x float y array numbers num;
+#N struct num float y;
+#N canvas 315 203 668 521 12;
+#X text 30 20 A library;
+#X text 51 180 Every template must be defined only once \, so this
+is a good way to organize things.;
+#X text 54 245 We also have built an abstraction for appending:;
+#N canvas 0 0 450 300 paint 1;
+#X scalar grob-lib 52 140 \; 0 \; 0 \; 88 \; 88 \; 90 \; 76 \; 64 \;
+58 \; 56 \; 56 \; 58 \; 62 \; 70 \; 76 \; 76 \; 70 \; 18 \; 0 \; 0
+\; 0 \; \;;
+#X restore 444 16 pd paint;
+#X obj 243 346 x-append pd-paint grob-lib;
+#X obj 32 388 setsize grob-lib numbers;
+#X msg 472 311 bang;
+#X text 56 74 We can factor out the graphical objects we use into a
+library.;
+#X msg 552 312 clear;
+#X obj 552 343 s pd-paint;
+#X text 76 311 <----------------;
+#X text 293 309 <----------------;
+#X text 518 310 <--;
+#X msg 605 312 vis 1;
+#X msg 243 311 10;
+#X msg 32 311 20;
+#X text 75 126 Please open "grob-library.pd" to make the template definitions
+known to Pd!;
+#X connect 4 0 5 1;
+#X connect 6 0 4 1;
+#X connect 8 0 9 0;
+#X connect 13 0 9 0;
+#X connect 14 0 4 0;
+#X connect 15 0 5 0;

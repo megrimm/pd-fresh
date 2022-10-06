@@ -1,0 +1,4 @@
+#N canvas 0 23 450 300 10;
+#X declare -stdlib \$1 -lib \$1 -stdpath \$1 -path \$1;
+#X obj 110 121 declare -stdlib \$1 -lib \$1 -stdpath \$1 -path \$1
+;

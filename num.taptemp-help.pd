@@ -1,0 +1,27 @@
+#N canvas 738 341 259 359 10;
+#X obj 46 122 bng 15 250 50 0 empty empty empty 20 8 0 8 -24198 -1
+-1;
+#X floatatom 46 305 5 0 0 0 - - -;
+#X text 70 121 <-- tap bpm button;
+#X msg 68 147 1;
+#X msg 83 173 0;
+#X floatatom 128 181 5 0 0 0 - - -;
+#X obj 46 244 num.taptemp;
+#X text 43 13 a simple tap tempo;
+#X text 43 27 calculates bpm after 3 taps;
+#X obj 68 207 metro 1000;
+#X floatatom 109 270 5 0 0 0 - - -;
+#X obj 46 58 key;
+#X obj 46 82 sel 116;
+#X text 98 79 <-- tap "T" key;
+#X text 87 305 <-- bpm > 60;
+#X text 147 268 <-- metro < 1000;
+#X connect 0 0 6 0;
+#X connect 3 0 9 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 1;
+#X connect 6 0 1 0;
+#X connect 6 1 10 0;
+#X connect 9 0 6 0;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;

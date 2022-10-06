@@ -1,0 +1,28 @@
+#N canvas 378 241 506 451 10;
+#X obj 129 322 seq.walking;
+#X floatatom 129 343 5 0 0 0 - - -, f 5;
+#X obj 133 121 hsl 128 15 0 100 0 1 empty empty walkarpeggiochance
+8 -6 0 10 -1 -262144 -1 2200 1;
+#X msg 162 294 onoff \$1;
+#X obj 162 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 156 239 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 156 257 busy \$1;
+#X obj 147 199 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 147 217 beat \$1;
+#X msg 139 178 speed \$1;
+#X floatatom 139 161 5 0 0 0 - - -, f 5;
+#X msg 130 140 chance \$1;
+#X connect 0 0 1 0;
+#X connect 2 0 11 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 9 0;
+#X connect 11 0 0 0;

@@ -1,0 +1,10 @@
+rhythm detection
+pitch detection 
+loop recording
+video sampler
+
+auto tune abstraction ( pitch track -> pitch shift
+gphoto
+purest-json - weather easy
+datamosher
+easy glsl loading

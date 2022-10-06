@@ -1,7 +1,0 @@
-#N canvas 54 95 450 300 10;
-#X obj 223 150 vid.image.gen;
-#X obj 230 214 print;
-#X obj 220 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X connect 0 0 1 0;
-#X connect 2 0 0 0;

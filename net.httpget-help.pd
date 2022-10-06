@@ -1,0 +1,47 @@
+#N canvas 530 23 545 628 10;
+#X text 100 433 from;
+#X obj 134 410 unpack 0 0 0 0;
+#X floatatom 134 433 3 0 0 0 - - -, f 3;
+#X floatatom 161 433 3 0 0 0 - - -, f 3;
+#X floatatom 188 433 3 0 0 0 - - -, f 3;
+#X floatatom 215 433 3 0 0 0 - - -, f 3;
+#X obj 157 385 tgl 15 0 empty empty connected 18 7 0 10 -24198 -241291
+-1 0 1;
+#X text 241 433 (Server IP Address);
+#X text 59 560 2010 mrpeach \, HCS \, & the PD community;
+#X msg 137 185 disconnect;
+#X msg 89 122 get http://checkip.dyndns.org/index.html;
+#X text 155 335 also takes tcpclient arguments (except for connect)
+;
+#X text 59 520 danomatika.com | robotcowboy.com;
+#X text 60 535 https://github.com/danomatika/rc-patches;
+#X text 60 505 2011 Dan Wilcox GPL v3;
+#X msg 150 251 header \$1;
+#X obj 150 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 177 228 print the HTTP header? (off by default);
+#X text 210 186 ... useful for large files ...;
+#X msg 168 306 raw \$1;
+#X obj 168 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 194 282 output raw bytes instead of floats & symbols;
+#X text 198 461 outputs each line as a list;
+#X text 55 91 http_get: a simple webclient using HTTP-GET;
+#X obj 112 360 net.httpget;
+#X msg 112 145 get http://megrimm.net/lab/news/googlenews.php?key=trump
+;
+#X obj 112 465 print GOTIT;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
+#X connect 1 3 5 0;
+#X connect 9 0 24 0;
+#X connect 10 0 24 0;
+#X connect 15 0 24 0;
+#X connect 16 0 15 0;
+#X connect 19 0 24 0;
+#X connect 20 0 19 0;
+#X connect 24 0 26 0;
+#X connect 24 1 1 0;
+#X connect 24 2 6 0;
+#X connect 25 0 24 0;

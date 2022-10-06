@@ -1,8 +1,0 @@
-#N canvas 459 58 551 400 10;
-#X obj 77 98 fexpr~ abs($x[0] - $x[-1]) > 0.5;
-#X obj 77 120 threshold~ 0.5 0 0.5 0;
-#X obj 77 160 outlet;
-#X obj 77 35 inlet~;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 3 0 0 0;

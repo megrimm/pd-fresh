@@ -1,0 +1,17 @@
+#N canvas 138 123 450 300 10;
+#X obj 107 148 sd.fire.forest~;
+#X obj 107 192 dac~;
+#X floatatom 105 73 5 0 0 0 - - -, f 5;
+#X msg 105 99 crackle \$1;
+#X floatatom 199 69 5 0 0 0 - - -, f 5;
+#X msg 192 98 hissing \$1;
+#X floatatom 283 63 5 0 0 0 - - -, f 5;
+#X msg 287 97 lapping \$1;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;

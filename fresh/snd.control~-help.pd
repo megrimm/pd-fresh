@@ -1,8 +1,0 @@
-#N canvas 23 363 450 300 10;
-#X floatatom 180 185 5 0 0 0 - - -, f 5;
-#X obj 167 134 snd.control~;
-#X floatatom 236 184 5 0 0 0 - - -, f 5;
-#X floatatom 293 185 5 0 0 0 - - -, f 5;
-#X connect 1 0 0 0;
-#X connect 1 1 2 0;
-#X connect 1 2 3 0;

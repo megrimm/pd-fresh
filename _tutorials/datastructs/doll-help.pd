@@ -1,0 +1,52 @@
+#N struct 1019-grob-lib-x float x float y array numbers 1019-num-x
+;
+#N struct 1019-num-x float x float y;
+#N struct 1020-grob-lib-x float x float y array numbers 1020-num-x
+;
+#N struct 1020-num-x float x float y;
+#N canvas 223 155 730 495 10;
+#X floatatom 96 429 5 0 0 0 - - -;
+#X floatatom 293 427 5 0 0 0 - - -;
+#X floatatom 96 159 5 0 0 0 - - -;
+#X floatatom 293 160 5 0 0 0 - - -;
+#X obj 328 93 snapshot~;
+#X obj 338 161 * 100;
+#X obj 296 24 tgl 15 1 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 393 19 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 2100 1;
+#X obj 491 89 cos~;
+#X obj 475 157 snapshot~;
+#X obj 390 62 sin~;
+#X obj 476 189 * 100;
+#X floatatom 348 20 5 0 0 0 - - -;
+#X obj 474 113 *~;
+#X obj 492 39 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 9800 1;
+#X text 491 139 Haha \, frequency modulation!;
+#X obj 491 59 phasor~ 0.5;
+#X obj 391 39 phasor~ 0.2;
+#X obj 298 48 metro 20;
+#X obj 153 66 get;
+#X obj 96 201 doll;
+#X obj 409 216 doll;
+#X connect 2 0 20 0;
+#X connect 3 0 20 1;
+#X connect 4 0 5 0;
+#X connect 5 0 20 1;
+#X connect 6 0 18 0;
+#X connect 7 0 17 0;
+#X connect 8 0 13 1;
+#X connect 9 0 11 0;
+#X connect 10 0 4 0;
+#X connect 10 0 13 0;
+#X connect 11 0 20 0;
+#X connect 12 0 18 1;
+#X connect 13 0 9 0;
+#X connect 14 0 16 0;
+#X connect 16 0 8 0;
+#X connect 17 0 10 0;
+#X connect 18 0 4 0;
+#X connect 18 0 9 0;
+#X connect 20 0 0 0;
+#X connect 20 1 1 0;

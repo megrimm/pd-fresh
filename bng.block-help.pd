@@ -1,0 +1,13 @@
+#N canvas 435 431 400 160 10;
+#X obj 42 106 print 1;
+#X obj 105 106 print 2;
+#X obj 42 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 105 60 5 0 0 0 - - -, f 5;
+#X text 39 19 Filters out bangs that arrive before a certain time span
+("blocking time") is over.;
+#X obj 42 83 bng.block 3;
+#X connect 2 0 5 0;
+#X connect 3 0 5 1;
+#X connect 5 0 0 0;
+#X connect 5 1 1 0;

@@ -1,0 +1,12 @@
+#N canvas 242 519 450 300 10;
+#X obj 132 106 bytes2any;
+#X obj 195 247 print;
+#X floatatom 142 154 10 0 0 0 - - - 0;
+#X obj 132 130 * 30;
+#X obj 132 176 change;
+#X obj 195 198 netreceive -u -b 23867;
+#X connect 0 0 3 0;
+#X connect 3 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;

@@ -1,0 +1,19 @@
+#N canvas 986 450 450 300 12;
+#X floatatom 172 171 5 0 0 0 - - -;
+#X obj 137 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 329 66 5 0 0 0 - - -;
+#X msg 74 38 1;
+#X msg 96 72 0;
+#X obj 149 31 inlet;
+#X obj 289 13 inlet;
+#X obj 142 213 outlet;
+#X obj 139 125 expr random(0 \, 100)>$f2==$f1;
+#X connect 1 0 8 0;
+#X connect 2 0 8 1;
+#X connect 3 0 8 0;
+#X connect 4 0 8 0;
+#X connect 5 0 8 0;
+#X connect 6 0 8 1;
+#X connect 8 0 0 0;
+#X connect 8 0 7 0;

@@ -1,0 +1,14 @@
+#N canvas 470 148 706 549 12;
+#X text 82 32 limiter for feedback etc;
+#X obj 116 237 mix.limiter~;
+#X obj 110 54 adc~;
+#X obj 119 305 dac~;
+#X text 265 208 threshold / reference;
+#X floatatom 193 205 5 0 0 0 - - - 0;
+#X floatatom 156 166 5 0 0 0 - - - 0;
+#X text 209 158 limit factor;
+#X connect 1 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 1 0;
+#X connect 5 0 1 2;
+#X connect 6 0 1 1;

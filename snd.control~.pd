@@ -1,0 +1,17 @@
+#N canvas 113 137 450 300 10;
+#X obj 116 37 adc~;
+#X obj 111 98 env~;
+#X obj 255 186 expr (($f1-30)/60)*2+0.5;
+#X obj 107 185 expr 5*(($f1-30)/60);
+#X obj 106 241 outlet;
+#X obj 254 58 loadbang;
+#X msg 254 80 \; pd dsp 1 \;;
+#X obj 37 242 outlet;
+#X obj 255 237 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 0 7 0;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;

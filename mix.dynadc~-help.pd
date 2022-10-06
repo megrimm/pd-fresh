@@ -1,0 +1,17 @@
+#N canvas 60 134 450 300 10;
+#X floatatom 111 66 5 0 0 0 - - -, f 5;
+#X text 150 64 change channel via inlet;
+#X msg 142 141 0;
+#X obj 149 120 loadbang;
+#X text 171 141 remember setting for next load;
+#X text 66 27 Dynamically assignable one-channel adc~;
+#X text 69 225 Tim Vets 2012;
+#X text 161 186 [dynadc~ <initial_channel>];
+#X text 160 201 just as you would with adc~;
+#X text 150 92 or click and drag yellow area (limited to 16 ch);
+#X text 158 169 initialize by creation argument:;
+#X obj 111 95 mix.dynadc~;
+#X connect 0 0 11 0;
+#X connect 2 0 11 0;
+#X connect 3 0 2 0;
+#X connect 11 1 2 0;

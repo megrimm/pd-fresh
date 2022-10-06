@@ -1,0 +1,27 @@
+#N canvas 562 262 477 331 10;
+#X obj 13 15 inlet~;
+#X obj 13 65 outlet~;
+#N canvas 561 127 383 106 \$0-dexpr-sub 1;
+#X restore 13 40 pd \$0-dexpr-sub;
+#X obj 117 13 inlet;
+#X obj 117 36 symbol;
+#X obj 127 81 list append \$1;
+#X text 115 265 (c)2012 \, megrimm;
+#X obj 127 58 loadbang;
+#X obj 192 234 namecanvas \$0-dexpr;
+#X obj 144 161 s pd-\$0-dexpr-sub;
+#X msg 117 103 clear \, obj 20 20 inlet~ \, obj 20 40 expr~ \$1 \,
+obj 20 60 outlet~ \, connect 0 0 1 0 \, connect 1 0 2 0;
+#X obj 118 234 s \$0-dexpr;
+#X msg 118 209 connect 0 0 2 0 \, connect 2 0 1 0;
+#X obj 117 139 t b a;
+#X obj 117 184 delay 1;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 10 0;
+#X connect 7 0 5 0;
+#X connect 10 0 13 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 13 1 9 0;
+#X connect 14 0 12 0;

@@ -1,0 +1,63 @@
+#N canvas 154 289 790 502 10;
+#X text 19 466 http://yvanvolochine.com;
+#X text 203 25 pd-extended's [counter];
+#X obj 235 89 inlet;
+#X obj 235 205 f \$1;
+#X obj 320 247 + 1;
+#X obj 235 276 t f f;
+#X obj 267 313 + 1;
+#X obj 527 273 loadbang;
+#X obj 527 295 f \$1;
+#X obj 527 317 s \$0-min;
+#X obj 599 273 loadbang;
+#X obj 599 295 f \$2;
+#X obj 599 317 route 0;
+#X text 655 317 ???;
+#X obj 599 339 s \$0-max;
+#X obj 381 89 inlet ???;
+#X obj 530 90 inlet reset;
+#X obj 530 112 route bang;
+#X msg 530 134 0;
+#X obj 530 156 s \$0-reset;
+#X obj 597 135 s \$0-jump;
+#X obj 267 335 s \$0-store;
+#X obj 260 148 r \$0-store;
+#X obj 235 111 t b;
+#X obj 320 216 r \$0-max;
+#X obj 235 244 mod 1e+09;
+#X obj 278 186 r \$0-jump;
+#X obj 269 167 r \$0-reset;
+#X obj 235 388 outlet;
+#N canvas 483 222 450 300 LICENSE 0;
+#X text 18 8 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version. This program
+is distributed in the hope that it will be useful \, but WITHOUT ANY
+WARRANTY \; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+for more details. You should have received a copy of the GNU General
+Public License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X restore 692 464 pd LICENSE;
+#X connect 2 0 23 0;
+#X connect 3 0 25 0;
+#X connect 4 0 25 1;
+#X connect 5 0 28 0;
+#X connect 5 1 6 0;
+#X connect 6 0 21 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 1 14 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 17 1 20 0;
+#X connect 18 0 19 0;
+#X connect 22 0 3 1;
+#X connect 23 0 3 0;
+#X connect 24 0 4 0;
+#X connect 25 0 5 0;
+#X connect 26 0 3 1;
+#X connect 27 0 3 1;

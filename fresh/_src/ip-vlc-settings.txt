@@ -1,4 +1,0 @@
-http://192.168.1.119/videostream.asf?user=admin&pwd=
-
-documentation
-http://www.ispyconnect.com/man.aspx?n=foscam

@@ -1,0 +1,11 @@
+#N canvas 0 23 450 300 10;
+#X declare -lib Gem;
+#X declare -lib zexy;
+#X declare -stdpath pmpd;
+#X declare -lib Hoa;
+#X declare -lib Cream;
+#X obj 82 93 declare -lib Gem;
+#X obj 81 118 declare -lib zexy;
+#X obj 79 148 declare -stdpath pmpd;
+#X obj 79 173 declare -lib Hoa;
+#X obj 86 201 declare -lib Cream;
