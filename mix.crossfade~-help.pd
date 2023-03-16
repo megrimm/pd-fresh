@@ -1,0 +1,24 @@
+#N canvas 146 35 484 380 12;
+#X obj 149 172 mix.crossfade~;
+#X obj 94 116 osc~ 200;
+#X obj 162 116 osc~ 300;
+#X obj 148 328 dac~;
+#X obj 148 292 *~ 1;
+#X floatatom 173 243 5 0 0 0 - - - 0;
+#X obj 173 266 / 100;
+#X obj 271 118 hsl 128 15 0 1 0 0 fade-set empty empty -2 -8 0 10 #dcdcdc
+#000000 #000000 0 1;
+#X floatatom 266 141 0 0 0 0 - - - 0;
+#X msg 266 93 0.5;
+#X text 299 93 central position;
+#X obj 488 132;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 4 0 3 0;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 4 1;
+#X connect 7 0 8 0;
+#X connect 8 0 0 2;
+#X connect 9 0 7 0;
